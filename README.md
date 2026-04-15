@@ -1,5 +1,6 @@
 # BetterBatteryWidget
 https://www.opendesktop.org/p/2355937/
+
 Just a simple battery widget.
 
 
@@ -11,4 +12,5 @@ This is a lightweight, minimal battery widget for KDE Plasma 6. I find the defau
  - Battery icon size
 
 ***Hey!*** Currently (version 1.0) doesn't have the option to turn on save energy yet (sorry, this is optimzed for TLP users)
-Credit to Command output (https://github.com/Zren/plasma-applet-commandoutput) for libraries! (FontFamily, ComboBox)
+
+Credits to Command output (https://github.com/Zren/plasma-applet-commandoutput) for libraries! (FontFamily, ComboBox)
