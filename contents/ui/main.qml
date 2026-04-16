@@ -11,6 +11,7 @@ PlasmoidItem {
     property int percent: 0
     property bool isCharge: false
     property bool isFull: false
+    property string icon: battery-70
 
     Plasma5Support.DataSource {
         id: batterySource
@@ -57,7 +58,8 @@ PlasmoidItem {
                 id: icon
                 source: {
                     let base = "battery-" + (Math.floor(root.percent / 10) * 10).toString().padStart(3, '0');
-                    return root.isCharge ? base + "-charging" : base;
+                    root.icon = root.isCharge ? base + "-charging" : base;
+                    return root.icon;
                 }
                 // Use config from settings
                 Layout.preferredWidth: Plasmoid.configuration.iconSize
@@ -71,5 +73,6 @@ PlasmoidItem {
         percent: root.percent
         charging: root.isCharge
         full: root.isFull
+        icon: root.icon
     }
 }

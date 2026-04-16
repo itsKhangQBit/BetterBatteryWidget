@@ -1,6 +1,8 @@
 import QtQuick
 import QtQuick.Layouts
+import org.kde.plasma.plasmoid
 import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.plasma.plasma5support as Plasma5Support
 import org.kde.kirigami as Kirigami
 
 Item {
@@ -8,6 +10,61 @@ Item {
     property int percent: 0
     property bool charging: false
     property bool full: false
+    property string icon: battery-70
+    property string pwrmgrBackend: none
+    property bool ispwrSave: false
+
+    Plasma5Support.DataSource {
+        id: pwrSaveSwitch
+        engine: "powermanagement"
+        connectedSources: ["Battery"]
+        onDataChanged: {
+            popupRoot.ispwrSave = data["Battery"]["Power Save Mode"] || false;
+            console.log(ispwrSave)
+        }
+    }
+
+    Plasma5Support.DataSource {
+        id: exec
+        engine: "executable"
+        connectedSources: []
+        onNewData: {
+            var output = data["stdout"] || "";
+            // if TLP, choose pwrmgrBackend as tlp, otherwise choose power-profiles-deamon
+            if (output.includes("/usr/sbin/tlp") || output.includes("/usr/bin/tlp")) {
+                pwrmgrBackend = "tlp";
+            } else if (output.includes("/usr/bin/powerprofilesctl")) {
+                pwrmgrBackend = "ppd";
+            }
+            disconnectSource(sourceName);
+        }
+
+        function runCMD(cmd) {
+            connectSource(cmd);
+        }
+    }
+
+    Component.onCompleted: {
+        // is there TLP or power-profiles-deamon
+        exec.runCMD("which tlp");
+        exec.runCMD("which powerprofilesctl");
+    }
+
+    function batSaver(state) {
+        if (pwrmgrBackend === "tlp") {
+            console.log(state)
+            let cmd = state ? "pkexec tlp bat" : "pkexec tlp ac";
+            exec.runCMD(cmd);
+        }
+        else if (pwrmgrBackend === "ppd") {
+            let profile = state ? "power-saver" : "balanced";
+            exec.runCMD("powerprofilesctl set " + profile);
+        }
+        // if no pwrmgrBackend, just log cause we can't set anything
+        else {
+            console.log("Oops, no power manager!");
+        }
+    }
 
     // popup size
     width: Kirigami.Units.gridUnit * 16
@@ -32,7 +89,7 @@ Item {
             }
             // small icon for fun :)
             Kirigami.Icon {
-                source: "battery-charging"
+                source: popupRoot.icon
                 width: 22
                 height: 22
             }
@@ -40,7 +97,6 @@ Item {
 
         // battery percentage
         ColumnLayout {
-            anchors.fill: parent
             PlasmaComponents.Label {
                 id: labelpercent
                 text: popupRoot.percent + "%"
@@ -57,6 +113,16 @@ Item {
                 }
                 opacity: 0.7
                 anchors.bottom: labelpercent.top
+            }
+
+            // switch for power saving
+            PlasmaComponents.Switch {
+                id: pwrSave
+                text: i18n("Power saving mode")
+                checked: popupRoot.ispwrSave
+                onToggled: {
+                    batSaver(checked)
+                }
             }
         }
 
