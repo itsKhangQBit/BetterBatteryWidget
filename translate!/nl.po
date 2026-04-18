@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-18 12:34+0700\n"
-"PO-Revision-Date: 2026-04-16 10:46+0200\n"
+"POT-Creation-Date: 2026-04-18 12:55+0700\n"
+"PO-Revision-Date: 2026-04-18 10:44+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -59,20 +59,20 @@ msgid "Font padding:"
 msgstr "Tekstopvulling:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Time remaining padding:"
-msgstr ""
+msgid "Add leading zero before:"
+msgstr "Voorloopnul toevoegen aan:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Hours"
-msgstr ""
+msgstr "Uren"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Minutes"
-msgstr ""
+msgstr "Minuten"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Simplified time"
-msgstr ""
+msgstr "Eenvoudige tijdweergave"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery percentage"
@@ -92,19 +92,19 @@ msgstr "Aan het ontladen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Charge time left: "
-msgstr ""
+msgstr "Resterende oplaadtijd: "
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery time left: "
-msgstr ""
+msgstr "Resterende accuduur: "
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power saving mode"
-msgstr ""
+msgstr "Energiebesparingsmodus"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep"
-msgstr ""
+msgstr "Slaapstand onderdrukken"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power settings..."
@@ -117,4 +117,4 @@ msgstr "Standaardlettertype"
 
 #: ../contents/ui/main.qml
 msgid "Calculating..."
-msgstr ""
+msgstr "Bezig met berekenen…"
