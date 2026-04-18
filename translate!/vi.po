@@ -61,7 +61,7 @@ msgstr "Thời gian dùng: "
 msgid "Block sleep"
 msgstr "Chặn ngủ"
 
-msgid "Time remaining padding:"
+msgid "Add leading zero before:"
 msgstr "Thêm số 0 trước:"
 
 msgid "Hours"

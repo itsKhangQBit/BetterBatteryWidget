@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-18 12:34+0700\n"
+"POT-Creation-Date: 2026-04-18 12:55+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,7 +58,7 @@ msgid "Font padding:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Time remaining padding:"
+msgid "Add leading zero before:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
