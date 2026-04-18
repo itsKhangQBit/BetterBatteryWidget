@@ -1,0 +1,120 @@
+# Translation of betterbatterywidget in nl
+# Copyright (C) 2026
+# This file is distributed under the same license as the betterbatterywidget package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: betterbatterywidget\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-18 12:34+0700\n"
+"PO-Revision-Date: 2026-04-16 10:46+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#: ../metadata.desktop
+msgid "Better battery widget"
+msgstr "De betere accuwidget"
+
+#: ../contents/config/config.qml
+msgid "Appearance"
+msgstr "Vormgeving"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Font family:"
+msgstr "Lettertype:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Font size:"
+msgstr "Tekstgrootte:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Font formatting:"
+msgstr "Tekstopmaak:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Bold"
+msgstr "Vetgedrukt"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Icon size:"
+msgstr "Pictogramgrootte:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage position:"
+msgstr "Percentage tonen:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "On the right"
+msgstr "Aan rechterkant"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Font padding:"
+msgstr "Tekstopvulling:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Time remaining padding:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Hours"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Minutes"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Simplified time"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Battery percentage"
+msgstr "Accupercentage"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Fully charged"
+msgstr "Volledig opgeladen"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Charging"
+msgstr "Aan het opladen"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Discharging"
+msgstr "Aan het ontladen"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Charge time left: "
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Battery time left: "
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Power saving mode"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Block sleep"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Power settings..."
+msgstr "Energie-instellingen…"
+
+#: ../contents/ui/libs/FontFamily.qml
+msgctxt "Use default font"
+msgid "Default"
+msgstr "Standaardlettertype"
+
+#: ../contents/ui/main.qml
+msgid "Calculating..."
+msgstr ""

@@ -1,0 +1,74 @@
+msgid "Better battery widget"
+msgstr "Better battery widget"
+
+msgid "Power settings..."
+msgstr "Cài đặt năng lượng..."
+
+msgid "Battery percentage"
+msgstr "Phần trăm pin"
+
+msgid "Charging"
+msgstr "Đang sạc pin"
+
+msgid "Discharging"
+msgstr "Đang dùng pin"
+
+msgid "Fully charged"
+msgstr "Đã sạc đầy pin"
+
+msgid "Power saving mode"
+msgstr "Chế độ tiết kiệm pin"
+
+msgid "Font family:"
+msgstr "Phông chữ:"
+
+msgid "Default"
+msgstr "Mặc định"
+
+msgid "Font size:"
+msgstr "Cỡ chữ:"
+
+msgid "Font formatting:"
+msgstr "Định dạng phông:"
+
+msgid "Bold"
+msgstr "Chữ đậm"
+
+msgid "Icon size:"
+msgstr "Kích cỡ biểu tượng:"
+
+msgid "Font padding:"
+msgstr "Khoảng cách chữ và pin:"
+
+msgid "Percentage position:"
+msgstr "Vị trí phần trăm:"
+
+msgid "On the right"
+msgstr "Ở bên phải"
+
+msgid "Appearance"
+msgstr "Giao diện"
+
+msgid "Charge time left: "
+msgstr "Thời gian sạc: "
+
+msgid "Calculating..."
+msgstr "Đang tính..."
+
+msgid "Battery time left: "
+msgstr "Thời gian dùng: "
+
+msgid "Block sleep"
+msgstr "Chặn ngủ"
+
+msgid "Time remaining padding:"
+msgstr "Thêm số 0 trước:"
+
+msgid "Hours"
+msgstr "Giờ"
+
+msgid "Minutes"
+msgstr "Phút"
+
+msgid "Simplified time"
+msgstr "Thời gian rút gọn"
