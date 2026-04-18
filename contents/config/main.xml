@@ -31,5 +31,8 @@
         <entry name="simpleTime" type="Bool">
             <default>false</default>
         </entry>
+        <entry name="timeLeft" type="Bool">
+            <default>true</default>
+        </entry>
     </group>
 </kcfg>
