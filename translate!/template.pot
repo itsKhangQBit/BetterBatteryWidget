@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-15 22:30+0700\n"
+"POT-Creation-Date: 2026-04-18 12:34+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,6 +57,22 @@ msgstr ""
 msgid "Font padding:"
 msgstr ""
 
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Time remaining padding:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Hours"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Minutes"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Simplified time"
+msgstr ""
+
 #: ../contents/ui/FullPopup.qml
 msgid "Battery percentage"
 msgstr ""
@@ -74,7 +90,19 @@ msgid "Discharging"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml
+msgid "Charge time left: "
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Battery time left: "
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
 msgid "Power saving mode"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Block sleep"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml
@@ -84,4 +112,8 @@ msgstr ""
 #: ../contents/ui/libs/FontFamily.qml
 msgctxt "Use default font"
 msgid "Default"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Calculating..."
 msgstr ""

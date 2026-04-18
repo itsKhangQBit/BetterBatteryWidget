@@ -13,6 +13,9 @@ Item {
     property alias cfg_iconSize: iconSizeSpinBox.value
     property alias cfg_fontPad: fontPadSpinBox.value
     property alias cfg_fontposR: fontposRCheckBox.checked
+    property alias cfg_padHr: padHrChkBox.checked
+    property alias cfg_padMin: padMinChkBox.checked
+    property alias cfg_simpleTime: simpleTimeChxBox.checked
 
     Kirigami.FormLayout {
 
@@ -54,6 +57,22 @@ Item {
             Kirigami.FormData.label: i18n("Font padding:")
             from: -100
             to: 100
+        }
+
+        CheckBox {
+            id: padHrChkBox
+            Kirigami.FormData.label: i18n("Time remaining padding:") // aka "add the "0" before:"
+            text: i18n("Hours")
+        }
+
+        CheckBox {
+            id: padMinChkBox
+            text: i18n("Minutes")
+        }
+
+        CheckBox {
+            id: simpleTimeChxBox
+            Kirigami.FormData.label: i18n("Simplified time")
         }
     }
 }

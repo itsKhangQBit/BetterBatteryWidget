@@ -12,18 +12,22 @@ PlasmoidItem {
     property bool isCharge: false
     property bool isFull: false
     property string icon: battery-70
+    property string health: "100%"
+    property string timeleft: "0"
 
     Plasma5Support.DataSource {
-        id: batterySource
+        id: batterySrc
         engine: "powermanagement"
         connectedSources: ["Battery"]
+        interval: 1000
         onDataChanged: {
-            let data = batterySource.data["Battery"]
+            let data = batterySrc.data["Battery"]
             if (data) {
                 root.percent = data["Percent"] || 0
                 root.isCharge = (data["State"] === "Charging" || data["State"] === "FullyCharged" || data["PluggedIn"] === true)
 
                 root.isFull = (data["State"] === "FullyCharged")
+                root.timeleft = data["Smoothed Remaining msec"] || "Unknown"
             }
         }
     }
@@ -33,7 +37,7 @@ PlasmoidItem {
 
         Layout.preferredWidth: plasmoidRow.implicitWidth + Kirigami.Units.smallSpacing
         Layout.preferredHeight: Plasmoid.configuration.iconSize
-        // nhận click
+        // get the click action to open the popup
         property bool wasExpanded
         onPressed: wasExpanded = root.expanded
         onClicked: root.expanded = !wasExpanded
@@ -74,5 +78,26 @@ PlasmoidItem {
         charging: root.isCharge
         full: root.isFull
         icon: root.icon
+        timeleft: formatTime(root.timeleft)
+    }
+
+    function formatTime(msec) {
+        if (msec <= 0) return i18n("Calculating...");
+        let tMin = Math.floor(msec / 60000);
+        let hr = Math.floor(tMin / 60);
+        let m = tMin % 60;
+        let s = Math.floor((msec % 60000) / 1000)
+        // get the padded time
+        let hrpadded = hr.toString().padStart(2, '0');
+        let mpadded = m.toString().padStart(2, '0');
+        let spadded = s.toString().padStart(2, '0');
+        // not simplified or there's more than 1 hour left?
+        if (hr > 0 || Plasmoid.configuration.simpleTime === false) {
+            // user enabled padding?
+            let hour =  Plasmoid.configuration.padHr ? hrpadded : hr
+            return hour + ":" + mpadded + ":" + spadded;
+        }
+        let min = Plasmoid.configuration.padMin ? mpadded : m
+        return min + ":" + spadded;
     }
 }

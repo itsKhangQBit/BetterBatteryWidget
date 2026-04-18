@@ -13,13 +13,22 @@
         <entry name="iconSize" type="Int">
             <default>24</default>
         </entry>
-        <entry name="fontPad" type="Int">
+        <entry name="fontPadding" type="Int">
             <default>5</default>
         </entry>
         <entry name="fontFamily" type="String">
             <default></default>
         </entry>
         <entry name="fontposR" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="padMin" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="padHr" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="simpleTime" type="Bool">
             <default>false</default>
         </entry>
     </group>

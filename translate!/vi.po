@@ -48,3 +48,27 @@ msgstr "Ở bên phải"
 
 msgid "Appearance"
 msgstr "Giao diện"
+
+msgid "Charge time left: "
+msgstr "Thời gian sạc: "
+
+msgid "Calculating..."
+msgstr "Đang tính..."
+
+msgid "Battery time left: "
+msgstr "Thời gian dùng: "
+
+msgid "Block sleep"
+msgstr "Chặn ngủ"
+
+msgid "Time remaining padding:"
+msgstr "Thêm số 0 trước:"
+
+msgid "Hours"
+msgstr "Giờ"
+
+msgid "Minutes"
+msgstr "Phút"
+
+msgid "Simplified time"
+msgstr "Thời gian rút gọn"

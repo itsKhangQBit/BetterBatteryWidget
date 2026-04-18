@@ -4,6 +4,7 @@ import org.kde.plasma.plasmoid
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.plasma5support as Plasma5Support
 import org.kde.kirigami as Kirigami
+import "."
 
 Item {
     id: popupRoot
@@ -13,6 +14,12 @@ Item {
     property string icon: battery-70
     property string pwrmgrBackend: none
     property bool ispwrSave: false
+    property string health: "100%"
+    property string timeleft: "0"
+
+    SleepBlocker {
+        id: sleepBlockerRoot
+    }
 
     Plasma5Support.DataSource {
         id: pwrSaveSwitch
@@ -20,7 +27,6 @@ Item {
         connectedSources: ["Battery"]
         onDataChanged: {
             popupRoot.ispwrSave = data["Battery"]["Power Save Mode"] || false;
-            console.log(ispwrSave)
         }
     }
 
@@ -28,7 +34,7 @@ Item {
         id: exec
         engine: "executable"
         connectedSources: []
-        onNewData: {
+        onNewData: (sourceName, data) => {
             var output = data["stdout"] || "";
             // if TLP, choose pwrmgrBackend as tlp, otherwise choose power-profiles-deamon
             if (output.includes("/usr/sbin/tlp") || output.includes("/usr/bin/tlp")) {
@@ -48,11 +54,11 @@ Item {
         // is there TLP or power-profiles-deamon
         exec.runCMD("which tlp");
         exec.runCMD("which powerprofilesctl");
+        sleepBlockerRoot.chkCafeStat()
     }
 
     function batSaver(state) {
         if (pwrmgrBackend === "tlp") {
-            console.log(state)
             let cmd = state ? "pkexec tlp bat" : "pkexec tlp ac";
             exec.runCMD(cmd);
         }
@@ -98,13 +104,6 @@ Item {
         // battery percentage
         ColumnLayout {
             PlasmaComponents.Label {
-                id: labelpercent
-                text: popupRoot.percent + "%"
-                font.pixelSize: 48
-                font.weight: Font.Bold
-            }
-
-            PlasmaComponents.Label {
                 text: {
                     if (popupRoot.full === true) {
                         return i18n("Fully charged");
@@ -112,16 +111,43 @@ Item {
                     return popupRoot.charging ? i18n("Charging") : i18n("Discharging")
                 }
                 opacity: 0.7
-                anchors.bottom: labelpercent.top
+            }
+
+            PlasmaComponents.Label {
+                text: popupRoot.percent + "%"
+                font.pixelSize: 48
+                font.weight: Font.Bold
+                Layout.topMargin: -5
+            }
+
+            PlasmaComponents.Label {
+                text: {
+                    let state = popupRoot.charging ? i18n("Charge time left: ") : i18n("Battery time left: ");
+                    return state + popupRoot.timeleft;
+                }
+                opacity: 0.7
+                Layout.topMargin: 3
             }
 
             // switch for power saving
             PlasmaComponents.Switch {
                 id: pwrSave
                 text: i18n("Power saving mode")
+                icon.name: "battery-profile-performance-symbolic"
                 checked: popupRoot.ispwrSave
                 onToggled: {
                     batSaver(checked)
+                }
+            }
+
+            // caffeine mode
+            PlasmaComponents.Switch {
+                id: caffeineButton
+                icon.name: sleepBlockerRoot.blockSleep ? "system-suspend-inhibited" : "system-suspend-uninhibited"
+                text: i18n("Block sleep")
+                checked:sleepBlockerRoot.blockSleep
+                onToggled: {
+                    sleepBlockerRoot.runCafe()
                 }
             }
         }
