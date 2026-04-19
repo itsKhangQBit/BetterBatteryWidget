@@ -28,6 +28,7 @@ PlasmoidItem {
 
                 root.isFull = (data["State"] === "FullyCharged")
                 root.timeleft = data["Smoothed Remaining msec"]
+                root.timeleft = formatTime(root.timeleft)
             }
         }
     }
@@ -74,11 +75,14 @@ PlasmoidItem {
 
     // Popup
     fullRepresentation: FullPopup {
+        /*
         percent: root.percent
         charging: root.isCharge
         full: root.isFull
         icon: root.icon
         timeleft: formatTime(root.timeleft)
+        */
+        widgetdata: root
     }
 
     function formatTime(msec) {
