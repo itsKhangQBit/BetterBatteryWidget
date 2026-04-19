@@ -50,7 +50,7 @@ msgid "Appearance"
 msgstr "Giao diện"
 
 msgid "Charge time left: "
-msgstr "Thời gian sạc: "
+msgstr "Thời gian sạc còn lại: "
 
 msgid "Calculating..."
 msgstr "Đang tính..."
