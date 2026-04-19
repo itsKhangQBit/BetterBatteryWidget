@@ -124,7 +124,7 @@ Item {
                     if (widgetdata.full === true) {
                         return i18n("Fully charged");
                     }
-                    return widgetdata.charging ? i18n("Charging") : i18n("Discharging")
+                    return widgetdata.isCharge ? i18n("Charging") : i18n("Discharging")
                 }
                 opacity: 0.7
             }
@@ -141,7 +141,7 @@ Item {
                     if (widgetdata.timeleft === "PlsDontFeedMe") {
                         return;
                     } else {
-                        let state = widgetdata.charging ? i18n("Charge time left: ") : i18n("Battery time left: ");
+                        let state = widgetdata.isCharge ? i18n("Charge time left: ") : i18n("Battery time left: ");
                         return state + widgetdata.timeleft;
                     }
                 }
