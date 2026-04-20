@@ -1,11 +1,11 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
-import org.kde.plasma.plasmoid
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 
-PlasmoidItem {
+Item {
     id: root
 
     property int percent: 0
@@ -14,6 +14,7 @@ PlasmoidItem {
     property string icon: battery-70
     property string health: "100%"
     property string timeleft: "0"
+    property bool expanded: false
 
     PlasmaCore.DataSource {
         id: batterySrc
@@ -58,14 +59,14 @@ PlasmoidItem {
     }
 
     // Plasmoid
-    compactRepresentation: MouseArea {
+    Plasmoid.compactRepresentation: MouseArea {
 
         Layout.preferredWidth: plasmoidRow.implicitWidth + Kirigami.Units.smallSpacing
         Layout.preferredHeight: Plasmoid.configuration.iconSize
         // get the click action to open the popup
         property bool wasExpanded
         onPressed: wasExpanded = root.expanded
-        onClicked: root.expanded = !wasExpanded
+        onClicked: Plasmoid.expanded = !wasExpanded
 
         RowLayout {
             id: plasmoidRow
@@ -98,7 +99,7 @@ PlasmoidItem {
     }
 
     // Popup
-    fullRepresentation: FullPopup {
+    Plasmoid.fullRepresentation: FullPopup {
         /*
         percent: root.percent
         charging: root.isCharge
