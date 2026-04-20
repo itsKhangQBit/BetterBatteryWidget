@@ -38,10 +38,16 @@ version 3.0: added:
 ![Popup / Full representation (Vietnamese)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/49376d5f2a1406d8ff32cfdd367c328591c46c44/screenshots/fullrep_vi.png)
 
 **Please help me translate this applet into multi languages, if you can!! I'd be very grateful for that!**
-Language translated:
+
+**Language translated:**
+
 [+] English
+
 [+] Vietnamese
+
 [+] Dutch
+
 [ ] France
+
 [ ] German
 [ ] Spanish
