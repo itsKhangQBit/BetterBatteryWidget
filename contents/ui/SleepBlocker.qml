@@ -1,14 +1,14 @@
-import QtQuick
-import QtQuick.Layouts
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
 import org.kde.plasma.plasmoid
-import org.kde.plasma.plasma5support as Plasma5Support
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 Item {
     id: sleepBlockerRoot
     property bool blockSleep: true
     property string pcName: "BetterBatteryWidget"
 
-    Plasma5Support.DataSource {
+    PlasmaCore.DataSource {
         id: exec
         engine: "executable"
         connectedSources: []

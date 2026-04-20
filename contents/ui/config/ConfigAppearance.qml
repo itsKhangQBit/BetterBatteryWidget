@@ -1,6 +1,6 @@
-import QtQuick
-import QtQuick.Controls
-import QtQuick.Layouts
+import QtQuick 2.15
+import QtQuick.Controls 2.15
+import QtQuick.Layouts 1.15
 import org.kde.kirigami as Kirigami
 import QtQuick.Dialogs // for the font dialog
 import "../libs" as LibConfig

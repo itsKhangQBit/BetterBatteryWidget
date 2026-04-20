@@ -1,14 +1,14 @@
-# Translation of betterbatterywidget in LANGUAGE
+# Translation of betterbatterywidget_p5 in LANGUAGE
 # Copyright (C) 2026
-# This file is distributed under the same license as the betterbatterywidget package.
+# This file is distributed under the same license as the betterbatterywidget_p5 package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: betterbatterywidget\n"
+"Project-Id-Version: betterbatterywidget_p5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-19 23:21+0700\n"
+"POT-Creation-Date: 2026-04-20 18:08+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"

@@ -1,9 +1,9 @@
-import QtQuick
-import QtQuick.Layouts
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
 import org.kde.plasma.plasmoid
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.plasma.plasma5support as Plasma5Support
-import org.kde.kirigami as Kirigami
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.20 as Kirigami
 
 PlasmoidItem {
     id: root
@@ -15,7 +15,7 @@ PlasmoidItem {
     property string health: "100%"
     property string timeleft: "0"
 
-    Plasma5Support.DataSource {
+    PlasmaCore.DataSource {
         id: batterySrc
         engine: "powermanagement"
         connectedSources: ["Battery"]
@@ -33,11 +33,11 @@ PlasmoidItem {
         }
     }
 
-    Plasma5Support.DataSource {
+    PlasmaCore.DataSource {
         id: exec
         engine: "executable"
         connectedSources: []
-        onNewData: (sourceName, data) => {
+        onNewData: {
             var output = data["stdout"].trim() || "";
             // split the line to read the values
             var line = output.trim().split('\n');
@@ -46,7 +46,7 @@ PlasmoidItem {
                 let chargeFull = parseInt(line[0]);
                 let chargeNew = parseInt(line[1]);
 
-                let bathealth = parseFloat(((chargeFull / chargeNew) * 100).toFixed(2)); // Make the calcs, cut de decimals, throw the unnecessary 0s away
+                let bathealth = parseFloat(((chargeFull / chargeNew) * 100).toFixed(2)); // Make the calcs, cut the decimals, throw the unnecessary 0s away
                 root.health = bathealth + "%";
             }
             disconnectSource(sourceName);
