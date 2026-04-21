@@ -2,23 +2,14 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami 2.14 as Kirigami
 import "."
 
 Item {
     id: popupRoot
-    /*
-    property int percent: 0
-    property bool charging: false
-    property bool full: false
-    property string icon: battery-70
-    */
+
     property string pwrmgrBackend: none
-    property bool ispwrSave: false
-    /*
-    property string health: "100%"
-    property string timeleft: "0"
-    */
+    property var ispwrSave: false
     property var widgetdata: root
 
     implicitWidth: mainLayout.implicitWidth
@@ -46,15 +37,61 @@ Item {
         id: exec
         engine: "executable"
         connectedSources: []
+        interval: 5000
         onNewData: {
             var output = data["stdout"] || "";
             // if TLP, choose pwrmgrBackend as tlp, otherwise choose power-profiles-deamon
             if (output.includes("/usr/sbin/tlp") || output.includes("/usr/bin/tlp")) {
                 pwrmgrBackend = "tlp";
+                batStatus.runCMD("tlp-stat -s | grep 'Mode'");
             } else if (output.includes("/usr/bin/powerprofilesctl")) {
                 pwrmgrBackend = "ppd";
+                batStatus.runCMD("powerprofilesctl list | grep '*'");
             }
+        }
+
+        function runCMD(cmd) {
+            connectSource(cmd);
+        }
+    }
+
+    PlasmaCore.DataSource {
+        id: execdisconn
+        engine: "executable"
+        connectedSources: []
+        interval: 2000
+        onNewData: {
             disconnectSource(sourceName);
+        }
+
+        function runCMD(cmd) {
+            connectSource(cmd);
+        }
+    }
+
+    PlasmaCore.DataSource {
+        id: batStatus
+        engine: "executable"
+        connectedSources: []
+        interval: 2000
+        onNewData: {
+            var output = (data["stdout"] || "");
+            // if TLP, choose pwrmgrBackend as tlp, otherwise choose power-profiles-daemon
+            if (sourceName.includes("tlp-stat")) {
+                if (output.includes("battery")) {
+                    popupRoot.ispwrSave = true;
+                } else if (output.includes("AC")) {
+                    popupRoot.ispwrSave = false;
+                }
+            } else if (sourceName.includes("powerprofilesctl")) {
+                if (output.includes("power-saver")) {
+                    popupRoot.ispwrSave = 0;
+                } else if (output.includes("balanced")) {
+                    popupRoot.ispwrSave = 1;
+                } else if (output.includes("performance")) {
+                    popupRoot.ispwrSave = 2;
+                }
+            }
         }
 
         function runCMD(cmd) {
@@ -72,11 +109,11 @@ Item {
     function batSaver(state) {
         if (pwrmgrBackend === "tlp") {
             let cmd = state ? "pkexec tlp bat" : "pkexec tlp ac";
-            exec.runCMD(cmd);
+            execdisconn.runCMD(cmd);
         }
         else if (pwrmgrBackend === "ppd") {
-            let profile = state ? "power-saver" : "balanced";
-            exec.runCMD("powerprofilesctl set " + profile);
+            let profile = ["power-saver", "balanced", "performance"]
+            execdisconn.runCMD("powerprofilesctl set " + profile[state]);
         }
         // if no pwrmgrBackend, just log cause we can't set anything
         else {
@@ -107,7 +144,7 @@ Item {
                 Layout.fillWidth: true
             }
             // small icon for fun :)
-            Kirigami.Icon {
+            PlasmaCore.IconItem {
                 source: widgetdata.icon
                 width: 22
                 height: 22
@@ -179,16 +216,6 @@ Item {
         ColumnLayout {
             // pin those shits to the bottom
             Layout.alignment: Qt.AlignBottom
-            // switch for power saving
-            PlasmaComponents.Switch {
-                id: pwrSave
-                text: i18n("Power saving mode")
-                icon.name: "battery-profile-performance-symbolic"
-                checked: popupRoot.ispwrSave
-                onToggled: {
-                    batSaver(checked)
-                }
-            }
 
             // caffeine mode
             PlasmaComponents.Switch {
@@ -198,6 +225,89 @@ Item {
                 checked:sleepBlockerRoot.blockSleep
                 onToggled: {
                     sleepBlockerRoot.runCafe()
+                }
+            }
+
+            // switch for power saving (tlp)
+            PlasmaComponents.Switch {
+                id: pwrSave
+                text: i18n("Power saving mode")
+                icon.name: "profile-performance"
+                checked: (typeof ispwrSave === "boolean") ? popupRoot.ispwrSave : false;
+                onToggled: {
+                    batSaver(checked)
+                }
+                visible: popupRoot.pwrmgrBackend === "tlp"
+                enabled: popupRoot.pwrmgrBackend === "tlp"
+            }
+
+            // slider for pwr profiles (ppd)
+            ColumnLayout {
+                visible: popupRoot.pwrmgrBackend === "ppd"
+
+                Layout.fillWidth: true
+
+                RowLayout {
+                    Layout.fillWidth: true
+
+                    PlasmaCore.SvgItem {
+                        Layout.alignment: Qt.AlignLeft
+                        Layout.preferredWidth: 22
+                        Layout.preferredHeight: 22
+                        svg: svg
+                        elementId: "profile-performance"
+                    }
+
+                    PlasmaComponents.Label {
+                        text: i18n("Power saving mode")
+                    }
+                }
+
+                PlasmaComponents.Slider {
+                    Layout.fillWidth: true
+                    enabled: popupRoot.pwrmgrBackend === "ppd"
+                    from: 0
+                    to: 2
+                    value: (typeof ispwrSave === "number") ? popupRoot.ispwrSave : 0;
+                    stepSize: 1
+                    onMoved: {
+                        popupRoot.batSaver(value);
+                    }
+                }
+
+                RowLayout {
+                    id: profIcons
+                    Layout.fillWidth: true
+                    PlasmaCore.Svg {
+                        id: svg
+                        imagePath: "icons/battery"
+                    }
+                    // space each icon equally.. or let it space itself!
+
+                    // code is taken straight and fresh :)) from KDE Plasma 5.27's battery applet
+                    // performance
+                    PlasmaCore.SvgItem {
+                        Layout.alignment: Qt.AlignLeft
+                        Layout.preferredWidth: 22
+                        Layout.preferredHeight: 22
+                        svg: svg
+                        elementId: "profile-powersave"
+                        opacity: popupRoot.ispwrSave === 0 ? 1.0 : 0.4
+                        Behavior on opacity { NumberAnimation { duration: 200 } }
+                    }
+
+                    Item { Layout.fillWidth: true }
+
+                    // powersave
+                    PlasmaCore.SvgItem {
+                        Layout.alignment: Qt.AlignLeft
+                        Layout.preferredWidth: 22
+                        Layout.preferredHeight: 22
+                        svg: svg
+                        elementId: "profile-performance"
+                        opacity: popupRoot.ispwrSave === 2 ? 1.0 : 0.4
+                        Behavior on opacity { NumberAnimation { duration: 200 } }
+                    }
                 }
             }
 

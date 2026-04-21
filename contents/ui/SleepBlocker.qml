@@ -26,8 +26,8 @@ Item {
                 }
             }
 
-            // Stop immediately
-            disconnectSource(sourceName)
+            // Stop immediately.. or don't, it's not gonna self update
+            // disconnectSource(sourceName)
         }
 
         // just for running cmds below
