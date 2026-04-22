@@ -31,13 +31,13 @@ version 3.0: added:
 (sorry if my English is terrible)
 
 # Images
-![Taskbar icon](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/49376d5f2a1406d8ff32cfdd367c328591c46c44/screenshots/taskbar.png)
+![Taskbar icon](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/taskbar.png)
 <br><br>
-![Popup / Full representation (English)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/49376d5f2a1406d8ff32cfdd367c328591c46c44/screenshots/fullrep_en.png)
+![Popup / Full representation (English)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/fullrep_en.png)
 <br><br>
-![Popup / Full representation (Vietnamese)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/49376d5f2a1406d8ff32cfdd367c328591c46c44/screenshots/fullrep_vi.png)
+![Popup / Full representation (Vietnamese)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/fullrep_vi.png)
 <br><br>
-![Popup / Full representation (Dutch)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/485b9590aea563054eeb1d6ea0a9eb078d08e0dd/screenshots/fullrep_nl)
+![Popup / Full representation (Dutch)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/fullrep_nl.png)
 
 **Please help me translate this applet into multi languages, if you can!! I'd be very grateful for that!**
 
