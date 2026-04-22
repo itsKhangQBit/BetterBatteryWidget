@@ -38,6 +38,21 @@ Item {
         }
     }
 
+    // this one just for on/off caffeine
+    Plasma5Support.DataSource {
+        id: execdisconn
+        engine: "executable"
+        connectedSources: []
+        interval: 2000
+        onNewData: {
+            disconnectSource(sourceName);
+        }
+
+        function runCMD(cmd) {
+            connectSource(cmd);
+        }
+    }
+
     function chkCafeStat() {
         exec.runCMD('systemd-inhibit --list --no-legend')
     }
@@ -52,9 +67,10 @@ Item {
         chgCafeStat()
         // Only then do we switch the Caffeine feature on/off
         if (sleepBlockerRoot.blockSleep) {
-            exec.runCMD('systemd-inhibit --what=idle:sleep --who="BetterBatteryWidget" --why="Blocking sleep..." sleep infinity &');
+            execdisconn.runCMD('systemd-inhibit --what=idle:sleep --who="' + pcName + '" --why="Blocking sleep..." sleep infinity &');
         } else {
-            exec.runCMD('pkill -f "BetterBatteryWidget"');
+            console.log('pkill -f "' + pcName + '"')
+            execdisconn.runCMD('pkill -f "' + pcName + '"');
         }
     }
 }
