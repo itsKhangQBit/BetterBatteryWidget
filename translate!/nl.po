@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-22 06:58+0000\n"
-"PO-Revision-Date: 2026-04-18 19:18+0200\n"
+"PO-Revision-Date: 2026-04-22 20:04+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -120,7 +120,7 @@ msgstr "Resterende tijd tonen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Enable battery health"
-msgstr ""
+msgstr "Gezondheidsstatus van accu tonen"
 
 #: ../contents/ui/libs/FontFamily.qml
 msgctxt "Use default font"
