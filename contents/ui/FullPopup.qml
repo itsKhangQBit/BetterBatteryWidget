@@ -172,6 +172,14 @@ Item {
                 Layout.topMargin: -5
             }
 
+            // battery bar
+            PlasmaComponents.ProgressBar {
+                Layout.fillWidth: true
+                from: 0
+                to: 100
+                value: widgetdata.percent
+            }
+
             GridLayout {
                 Layout.fillWidth: true
                 Layout.topMargin: 3
@@ -312,14 +320,6 @@ Item {
                         Behavior on opacity { NumberAnimation { duration: 200 } }
                     }
                 }
-            }
-
-            // battery bar
-            PlasmaComponents.ProgressBar {
-                Layout.fillWidth: true
-                from: 0
-                to: 100
-                value: widgetdata.percent
             }
 
             // settings button
