@@ -1,8 +1,8 @@
 // Version 4
 
-import QtQuick
+import QtQuick 2.15
 
-import "." as LibConfig
+import "." 1.0 as LibConfig
 
 LibConfig.ComboBox {
 	id: configFontFamily

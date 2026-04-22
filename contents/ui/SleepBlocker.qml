@@ -39,7 +39,7 @@ Item {
     }
 
     // this one just for on/off caffeine
-    Plasma5Support.DataSource {
+    PlasmaCore.DataSource {
         id: execdisconn
         engine: "executable"
         connectedSources: []

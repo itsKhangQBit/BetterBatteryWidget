@@ -2,8 +2,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.20 as Kirigami
-import QtQuick.Dialogs 2.15 // for the font dialog
-import "../libs" as LibConfig
+import QtQuick.Dialogs 1.3 // for the font dialog
+import "../libs" 1.0 as LibConfig
 
 Item {
     id: root
@@ -17,6 +17,7 @@ Item {
     property alias cfg_padMin: padMinChkBox.checked
     property alias cfg_simpleTime: simpleTimeChkBox.checked
     property alias cfg_timeLeft: timeLeftChkBox.checked
+    property alias cfg_healthLeft: healthLeftChkBox.checked
 
     Kirigami.FormLayout {
 
@@ -81,6 +82,11 @@ Item {
         CheckBox {
             id: timeLeftChkBox
             Kirigami.FormData.label: i18n("Enable time remaining")
+        }
+
+        CheckBox {
+            id: healthLeftChkBox
+            Kirigami.FormData.label: i18n("Enable battery health")
         }
     }
 }

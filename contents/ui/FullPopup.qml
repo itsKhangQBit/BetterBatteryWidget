@@ -181,7 +181,7 @@ Item {
                     text: widgetdata.isCharge ? i18n("Charge time left: ") : i18n("Battery time left: ");
                     opacity: 0.7
                     Layout.topMargin: 3
-                    visible: Plasmoid.configuration.timeLeft && !widgetdata.isFull
+                    visible: plasmoid.configuration.timeLeft && !widgetdata.isFull
                     Layout.fillWidth: true
                 }
 
@@ -189,24 +189,27 @@ Item {
                     text: widgetdata.timeleft
                     opacity: 0.7
                     Layout.topMargin: 3
-                    visible: Plasmoid.configuration.timeLeft && !widgetdata.isFull
+                    visible: plasmoid.configuration.timeLeft && !widgetdata.isFull
                 }
 
                 PlasmaComponents.Label {
                     text: i18n("Battery health: ")
                     opacity: 0.7
                     Layout.fillWidth: true
+                    visible: plasmoid.configuration.healthLeft
                 }
+
                 PlasmaComponents.Label {
                     text: widgetdata.health
+                    visible: plasmoid.configuration.healthLeft
                     opacity: 0.7
                     color: {
                         let healthInt = parseInt(widgetdata.health);
 
                         if (healthInt >= 90) return "#64EB1C" // it's new!!!
-                        if (healthInt >= 70) return "#5ED61C" // still going strong
-                        if (healthInt >= 50) return "#E5F21B" // degrading
-                        return "#FF361C" // god bless your battery
+                            if (healthInt >= 70) return "#5ED61C" // still going strong
+                                if (healthInt >= 50) return "#E5F21B" // degrading
+                                    return "#FF361C" // god bless your battery
                     }
                 }
             }

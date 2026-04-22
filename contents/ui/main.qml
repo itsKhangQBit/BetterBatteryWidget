@@ -62,7 +62,7 @@ Item {
     Plasmoid.compactRepresentation: MouseArea {
 
         Layout.preferredWidth: plasmoidRow.implicitWidth + Kirigami.Units.smallSpacing
-        Layout.preferredHeight: Plasmoid.configuration.iconSize
+        Layout.preferredHeight: plasmoid.configuration.iconSize
         // get the click action to open the popup
         property bool wasExpanded
         onPressed: wasExpanded = root.expanded
@@ -71,7 +71,7 @@ Item {
         RowLayout {
             id: plasmoidRow
             // Offset the percentage to the right or left
-            layoutDirection: Plasmoid.configuration.fontposR ? Qt.RightToLeft : Qt.LeftToRight
+            layoutDirection: plasmoid.configuration.fontposR ? Qt.RightToLeft : Qt.LeftToRight
             anchors.fill: parent
             spacing: plasmoid.configuration.fontPad
             height: parent.height
@@ -79,9 +79,9 @@ Item {
             PlasmaComponents.Label {
                 id: percent
                 text: root.percent + "%"
-                font.pixelSize: Plasmoid.configuration.fontSize
-                font.bold: Plasmoid.configuration.fontBold
-                font.family: Plasmoid.configuration.fontFamily || Kirigami.Theme.defaultFont.family
+                font.pixelSize: plasmoid.configuration.fontSize
+                font.bold: plasmoid.configuration.fontBold
+                font.family: plasmoid.configuration.fontFamily || Kirigami.Theme.defaultFont.family
             }
 
             Kirigami.Icon {
@@ -92,8 +92,8 @@ Item {
                     return root.icon;
                 }
                 // Use config from settings
-                Layout.preferredWidth: Plasmoid.configuration.iconSize
-                Layout.preferredHeight: Plasmoid.configuration.iconSize
+                Layout.preferredWidth: plasmoid.configuration.iconSize
+                Layout.preferredHeight: plasmoid.configuration.iconSize
             }
         }
     }
@@ -116,12 +116,12 @@ Item {
             let mpadded = m.toString().padStart(2, '0');
             let spadded = s.toString().padStart(2, '0');
             // not simplified or there's more than 1 hour left?
-            if (hr > 0 || Plasmoid.configuration.simpleTime === false) {
+            if (hr > 0 || plasmoid.configuration.simpleTime === false) {
                 // user enabled padding?
-                let hour =  Plasmoid.configuration.padHr ? hrpadded : hr
+                let hour =  plasmoid.configuration.padHr ? hrpadded : hr
                 return hour + ":" + mpadded + ":" + spadded;
             }
-            let min = Plasmoid.configuration.padMin ? mpadded : m
+            let min = plasmoid.configuration.padMin ? mpadded : m
             return min + ":" + spadded;
         }
     }

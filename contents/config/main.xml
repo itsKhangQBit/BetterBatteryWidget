@@ -34,5 +34,8 @@
         <entry name="timeLeft" type="Bool">
             <default>true</default>
         </entry>
+        <entry name="healthLeft" type="Bool">
+            <default>true</default>
+        </entry>
     </group>
 </kcfg>
