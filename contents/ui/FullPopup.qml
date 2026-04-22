@@ -72,11 +72,11 @@ Item {
                 }
             } else if (sourceName.includes("powerprofilesctl")) {
                 if (output.includes("power-saver")) {
-                    popupRoot.ispwrSave = 2;
+                    popupRoot.ispwrSave = 0;
                 } else if (output.includes("balanced")) {
                     popupRoot.ispwrSave = 1;
                 } else if (output.includes("performance")) {
-                    popupRoot.ispwrSave = 0;
+                    popupRoot.ispwrSave = 2;
                 }
             }
         }

@@ -6,7 +6,7 @@ import org.kde.plasma.plasma5support as Plasma5Support
 Item {
     id: sleepBlockerRoot
     property bool blockSleep: true
-    property string pcName: "BetterBatteryWidget"
+    property string pcName: "BetterBatteryWidget_plasmoid"
 
     Plasma5Support.DataSource {
         id: exec
@@ -27,6 +27,8 @@ Item {
                 }
             }
 
+            console.log(sleepBlockerRoot.blockSleep)
+
             // Stop immediately.. or don't, it's not gonna self update
             // disconnectSource(sourceName)
         }
@@ -36,6 +38,21 @@ Item {
             if (connectedSources.indexOf(cmd) === -1) {
                 connectSource(cmd);
             }
+        }
+    }
+
+    // this one just for on/off caffeine
+    Plasma5Support.DataSource {
+        id: execdisconn
+        engine: "executable"
+        connectedSources: []
+        interval: 2000
+        onNewData: {
+            disconnectSource(sourceName);
+        }
+
+        function runCMD(cmd) {
+            connectSource(cmd);
         }
     }
 
@@ -53,9 +70,10 @@ Item {
         chgCafeStat()
         // Only then do we switch the Caffeine feature on/off
         if (sleepBlockerRoot.blockSleep) {
-            exec.runCMD('systemd-inhibit --what=idle:sleep --who="BetterBatteryWidget" --why="Blocking sleep..." sleep infinity &');
+            execdisconn.runCMD('systemd-inhibit --what=idle:sleep --who="' + pcName + '" --why="Blocking sleep..." sleep infinity &');
         } else {
-            exec.runCMD('pkill -f "BetterBatteryWidget"');
+            console.log('pkill -f "' + pcName + '"')
+            execdisconn.runCMD('pkill -f "' + pcName + '"');
         }
     }
 }
