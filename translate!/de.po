@@ -44,15 +44,15 @@ msgstr "Wird entladen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Charge time left: "
-msgstr "Verbleidende Ladezeit:"
+msgstr "Verbleidende Ladezeit: "
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery time left: "
-msgstr "Verbleibende Laufzeit:"
+msgstr "Verbleibende Laufzeit: "
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery health: "
-msgstr "Akkuzustand:"
+msgstr "Akkuzustand: "
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep"
@@ -60,7 +60,7 @@ msgstr "Standby verhindern"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power saving mode"
-msgstr "Energiesparmodus"
+msgstr "Energieprofil"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power settings..."
