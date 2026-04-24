@@ -72,11 +72,11 @@ msgstr "Schriftart:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Font size:"
-msgstr "Schriftgröße"
+msgstr "Schriftgröße:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Font formatting:"
-msgstr "Schriftformat"
+msgstr "Schriftformat:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Bold"
@@ -84,7 +84,7 @@ msgstr "Fett"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Icon size:"
-msgstr "Symbolgröße"
+msgstr "Symbolgröße:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage position:"
