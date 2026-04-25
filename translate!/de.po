@@ -1,131 +1,132 @@
-# Translation of betterbatterywidget_p5 in LANGUAGE
+# Translation of betterbatterywidget in de
 # Copyright (C) 2026
-# This file is distributed under the same license as the betterbatterywidget_p5 package.
+# This file is distributed under the same license as the betterbatterywidget package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: betterbatterywidget_p5\n"
+"Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-23 08:23+0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2026-04-24 21:30+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
 
 #: ../metadata.desktop
 msgid "Better battery widget"
-msgstr ""
+msgstr "Besseres Batteriewidget"
 
 #: ../contents/config/config.qml
 msgid "Appearance"
-msgstr ""
+msgstr "Darstellung"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Font family:"
-msgstr ""
+msgstr "Schriftart:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Font size:"
-msgstr ""
+msgstr "Schriftgröße:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Font formatting:"
-msgstr ""
+msgstr "Schriftformat:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Bold"
-msgstr ""
+msgstr "Fett"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Icon size:"
-msgstr ""
+msgstr "Symbolgröße:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage position:"
-msgstr ""
+msgstr "Ladezustandsposition:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "On the right"
-msgstr ""
+msgstr "Rechts"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Font padding:"
-msgstr ""
+msgstr "Schriftabstand:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Add leading zero before:"
-msgstr ""
+msgstr "Führende 0 hinzufügen zu:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Hours"
-msgstr ""
+msgstr "Stunden"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Minutes"
-msgstr ""
+msgstr "Minuten"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Simplified time"
-msgstr ""
+msgstr "Einfache Zeit"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Enable time remaining"
-msgstr ""
+msgstr "Verbleibende Zeit anzeigen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Enable battery health"
-msgstr ""
+msgstr "Akkuzustand anzeigen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery percentage"
-msgstr ""
+msgstr "Energie und Akku"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Fully charged"
-msgstr ""
+msgstr "Aufgeladen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Charging"
-msgstr ""
+msgstr "Wird geladen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Discharging"
-msgstr ""
+msgstr "Wird entladen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Charge time left: "
-msgstr ""
+msgstr "Verbleidende Ladezeit: "
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery time left: "
-msgstr ""
+msgstr "Verbleibende Laufzeit: "
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery health: "
-msgstr ""
+msgstr "Akkuzustand: "
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep"
-msgstr ""
+msgstr "Standby verhindern"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power saving mode"
-msgstr ""
+msgstr "Energieprofil"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power settings..."
-msgstr ""
+msgstr "Energieeinstellungen..."
 
 #: ../contents/ui/libs/FontFamily.qml
 msgctxt "Use default font"
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 #: ../contents/ui/main.qml
 msgid "Calculating..."
-msgstr ""
+msgstr "Berechnen..."
