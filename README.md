@@ -51,6 +51,6 @@ version 3.0: added:
 
 [ ] France
 
-[ ] German
+[+] German
 
 [ ] Spanish
