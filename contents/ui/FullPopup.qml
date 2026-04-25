@@ -282,6 +282,7 @@ Item {
                 }
 
                 PlasmaComponents.Slider {
+                    id: pwrpflevel
                     Layout.fillWidth: true
                     enabled: popupRoot.pwrmgrBackend === "ppd"
                     from: 0
@@ -304,7 +305,7 @@ Item {
                         Layout.preferredWidth: 22
                         Layout.preferredHeight: 22
                         source: "battery-profile-powersave-symbolic"
-                        opacity: popupRoot.ispwrSave === 2 ? 0.4 : 1.0
+                        opacity: popupRoot.ispwrSave === 0 ? 1.0 : 0.4
                         Behavior on opacity { NumberAnimation { duration: 200 } }
                     }
 
@@ -316,7 +317,7 @@ Item {
                         Layout.preferredWidth: 22
                         Layout.preferredHeight: 22
                         source: "battery-profile-performance-symbolic"
-                        opacity: popupRoot.ispwrSave === 0 ? 0.4 : 1.0
+                        opacity: popupRoot.ispwrSave === 2 ? 1.0 : 0.4
                         Behavior on opacity { NumberAnimation { duration: 200 } }
                     }
 

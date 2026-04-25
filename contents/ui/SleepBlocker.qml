@@ -27,8 +27,6 @@ Item {
                 }
             }
 
-            console.log(sleepBlockerRoot.blockSleep)
-
             // Stop immediately.. or don't, it's not gonna self update
             // disconnectSource(sourceName)
         }
@@ -72,7 +70,6 @@ Item {
         if (sleepBlockerRoot.blockSleep) {
             execdisconn.runCMD('systemd-inhibit --what=idle:sleep --who="' + pcName + '" --why="Blocking sleep..." sleep infinity &');
         } else {
-            console.log('pkill -f "' + pcName + '"')
             execdisconn.runCMD('pkill -f "' + pcName + '"');
         }
     }
