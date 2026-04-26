@@ -47,7 +47,7 @@ PlasmoidItem {
                 let chargeNew = parseInt(line[1]);
 
                 let bathealth = parseFloat(((chargeFull / chargeNew) * 100).toFixed(2)); // Make the calcs, cut de decimals, throw the unnecessary 0s away
-                root.health = bathealth + "%";
+                root.health = bathealth + <= 100 ? bathealth + "%" : "100%";
             }
             disconnectSource(sourceName);
         }
