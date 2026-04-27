@@ -48,7 +48,10 @@ Item {
                 let chargeNew = parseInt(line[1]);
 
                 let bathealth = parseFloat(((chargeFull / chargeNew) * 100).toFixed(2)); // Make the calcs, cut the decimals, throw the unnecessary 0s away
-                root.health = bathealth + "%";
+                // instead of root.health = bathealth + "%";, which might display "110%"
+                // we use this!
+                root.health = (bathealth > 100) ? "100%" : bathealth + "%";
+                //            ^ > 100?            ^ yes?   ^ no?
             }
             disconnectSource(sourceName);
         }
