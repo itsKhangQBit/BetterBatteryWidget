@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-22 06:58+0000\n"
+"POT-Creation-Date: 2026-05-14 15:27+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,46 +25,6 @@ msgstr ""
 msgid "Appearance"
 msgstr ""
 
-#: ../contents/ui/FullPopup.qml
-msgid "Battery percentage"
-msgstr ""
-
-#: ../contents/ui/FullPopup.qml
-msgid "Fully charged"
-msgstr ""
-
-#: ../contents/ui/FullPopup.qml
-msgid "Charging"
-msgstr ""
-
-#: ../contents/ui/FullPopup.qml
-msgid "Discharging"
-msgstr ""
-
-#: ../contents/ui/FullPopup.qml
-msgid "Charge time left: "
-msgstr ""
-
-#: ../contents/ui/FullPopup.qml
-msgid "Battery time left: "
-msgstr ""
-
-#: ../contents/ui/FullPopup.qml
-msgid "Battery health: "
-msgstr ""
-
-#: ../contents/ui/FullPopup.qml
-msgid "Block sleep"
-msgstr ""
-
-#: ../contents/ui/FullPopup.qml
-msgid "Power saving mode"
-msgstr ""
-
-#: ../contents/ui/FullPopup.qml
-msgid "Power settings..."
-msgstr ""
-
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Font family:"
 msgstr ""
@@ -79,6 +39,14 @@ msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Bold"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Italic"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Underline"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
@@ -119,6 +87,46 @@ msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Enable battery health"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Battery percentage"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Fully charged"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Charging"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Discharging"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Charge time left: "
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Battery time left: "
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Battery health: "
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Block sleep"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Power saving mode"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Power settings..."
 msgstr ""
 
 #: ../contents/ui/libs/FontFamily.qml
