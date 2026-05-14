@@ -91,3 +91,12 @@ msgstr "Chữ gạch chân"
 
 msgid "Italic"
 msgstr "Chữ nghiêng"
+
+msgid "Apps blocking sleep"
+msgstr "Các ứng dụng đang chặn ngủ"
+
+msgid "Apps blocking sleep:"
+msgstr "Các ứng dụng đang chặn ngủ:"
+
+msgid "Percentage color on taskbar:"
+msgstr "Màu của phần trăm trên taskbar:"

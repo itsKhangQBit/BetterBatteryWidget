@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-14 15:27+0700\n"
+"POT-Creation-Date: 2026-05-14 21:52+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,6 +31,10 @@ msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Font size:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage color on taskbar:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
@@ -122,11 +126,19 @@ msgid "Block sleep"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml
+msgid "Apps blocking sleep"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
 msgid "Power saving mode"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power settings..."
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Apps blocking sleep:"
 msgstr ""
 
 #: ../contents/ui/libs/FontFamily.qml

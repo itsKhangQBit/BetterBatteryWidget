@@ -9,12 +9,15 @@ import "."
 Item {
     id: popupRoot
 
+    property bool inBlockingMenu: false
     property string pwrmgrBackend: none
     property var ispwrSave: false
     property var widgetdata: root
 
     implicitWidth: mainLayout.implicitWidth
     implicitHeight: mainLayout.implicitHeight
+    anchors.margins: Kirigami.Units.largeSpacing
+    clip: true
 
     Layout.preferredWidth: implicitWidth + (Kirigami.Units.largeSpacing * 5)
     Layout.preferredHeight: implicitHeight + (Kirigami.Units.largeSpacing * 5)
@@ -105,13 +108,14 @@ Item {
         exec.runCMD("which tlp");
         exec.runCMD("which powerprofilesctl");
         sleepBlockerRoot.chkCafeStat()
+        sleepBlockerRoot.getBlockerList()
     }
 
     Component.onDestruction: {
-        // is there TLP or power-profiles-daemon
         exec.connectedSources = [];
         batStatus.connectedSources = [];
         sleepBlockerRoot.exec.connectedSources = [];
+        sleepBlockerRoot.sleepchk.connectedSources = [];
     }
 
     function batSaver(state) {
@@ -136,9 +140,15 @@ Item {
             right: parent.right
             top: parent.top
             bottom: parent.bottom
-            margins: Kirigami.Units.largeSpacing
         }
         spacing: Kirigami.Units.largeSpacing
+
+        opacity: popupRoot.inBlockingMenu === true ? 0 : 1
+        visible: opacity > 0
+
+        Behavior on opacity {
+            NumberAnimation { duration: 400 }
+        }
 
         // headers
         RowLayout {
@@ -247,6 +257,27 @@ Item {
                 }
             }
 
+            PlasmaComponents.Label {
+                text: i18n("Apps blocking sleep")
+                color: "white"
+                opacity: clickArea.pressed ? 0.5 : (clickArea.containsMouse ? 0.7 : 1.0)
+                visible: sleepBlockerRoot.hasBlocker === true
+
+                MouseArea {
+                    id: clickArea
+                    anchors.fill: parent
+                    hoverEnabled: true
+                    cursorShape: Qt.PointingHandCursor
+                    onClicked: {
+                        popupRoot.inBlockingMenu = !popupRoot.inBlockingMenu
+                    }
+                }
+
+                Behavior on opacity {
+                    NumberAnimation { duration: 150 }
+                }
+            }
+
             // switch for power saving (tlp)
             PlasmaComponents.Switch {
                 id: pwrSave
@@ -329,8 +360,107 @@ Item {
                 text: i18n("Power settings...")
                 icon.name: "configure"
                 Layout.fillWidth: true
-                onClicked: {
-                    Qt.openUrlExternally("systemsettings://kcm_powerdevilprofilesconfig")
+                MouseArea {
+                    anchors.fill: parent
+                    cursorShape: Qt.PointingHandCursor
+                    onClicked: {
+                        Qt.openUrlExternally("systemsettings://kcm_powerdevilprofilesconfig")
+                    }
+                }
+            }
+        }
+    }
+
+    ColumnLayout {
+        // some really interesting stuff
+        id: blockingListTab
+        spacing: Kirigami.Units.largeSpacing
+        width: popupRoot.width
+        implicitHeight: mainLayout.implicitHeight
+
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+        }
+
+        x: popupRoot.inBlockingMenu ? (popupRoot.width - width) / 2 : popupRoot.width
+        opacity: popupRoot.inBlockingMenu === true ? 1 : 0
+        visible: opacity > 0
+
+        Behavior on opacity {
+            NumberAnimation { duration: 400 }
+        }
+
+        Behavior on x {
+            NumberAnimation {
+                duration: 400
+                easing.type: popupRoot.inBlockingMenu ? Easing.InCubic : Easing.OutCubic
+            }
+        }
+
+        // headers
+        RowLayout {
+            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignTop
+
+            PlasmaComponents.ToolButton {
+                icon.name: "arrow-left"
+                onClicked: popupRoot.inBlockingMenu = !popupRoot.inBlockingMenu
+            }
+
+            Item { Layout.fillWidth: true }
+
+            PlasmaComponents.Label {
+                text: widgetdata.percent + "%"
+                font.bold: true
+                font.pixelSize: 16
+            }
+        }
+
+        ColumnLayout {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+
+            PlasmaComponents.Label {
+                text: i18n("Apps blocking sleep:")
+                font.bold: true
+            }
+
+            ListView {
+                id: blockingListView
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+
+                model: sleepBlockerRoot.sharedList
+                spacing: 8
+                clip: true
+
+                remove: Transition {
+                    ParallelAnimation {
+                        NumberAnimation { property: "opacity"; to: 0; duration: 250 }
+                        NumberAnimation { property: "height"; to: 0; duration: 250; easing.type: Easing.InOutQuad }
+                    }
+                }
+
+                add: Transition {
+                    ParallelAnimation {
+                        NumberAnimation { property: "opacity"; from: 0; to: 1; duration: 250 }
+                        NumberAnimation { property: "height"; from: 0; duration: 250; easing.type: Easing.InOutQuad }
+                    }
+                }
+
+                displaced: Transition {
+                    NumberAnimation { properties: "x,y"; duration: 250; easing.type: Easing.OutCubic }
+                }
+
+                delegate: PlasmaComponents.Label {
+
+                    width: blockingListView.width
+                    opacity: 1
+                    Behavior on opacity { NumberAnimation { duration: 150 } }
+
+                    text: model.appName
+                    wrapMode: Text.WordWrap
                 }
             }
         }

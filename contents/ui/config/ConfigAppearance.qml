@@ -2,7 +2,8 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
-import QtQuick.Dialogs // for the font dialog and the color picker
+import org.kde.kquickcontrols as KQuickControls
+import QtQuick.Dialogs // for the font dialog
 import "../libs" as LibConfig
 
 Item {
@@ -20,6 +21,7 @@ Item {
     property alias cfg_simpleTime: simpleTimeChkBox.checked
     property alias cfg_timeLeft: timeLeftChkBox.checked
     property alias cfg_healthLeft: healthLeftChkBox.checked
+    property alias cfg_percentColor: colorPicker.color
 
     Kirigami.FormLayout {
 
@@ -36,6 +38,20 @@ Item {
             from: 6
             to: 72
             value: root.cfg_fontSize
+        }
+
+        RowLayout {
+            Label {
+                text: i18n("Percentage color on taskbar:")
+            }
+
+            KQuickControls.ColorButton {
+                id: colorPicker
+                color: cfg_percentColor
+
+                // save my color pls
+                onColorChanged: cfg_percentColor = color.toString()
+            }
         }
 
         CheckBox {

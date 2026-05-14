@@ -82,6 +82,7 @@ PlasmoidItem {
                 id: percent
                 text: root.percent + "%"
                 font.pixelSize: Plasmoid.configuration.fontSize
+                color: Plasmoid.configuration.percentColor || Kirigami.Theme.textColor
                 font.bold: Plasmoid.configuration.fontBold
                 font.italic: Plasmoid.configuration.fontItalic
                 font.underline: Plasmoid.configuration.fontUnderline
