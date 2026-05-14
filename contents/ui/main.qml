@@ -72,7 +72,7 @@ PlasmoidItem {
 
         RowLayout {
             id: plasmoidRow
-            // Offset the percentage to the right or left
+            // Offset the percentage to the right or left, its your choice
             layoutDirection: Plasmoid.configuration.fontposR ? Qt.RightToLeft : Qt.LeftToRight
             anchors.fill: parent
             spacing: plasmoid.configuration.fontPad
@@ -83,6 +83,8 @@ PlasmoidItem {
                 text: root.percent + "%"
                 font.pixelSize: Plasmoid.configuration.fontSize
                 font.bold: Plasmoid.configuration.fontBold
+                font.italic: Plasmoid.configuration.fontItalic
+                font.underline: Plasmoid.configuration.fontUnderline
                 font.family: Plasmoid.configuration.fontFamily || Kirigami.Theme.defaultFont.family
             }
 

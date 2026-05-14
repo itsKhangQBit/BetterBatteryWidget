@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
-import QtQuick.Dialogs // for the font dialog
+import QtQuick.Dialogs // for the font dialog and the color picker
 import "../libs" as LibConfig
 
 Item {
@@ -10,6 +10,8 @@ Item {
 
     property alias cfg_fontSize: fontSizeSpinBox.value
     property alias cfg_fontBold: fontBoldCheckBox.checked
+    property alias cfg_fontItalic: fontItalicCheckBox.checked
+    property alias cfg_fontUnderline: fontUnderlineCheckbox.checked
     property alias cfg_iconSize: iconSizeSpinBox.value
     property alias cfg_fontPad: fontPadSpinBox.value
     property alias cfg_fontposR: fontposRCheckBox.checked
@@ -40,6 +42,16 @@ Item {
             id: fontBoldCheckBox
             Kirigami.FormData.label: i18n("Font formatting:")
             text: i18n("Bold")
+        }
+
+        CheckBox {
+            id: fontItalicCheckBox
+            text: i18n("Italic")
+        }
+
+        CheckBox {
+            id: fontUnderlineCheckbox
+            text: i18n("Underline")
         }
 
         SpinBox {
