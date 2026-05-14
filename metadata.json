@@ -9,6 +9,9 @@
             {
                 "Email": "vistausss@fastmail.com",
                 "Name": "Heimen Stoffels (Vistaus)"
+            },
+            {
+                "Name": "Gamernist"
             }
         ],
         "Category": "Battery",
@@ -18,7 +21,7 @@
         "License": "GPL-2.0+",
         "Name": "Better battery widget",
         "ServiceTypes": ["Plasma/Applet"],
-        "Version": "4.1.1"
+        "Version": "4.3"
     },
     "X-Plasma-Provides":"org.kde.plasma.powermanagement",
     "X-Plasma-API-Minimum-Version": "6.0",
