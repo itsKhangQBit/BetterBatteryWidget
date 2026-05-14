@@ -10,6 +10,12 @@
         <entry name="fontBold" type="Bool">
             <default>true</default>
         </entry>
+        <entry name="fontItalic" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="fontUnderline" type="Bool">
+            <default>false</default>
+        </entry>
         <entry name="iconSize" type="Int">
             <default>24</default>
         </entry>
