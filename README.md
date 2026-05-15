@@ -19,9 +19,9 @@ A lightweight, minimal battery widget for KDE Plasma 6. I find the default widge
 
 **Changelogs**
 - version 1.0: initial
-- version 2.0: added battery saver feature, translated into dutch language by @Vistaus
+- version 2.0: added battery saver feature, translated to Dutch by @Vistaus
 - version 3.0: added sleep blocker, charge / usage time remaining (you can enable / disable this feature), battery health feature
-- version 4.0: polished everything up, fixed the feature battery saver to be A LOT BETTER.
+- version 4.0: polished everything up, fixed the feature battery saver to be A LOT BETTER, translated to German by @Gamernist
 - version 5.0: added sleepblocking app lists, more customization
 
 # Images
