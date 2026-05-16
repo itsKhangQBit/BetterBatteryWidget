@@ -23,98 +23,106 @@ Item {
     property alias cfg_healthLeft: healthLeftChkBox.checked
     property alias cfg_percentColor: colorPicker.color
 
-    Kirigami.FormLayout {
+    ScrollView {
+        anchors.fill: root
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+        ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+        ScrollBar.vertical.policy: ScrollBar.AsNeeded
+        clip: true
 
-        LibConfig.FontFamily {
-            Kirigami.FormData.label: i18n("Font family:")
-            configKey: 'fontFamily'
-        }
+        Kirigami.FormLayout {
+            id: form
 
-        anchors.fill: parent
-
-        SpinBox {
-            id: fontSizeSpinBox
-            Kirigami.FormData.label: i18n("Font size:")
-            from: 6
-            to: 72
-            value: root.cfg_fontSize
-        }
-
-        RowLayout {
-            Label {
-                text: i18n("Percentage color on taskbar:")
+            LibConfig.FontFamily {
+                Kirigami.FormData.label: i18n("Font family:")
+                configKey: 'fontFamily'
             }
 
-            KQuickControls.ColorButton {
-                id: colorPicker
-                color: cfg_percentColor
-
-                // save my color pls
-                onColorChanged: cfg_percentColor = color.toString()
+            SpinBox {
+                id: fontSizeSpinBox
+                Kirigami.FormData.label: i18n("Font size:")
+                from: 6
+                to: 72
+                value: root.cfg_fontSize
             }
-        }
 
-        CheckBox {
-            id: fontBoldCheckBox
-            Kirigami.FormData.label: i18n("Font formatting:")
-            text: i18n("Bold")
-        }
+            RowLayout {
+                Label {
+                    text: i18n("Percentage color on taskbar:")
+                }
 
-        CheckBox {
-            id: fontItalicCheckBox
-            text: i18n("Italic")
-        }
+                KQuickControls.ColorButton {
+                    id: colorPicker
+                    color: cfg_percentColor
 
-        CheckBox {
-            id: fontUnderlineCheckbox
-            text: i18n("Underline")
-        }
+                    // save my color pls
+                    onColorChanged: cfg_percentColor = color.toString()
+                }
+            }
 
-        SpinBox {
-            id: iconSizeSpinBox
-            Kirigami.FormData.label: i18n("Icon size:")
-            from: 16
-            to: 128
-        }
+            CheckBox {
+                id: fontBoldCheckBox
+                Kirigami.FormData.label: i18n("Font formatting:")
+                text: i18n("Bold")
+            }
 
-        CheckBox {
-            id: fontposRCheckBox
-            Kirigami.FormData.label: i18n("Percentage position:")
-            text: i18n("On the right")
-        }
+            CheckBox {
+                id: fontItalicCheckBox
+                text: i18n("Italic")
+            }
 
-        SpinBox {
-            id: fontPadSpinBox
-            Kirigami.FormData.label: i18n("Font padding:")
-            from: -100
-            to: 100
-        }
+            CheckBox {
+                id: fontUnderlineCheckbox
+                text: i18n("Underline")
+            }
 
-        CheckBox {
-            id: padHrChkBox
-            Kirigami.FormData.label: i18n("Add leading zero before:")
-            text: i18n("Hours")
-        }
+            SpinBox {
+                id: iconSizeSpinBox
+                Kirigami.FormData.label: i18n("Icon size:")
+                from: 16
+                to: 128
+            }
 
-        CheckBox {
-            id: padMinChkBox
-            text: i18n("Minutes")
-        }
+            CheckBox {
+                id: fontposRCheckBox
+                Kirigami.FormData.label: i18n("Percentage position:")
+                text: i18n("On the right")
+            }
 
-        CheckBox {
-            id: simpleTimeChkBox
-            Kirigami.FormData.label: i18n("Simplified time")
-        }
+            SpinBox {
+                id: fontPadSpinBox
+                Kirigami.FormData.label: i18n("Font padding:")
+                from: -100
+                to: 100
+            }
+
+            CheckBox {
+                id: padHrChkBox
+                Kirigami.FormData.label: i18n("Add leading zero before:")
+                text: i18n("Hours")
+            }
+
+            CheckBox {
+                id: padMinChkBox
+                text: i18n("Minutes")
+            }
+
+            CheckBox {
+                id: simpleTimeChkBox
+                Kirigami.FormData.label: i18n("Simplified time")
+            }
 
 
-        CheckBox {
-            id: timeLeftChkBox
-            Kirigami.FormData.label: i18n("Enable time remaining")
-        }
+            CheckBox {
+                id: timeLeftChkBox
+                Kirigami.FormData.label: i18n("Enable time remaining")
+            }
 
-        CheckBox {
-            id: healthLeftChkBox
-            Kirigami.FormData.label: i18n("Enable battery health")
+            CheckBox {
+                id: healthLeftChkBox
+                Kirigami.FormData.label: i18n("Enable battery health")
+            }
         }
     }
 }

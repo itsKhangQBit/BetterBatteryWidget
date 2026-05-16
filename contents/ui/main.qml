@@ -11,7 +11,7 @@ PlasmoidItem {
     property int percent: 0
     property bool isCharge: false
     property bool isFull: false
-    property string icon: battery-70
+    property string icon: "battery-70"
     property string health: "100%"
     property string timeleft: "0"
 

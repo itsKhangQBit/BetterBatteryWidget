@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Layouts
+import QtQuick.Controls
 import org.kde.plasma.plasmoid
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.plasma5support as Plasma5Support
@@ -10,7 +11,7 @@ Item {
     id: popupRoot
 
     property bool inBlockingMenu: false
-    property string pwrmgrBackend: none
+    property string pwrmgrBackend: "none"
     property var ispwrSave: false
     property var widgetdata: root
 
@@ -420,49 +421,68 @@ Item {
         ColumnLayout {
             Layout.fillHeight: true
             Layout.fillWidth: true
+            Layout.alignment: Qt.AlignTop
 
             PlasmaComponents.Label {
                 text: i18n("Apps blocking sleep:")
                 font.bold: true
             }
 
-            ListView {
-                id: blockingListView
+            // scroll for you
+            PlasmaComponents.ScrollView {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-
-                model: sleepBlockerRoot.sharedList
-                spacing: 8
+                Layout.maximumHeight: contentHeight
                 clip: true
+                ScrollBar.vertical.policy: ScrollBar.AsNeeded
 
-                remove: Transition {
-                    ParallelAnimation {
-                        NumberAnimation { property: "opacity"; to: 0; duration: 250 }
-                        NumberAnimation { property: "height"; to: 0; duration: 250; easing.type: Easing.InOutQuad }
+                // display the results from [SleepBlocker] file
+                ListView {
+                    id: blockingListView
+                    height: contentHeight
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    boundsBehavior: Flickable.StopAtBounds
+                    spacing: 8
+
+                    model: sleepBlockerRoot.sharedList
+
+                    // fancy ahh animations
+                    remove: Transition {
+                        PropertyAction { target: ViewTransition.item; property: "ListView.delayRemove"; value: true } // please delay, please show the animation
+                        ParallelAnimation {
+                            NumberAnimation { property: "opacity"; to: 0; duration: 250 }
+                            NumberAnimation { property: "height"; to: 0; duration: 250; easing.type: Easing.InOutQuad }
+                        }
+                        PropertyAction { target: ViewTransition.item; property: "ListView.delayRemove"; value: false } // you're free to go
                     }
-                }
 
-                add: Transition {
-                    ParallelAnimation {
-                        NumberAnimation { property: "opacity"; from: 0; to: 1; duration: 250 }
-                        NumberAnimation { property: "height"; from: 0; duration: 250; easing.type: Easing.InOutQuad }
+                    add: Transition {
+                        ParallelAnimation {
+                            NumberAnimation { property: "opacity"; from: 0; to: 1; duration: 250 }
+                            NumberAnimation { property: "height"; from: 0; duration: 250; easing.type: Easing.InOutQuad }
+                        }
                     }
-                }
 
-                displaced: Transition {
-                    NumberAnimation { properties: "x,y"; duration: 250; easing.type: Easing.OutCubic }
-                }
+                    displaced: Transition {
+                        NumberAnimation { properties: "x,y"; duration: 250; easing.type: Easing.OutCubic }
+                    }
 
-                delegate: PlasmaComponents.Label {
+                    delegate: PlasmaComponents.Label {
 
-                    width: blockingListView.width
-                    opacity: 1
-                    Behavior on opacity { NumberAnimation { duration: 150 } }
+                        width: blockingListView.width
+                        opacity: 1
+                        Behavior on opacity { NumberAnimation { duration: 150 } }
 
-                    text: model.appName
-                    wrapMode: Text.WordWrap
+                        text: model.appName
+                        wrapMode: Text.WordWrap
+                    }
                 }
             }
         }
+
+        // Push everything up top
+        Item { Layout.fillHeight: true }
+
     }
 }
