@@ -14,9 +14,10 @@ Item {
     property string pwrmgrBackend: "none"
     property var ispwrSave: false
     property var widgetdata: root
+    property alias exec: exec
 
-    implicitWidth: mainLayout.implicitWidth
-    implicitHeight: mainLayout.implicitHeight
+    implicitWidth: Math.max(headers.implicitWidth, mainLayout.implicitWidth)
+    implicitHeight: mainLayout.implicitHeight + headers.implicitHeight
     anchors.margins: Kirigami.Units.largeSpacing
     clip: true
 
@@ -27,15 +28,6 @@ Item {
 
     SleepBlocker {
         id: sleepBlockerRoot
-    }
-
-    Plasma5Support.DataSource {
-        id: pwrSaveSwitch
-        engine: "powermanagement"
-        connectedSources: ["Battery"]
-        onDataChanged: {
-            popupRoot.ispwrSave = data["Battery"]["Power Save Mode"] || false;
-        }
     }
 
     Plasma5Support.DataSource {
@@ -106,17 +98,19 @@ Item {
 
     Component.onCompleted: {
         // is there TLP or power-profiles-daemon
-        exec.runCMD("which tlp");
-        exec.runCMD("which powerprofilesctl");
-        sleepBlockerRoot.chkCafeStat()
-        sleepBlockerRoot.getBlockerList()
+        popupRoot.exec.runCMD("which tlp");
+        popupRoot.exec.runCMD("which powerprofilesctl");
+        widgetdata.exec.runCMD("cat /sys/class/power_supply/BAT*/charge_full /sys/class/power_supply/BAT*/charge_full_design");
+        sleepBlockerRoot.chkCafeStat();
+        sleepBlockerRoot.getBlockerList();
     }
 
     Component.onDestruction: {
-        exec.connectedSources = [];
+        popupRoot.exec.connectedSources = [];
         batStatus.connectedSources = [];
         sleepBlockerRoot.exec.connectedSources = [];
         sleepBlockerRoot.sleepchk.connectedSources = [];
+        widgetdata.exec.connectedSources = [];
     }
 
     function batSaver(state) {
@@ -134,12 +128,109 @@ Item {
         }
     }
 
+    // headers
+    RowLayout {
+        id: headers
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: parent.top
+
+        RowLayout {
+            width: mainLabel.width
+
+            PlasmaComponents.Label {
+                id: mainLabel
+                text: i18n("Battery percentage")
+                font.bold: true
+                font.pixelSize: Kirigami.Theme.defaultFont.pixelSize * 1.2
+                Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
+                visible: opacity > 0
+                opacity: popupRoot.inBlockingMenu ? 0 : 1
+                Layout.preferredWidth: popupRoot.inBlockingMenu ? 0 : implicitWidth
+                clip: true
+                horizontalAlignment: Text.AlignRight
+
+                Behavior on opacity {
+                    NumberAnimation { duration: 400 }
+                }
+                Behavior on Layout.preferredWidth {
+                    NumberAnimation {
+                        duration: 400
+                        easing.type: Easing.InOutCubic
+                    }
+                }
+            }
+
+            // headers
+            RowLayout {
+                Layout.preferredWidth: popupRoot.inBlockingMenu ? blockmenucontent.implicitWidth : 0 // don't take my precious space
+                visible: opacity > 0
+                opacity: popupRoot.inBlockingMenu ? 1 : 0
+                clip: true
+
+                Behavior on opacity {
+                    NumberAnimation { duration: 400 }
+                }
+
+                Behavior on Layout.preferredWidth {
+                    NumberAnimation {
+                        duration: 400
+                        easing.type: Easing.InOutCubic
+                    }
+                }
+
+                RowLayout {
+                    id: blockmenucontent
+                    width: implicitWidth
+                    PlasmaComponents.ToolButton {
+                        icon.name: "arrow-left"
+                        onClicked: popupRoot.inBlockingMenu = !popupRoot.inBlockingMenu
+
+                        PlasmaComponents.ToolTip {
+                            text: i18n("Back")
+                        }
+                    }
+
+                    PlasmaComponents.Label {
+                        text: widgetdata.percent + "%"
+                        font.bold: true
+                        font.pixelSize: 16
+                    }
+                }
+            }
+        }
+
+        RowLayout {
+            id: toolnstatus
+
+            Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
+            // small icon for fun :)
+            Kirigami.Icon {
+                source: widgetdata.icon
+                width: 22
+                height: 22
+            }
+
+            PlasmaComponents.ToolButton {
+                icon.name: "pin-receptacle"
+                checkable: true
+                checked: Plasmoid.configuration.pinned
+                onToggled: {
+                    Plasmoid.configuration.pinned = !Plasmoid.configuration.pinned
+                }
+                PlasmaComponents.ToolTip {
+                    text: i18n("Keep applet open")
+                }
+            }
+        }
+    }
+
     ColumnLayout {
         id: mainLayout
         anchors {
             left: parent.left
             right: parent.right
-            top: parent.top
+            top: headers.bottom
             bottom: parent.bottom
         }
         spacing: Kirigami.Units.largeSpacing
@@ -151,29 +242,11 @@ Item {
             NumberAnimation { duration: 400 }
         }
 
-        // headers
-        RowLayout {
-            Layout.fillWidth: true
-            Layout.alignment: Qt.AlignTop
-
-            PlasmaComponents.Label {
-                text: i18n("Battery percentage")
-                font.bold: true
-                font.pixelSize: Kirigami.Theme.defaultFont.pixelSize * 1.2
-                Layout.fillWidth: true
-            }
-            // small icon for fun :)
-            Kirigami.Icon {
-                source: widgetdata.icon
-                width: 22
-                height: 22
-            }
-        }
-
         // battery percentage
         ColumnLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
+
             PlasmaComponents.Label {
                 text: {
                     if (widgetdata.isFull) {
@@ -196,7 +269,7 @@ Item {
                 Layout.fillWidth: true
                 from: 0
                 to: 100
-                value: widgetdata.percent
+                value: parseInt(widgetdata.percent, 10) || 0
             }
 
             GridLayout {
@@ -261,8 +334,9 @@ Item {
             PlasmaComponents.Label {
                 text: i18n("Apps blocking sleep")
                 color: "white"
-                opacity: clickArea.pressed ? 0.5 : (clickArea.containsMouse ? 0.7 : 1.0)
-                visible: sleepBlockerRoot.hasBlocker === true
+                opacity: !sleepBlockerRoot.hasBlocker ? 0 : (clickArea.pressed ? 0.5 : (clickArea.containsMouse ? 0.7 : 1.0))
+                visible: opacity > 0
+                clip: true
 
                 MouseArea {
                     id: clickArea
@@ -377,16 +451,11 @@ Item {
         id: blockingListTab
         spacing: Kirigami.Units.largeSpacing
         width: popupRoot.width
-        implicitHeight: mainLayout.implicitHeight
-
-        anchors {
-            top: parent.top
-            bottom: parent.bottom
-        }
-
         x: popupRoot.inBlockingMenu ? (popupRoot.width - width) / 2 : popupRoot.width
         opacity: popupRoot.inBlockingMenu === true ? 1 : 0
         visible: opacity > 0
+        anchors.top: headers.bottom
+        height: mainLayout.height
 
         Behavior on opacity {
             NumberAnimation { duration: 400 }
@@ -399,31 +468,14 @@ Item {
             }
         }
 
-        // headers
-        RowLayout {
-            Layout.fillWidth: true
-            Layout.alignment: Qt.AlignTop
-
-            PlasmaComponents.ToolButton {
-                icon.name: "arrow-left"
-                onClicked: popupRoot.inBlockingMenu = !popupRoot.inBlockingMenu
-            }
-
-            Item { Layout.fillWidth: true }
-
-            PlasmaComponents.Label {
-                text: widgetdata.percent + "%"
-                font.bold: true
-                font.pixelSize: 16
-            }
-        }
-
         ColumnLayout {
+            id: sleepblockerlist
             Layout.fillHeight: true
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignTop
 
             PlasmaComponents.Label {
+                id: applabel
                 text: i18n("Apps blocking sleep:")
                 font.bold: true
             }
@@ -432,50 +484,77 @@ Item {
             PlasmaComponents.ScrollView {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                Layout.maximumHeight: contentHeight
+                Layout.maximumHeight: sleepblockerlist.height - applabel.height
                 clip: true
                 ScrollBar.vertical.policy: ScrollBar.AsNeeded
 
                 // display the results from [SleepBlocker] file
                 ListView {
                     id: blockingListView
-                    height: contentHeight
+                    implicitHeight: sleepblockerlist.height - applabel.height
+                    interactive: false
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     boundsBehavior: Flickable.StopAtBounds
-                    spacing: 8
+                    spacing: 4
 
                     model: sleepBlockerRoot.sharedList
 
                     // fancy ahh animations
-                    remove: Transition {
-                        PropertyAction { target: ViewTransition.item; property: "ListView.delayRemove"; value: true } // please delay, please show the animation
-                        ParallelAnimation {
-                            NumberAnimation { property: "opacity"; to: 0; duration: 250 }
-                            NumberAnimation { property: "height"; to: 0; duration: 250; easing.type: Easing.InOutQuad }
-                        }
-                        PropertyAction { target: ViewTransition.item; property: "ListView.delayRemove"; value: false } // you're free to go
-                    }
 
-                    add: Transition {
-                        ParallelAnimation {
-                            NumberAnimation { property: "opacity"; from: 0; to: 1; duration: 250 }
-                            NumberAnimation { property: "height"; from: 0; duration: 250; easing.type: Easing.InOutQuad }
-                        }
-                    }
+                    // remove is not here because it has a bug (for me):
+                    // when there's more than 2 apps displaying then the animation won't play.
+                    // add is also the same, how unfortunate
 
                     displaced: Transition {
-                        NumberAnimation { properties: "x,y"; duration: 250; easing.type: Easing.OutCubic }
+                        NumberAnimation { properties: "y"; duration: 250; easing.type: Easing.OutCubic }
                     }
 
                     delegate: PlasmaComponents.Label {
-
-                        width: blockingListView.width
-                        opacity: 1
-                        Behavior on opacity { NumberAnimation { duration: 150 } }
+                        id: delegateRoot
 
                         text: model.appName
                         wrapMode: Text.WordWrap
+                        ListView.delayRemove: true
+                        //clip: true // looks nicer without clip, i've changed my mind :)))
+
+                        readonly property bool bye: model.removing === true
+
+                        // so... we fix the bug by animating it ourselves!
+                        opacity: 0
+                        height: 0
+                        property real yoff: -10 // want cool sliding
+
+                        transform: Translate {
+                            y: delegateRoot.yoff // we have to translate so y of our app stays at the correct pos
+                        }
+
+                        Component.onCompleted: {
+                            opacity = Qt.binding(() => bye ? 0 : 1)
+                            yoff = Qt.binding(() => bye ? -10 : 0)
+                            height = Qt.binding(() => bye ? 0 : implicitHeight)
+                        }
+
+                        Behavior on opacity { NumberAnimation { duration: 250} } // fades faster than be clipped
+
+                        Behavior on height {
+                            NumberAnimation {
+                                duration: 250
+                                easing.type: bye ? Easing.InQuad : Easing.OutQuad
+                                onRunningChanged: {
+                                    if (!running && delegateRoot.bye) {
+                                        sleepBlockerRoot.remove(model.appName);
+                                    }
+                                }
+                            }
+                        }
+
+                        Behavior on yoff {
+                            NumberAnimation {
+                                duration: 250
+                                easing.type: bye ? Easing.InQuad : Easing.OutQuad
+                            }
+                        }
                     }
                 }
             }

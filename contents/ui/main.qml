@@ -8,28 +8,43 @@ import org.kde.kirigami as Kirigami
 PlasmoidItem {
     id: root
 
-    property int percent: 0
+    property string percent: "--"
     property bool isCharge: false
     property bool isFull: false
-    property string icon: "battery-70"
+    property string icon: "battery-000"
     property string health: "100%"
     property string timeleft: "0"
+    property alias exec: exec //need the alias so that we can call exec from FullPopup
 
     Plasma5Support.DataSource {
         id: batterySrc
         engine: "powermanagement"
         connectedSources: ["Battery"]
         interval: 1000
-        onDataChanged: {
-            let data = batterySrc.data["Battery"]
-            if (data) {
-                root.percent = data["Percent"] || 0
-                root.isCharge = (data["State"] === "Charging" || data["State"] === "FullyCharged" || data["PluggedIn"] === true)
+        onDataChanged: updateData()
+    }
 
-                root.isFull = (data["State"] === "FullyCharged")
-                root.timeleft = data["Smoothed Remaining msec"] || ""
-                root.timeleft = formatTime(root.timeleft)
-            }
+    hideOnWindowDeactivate: !Plasmoid.configuration.pinned // had to link with the xml so that it works
+
+    // we have to set a timer so that it actually updates fast
+    Timer {
+        interval: 1000
+        running: true
+        repeat: true
+        triggeredOnStart: true
+        onTriggered: updateData()
+    }
+
+    // make a func so that the code looks neater
+    function updateData() {
+        let data = batterySrc.data["Battery"]
+        if (data) {
+            root.percent = data["Percent"].toString() || "--"
+            root.isCharge = (data["State"] === "Charging" || data["State"] === "FullyCharged" || data["PluggedIn"] === true)
+
+            root.isFull = (data["State"] === "FullyCharged")
+            root.timeleft = data["Smoothed Remaining msec"] || ""
+            root.timeleft = formatTime(root.timeleft)
         }
     }
 
@@ -37,6 +52,7 @@ PlasmoidItem {
         id: exec
         engine: "executable"
         connectedSources: []
+        interval: 60000
         onNewData: (sourceName, data) => {
             var output = data["stdout"].trim() || "";
             // split the line to read the values
@@ -50,9 +66,7 @@ PlasmoidItem {
                 // instead of root.health = bathealth + "%";, which might display "110%"
                 // we use this!
                 root.health = (bathealth > 100) ? "100%" : bathealth + "%";
-                //            ^ > 100?            ^ yes?   ^ no?
             }
-            disconnectSource(sourceName);
         }
 
         function runCMD(cmd) {
@@ -66,7 +80,7 @@ PlasmoidItem {
         Layout.preferredWidth: plasmoidRow.implicitWidth + Kirigami.Units.smallSpacing
         Layout.preferredHeight: Plasmoid.configuration.iconSize
         // get the click action to open the popup
-        property bool wasExpanded
+        property bool wasExpanded: false
         onPressed: wasExpanded = root.expanded
         onClicked: root.expanded = !wasExpanded
 
@@ -92,10 +106,13 @@ PlasmoidItem {
             Kirigami.Icon {
                 id: icon
                 source: {
-                    let base = "battery-" + (Math.floor(root.percent / 10) * 10).toString().padStart(3, '0');
+                    let intpercent = parseInt(root.percent, 10) || 0
+                    let percent = (Math.floor(intpercent / 10) *  10).toString().padStart(3, '0');
+                    let base = "battery-" + percent
                     root.icon = root.isCharge ? base + "-charging" : base;
                     return root.icon;
                 }
+
                 // Use config from settings
                 Layout.preferredWidth: Plasmoid.configuration.iconSize
                 Layout.preferredHeight: Plasmoid.configuration.iconSize
@@ -128,15 +145,6 @@ PlasmoidItem {
             }
             let min = Plasmoid.configuration.padMin ? mpadded : m
             return min + ":" + spadded;
-        }
-    }
-
-    Timer {
-        interval: 10000
-        running: true
-        repeat: true
-        onTriggered: {
-            exec.runCMD("cat /sys/class/power_supply/BAT*/charge_full /sys/class/power_supply/BAT*/charge_full_design");
         }
     }
 }

@@ -11,6 +11,7 @@ Item {
     property bool hasBlocker: false
     property string pcName: "BetterBatteryWidget_plasmoid"
     property alias sharedList: appListModel
+    property var appList: []
 
     ListModel {
         id: appListModel
@@ -112,6 +113,18 @@ Item {
         }
     }
 
+    // here's the function to remove the app
+    function remove(app) {
+        for (let i = 0; i < appListModel.count; i++) {
+            if (appListModel.get(i).appName === app) {
+                appListModel.remove(i);
+                // update the variable ourselves
+                sleepBlockerRoot.hasBlocker = (sleepBlockerRoot.appList.length > 0);
+                break;
+            }
+        }
+    }
+
     function updateBlockerList(unparsedshit) { // basically the unparsed dbus structure
         try {
             let parsedshit = unparsedshit.split('\n').map(line => line.trim());
@@ -160,12 +173,17 @@ Item {
                     newApps.push(appName + " [" + nameCount[appName] + "]"); // add numberings
                 }
             }
+            sleepBlockerRoot.appList = newApps; //push the list
 
             // if no more then remove
             for (let appchoose = appListModel.count - 1; appchoose >= 0; appchoose--) {
                 let currentApp = appListModel.get(appchoose).appName;
                 if (newApps.indexOf(currentApp) === -1) {
-                    appListModel.remove(appchoose);
+                    appListModel.setProperty(appchoose, "removing", true);
+
+                    // so here's how the fix works:
+                    // instead of deleting, we change the properties of it
+                    // FullPopup catches it, plays the animation, then calls the function remove()
                 }
             }
 
@@ -179,7 +197,10 @@ Item {
                     }
                 }
                 if (!isExist) {
-                    appListModel.append({ "appName": newApps[appchoose] });
+                    appListModel.append({
+                        "appName": newApps[appchoose],
+                        "removing": false // add the properties so we can change it
+                    });
                 }
             }
             sleepBlockerRoot.hasBlocker = (newApps.length > 0);
