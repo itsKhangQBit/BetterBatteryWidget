@@ -1,17 +1,17 @@
 # BetterBatteryWidget
 https://www.opendesktop.org/p/2355937/
 
-Just a simple battery widget.
+Just a simple battery widget, for Plasma.
 
 **PLEASE RESTART PLASMASHELL, OTHERWISE IT MIGHT NOT WORK!**
 
-A lightweight, minimal battery widget for KDE Plasma 6. I find the default widget not that good, so I decided to create a new one.
+A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default widget not that good, so I decided to create a new one.
 
 **Features:** 
 - Battery percentage
-- Percentage font selection, styles (Bold for now), size, position, ....
+- Percentage font, styles (Bold, Italic, Underline), size, position, color customization
 - Battery icon size
-- Sleep block
+- Sleep block & list of apps blocking sleep
 - Time remaining (charge / discharge)
 
 **Credits:**
@@ -19,9 +19,9 @@ A lightweight, minimal battery widget for KDE Plasma 6. I find the default widge
 
 **Changelogs**
 - version 1.0: initial
-- version 2.0: added battery saver feature, translated to Dutch by @Vistaus
+- version 2.0: added battery saver feature, translated into dutch language by @Vistaus
 - version 3.0: added sleep blocker, charge / usage time remaining (you can enable / disable this feature), battery health feature
-- version 4.0: polished everything up, fixed the feature battery saver to be A LOT BETTER, translated to German by @Gamernist
+- version 4.0: polished everything up, fixed the feature battery saver to be A LOT BETTER.
 - version 5.0: added sleepblocking app lists, more customization
 
 # Images
