@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-14 21:52+0700\n"
+"POT-Creation-Date: 2026-05-17 14:30+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,6 +95,14 @@ msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery percentage"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Back"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Keep applet open"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml

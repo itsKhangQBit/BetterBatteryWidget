@@ -99,4 +99,10 @@ msgid "Apps blocking sleep:"
 msgstr "Các ứng dụng đang chặn ngủ:"
 
 msgid "Percentage color on taskbar:"
-msgstr "Màu của phần trăm trên taskbar:"
+msgstr "Màu của phần trăm trên panel:"
+
+msgid "Keep applet open"
+msgstr "Giữ cho applet mở"
+
+msgid "Back"
+msgstr "Quay lại"
