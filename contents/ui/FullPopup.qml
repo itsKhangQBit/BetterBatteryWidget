@@ -12,9 +12,9 @@ Item {
 
     property bool inBlockingMenu: false
     property string pwrmgrBackend: "none"
-    property var ispwrSave: false
+    property int ispwrSave: 0 // we can also use int for bool: false is 0, true is 1 (this will be used for the TLP switch)
     property var widgetdata: root
-    property alias exec: exec
+    property alias batMgr: batMgr
 
     implicitWidth: Math.max(headers.implicitWidth, mainLayout.implicitWidth)
     implicitHeight: mainLayout.implicitHeight + headers.implicitHeight
@@ -31,7 +31,7 @@ Item {
     }
 
     Plasma5Support.DataSource {
-        id: exec
+        id: batMgr
         engine: "executable"
         connectedSources: []
         interval: 5000
@@ -47,7 +47,7 @@ Item {
             }
         }
 
-        function runCMD(cmd) {
+        function check(cmd) {
             connectSource(cmd);
         }
     }
@@ -62,9 +62,9 @@ Item {
             // if TLP, choose pwrmgrBackend as tlp, otherwise choose power-profiles-daemon
             if (sourceName.includes("tlp-stat")) {
                 if (output.includes("battery")) {
-                    popupRoot.ispwrSave = true;
+                    popupRoot.ispwrSave = 1;
                 } else if (output.includes("AC")) {
-                    popupRoot.ispwrSave = false;
+                    popupRoot.ispwrSave = 0;
                 }
             } else if (sourceName.includes("powerprofilesctl")) {
                 if (output.includes("power-saver")) {
@@ -83,44 +83,43 @@ Item {
     }
 
     Plasma5Support.DataSource {
-        id: execdisconn
+        id: batSet
         engine: "executable"
         connectedSources: []
-        interval: 2000
-        onNewData: {
+        onNewData: (sourceName, data) => {
             disconnectSource(sourceName);
         }
 
-        function runCMD(cmd) {
+        function set(cmd) {
             connectSource(cmd);
         }
     }
 
     Component.onCompleted: {
         // is there TLP or power-profiles-daemon
-        popupRoot.exec.runCMD("which tlp");
-        popupRoot.exec.runCMD("which powerprofilesctl");
-        widgetdata.exec.runCMD("cat /sys/class/power_supply/BAT*/charge_full /sys/class/power_supply/BAT*/charge_full_design");
+        popupRoot.batMgr.check("which tlp");
+        popupRoot.batMgr.check("which powerprofilesctl");
+        widgetdata.getBatHealth.get("cat /sys/class/power_supply/BAT*/charge_full /sys/class/power_supply/BAT*/charge_full_design");
         sleepBlockerRoot.chkCafeStat();
         sleepBlockerRoot.getBlockerList();
     }
 
     Component.onDestruction: {
-        popupRoot.exec.connectedSources = [];
+        popupRoot.batMgr.connectedSources = [];
         batStatus.connectedSources = [];
-        sleepBlockerRoot.exec.connectedSources = [];
+        sleepBlockerRoot.sleepstat.connectedSources = [];
         sleepBlockerRoot.sleepchk.connectedSources = [];
-        widgetdata.exec.connectedSources = [];
+        widgetdata.getBatHealth.connectedSources = [];
     }
 
     function batSaver(state) {
         if (pwrmgrBackend === "tlp") {
             let cmd = state ? "pkexec tlp bat" : "pkexec tlp ac";
-            execdisconn.runCMD(cmd);
+            batSet.set(cmd);
         }
         else if (pwrmgrBackend === "ppd") {
             let profile = ["power-saver", "balanced", "performance"]
-            execdisconn.runCMD("powerprofilesctl set " + profile[state]);
+            batSet.set("powerprofilesctl set " + profile[state]);
         }
         // if no pwrmgrBackend, just log cause we can't set anything
         else {
@@ -215,6 +214,7 @@ Item {
                 icon.name: "pin-receptacle"
                 checkable: true
                 checked: Plasmoid.configuration.pinned
+                visible: Plasmoid.location !== 0
                 onToggled: {
                     Plasmoid.configuration.pinned = !Plasmoid.configuration.pinned
                 }
@@ -259,9 +259,18 @@ Item {
 
             PlasmaComponents.Label {
                 text: widgetdata.percent + "%"
-                font.pixelSize: 48
-                font.weight: Font.Bold
+                font.pixelSize: Plasmoid.configuration.popupfontSize
+                color: Plasmoid.configuration.popuppercentColor || Kirigami.Theme.textColor
+                font.bold: Plasmoid.configuration.popupfontBold
+                font.italic: Plasmoid.configuration.popupfontItalic
+                font.underline: Plasmoid.configuration.popupfontUnderline
+                font.family: Plasmoid.configuration.popupfontFamily || Kirigami.Theme.defaultFont.family
                 Layout.topMargin: -5
+                Layout.alignment: {
+                    let alignlist = [Qt.AlignLeft, Qt.AlignHCenter, Qt.AlignRight]
+                    let pos = Plasmoid.configuration.popuppercentPos || 0
+                    return alignlist[pos]
+                }
             }
 
             // battery bar
@@ -358,7 +367,7 @@ Item {
                 id: pwrSave
                 text: i18n("Power saving mode")
                 icon.name: "battery-profile-performance-symbolic"
-                checked: (typeof ispwrSave === "boolean") ? popupRoot.ispwrSave : false;
+                checked: popupRoot.pwrmgrBackend === "tlp" ? popupRoot.ispwrSave : false
                 onToggled: {
                     batSaver(checked)
                 }
@@ -393,7 +402,7 @@ Item {
                     enabled: popupRoot.pwrmgrBackend === "ppd"
                     from: 0
                     to: 2
-                    value: (typeof ispwrSave === "number") ? popupRoot.ispwrSave : 0;
+                    value: popupRoot.pwrmgrBackend === "ppd" ? popupRoot.ispwrSave : 0;
                     stepSize: 1
                     onMoved: {
                         popupRoot.batSaver(value);
@@ -486,6 +495,8 @@ Item {
                 Layout.fillWidth: true
                 Layout.maximumHeight: sleepblockerlist.height - applabel.height
                 clip: true
+                contentWidth: availableWidth
+                ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
                 ScrollBar.vertical.policy: ScrollBar.AsNeeded
 
                 // display the results from [SleepBlocker] file
@@ -496,7 +507,7 @@ Item {
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     boundsBehavior: Flickable.StopAtBounds
-                    spacing: 4
+                    spacing: 0
 
                     model: sleepBlockerRoot.sharedList
 
@@ -518,12 +529,12 @@ Item {
                         ListView.delayRemove: true
                         //clip: true // looks nicer without clip, i've changed my mind :)))
 
-                        readonly property bool bye: model.removing === true
+                        readonly property bool bye: model.removing === true // want cool sliding
 
                         // so... we fix the bug by animating it ourselves!
                         opacity: 0
                         height: 0
-                        property real yoff: -10 // want cool sliding
+                        property real yoff: -10
 
                         transform: Translate {
                             y: delegateRoot.yoff // we have to translate so y of our app stays at the correct pos
@@ -531,11 +542,11 @@ Item {
 
                         Component.onCompleted: {
                             opacity = Qt.binding(() => bye ? 0 : 1)
-                            yoff = Qt.binding(() => bye ? -10 : 0)
                             height = Qt.binding(() => bye ? 0 : implicitHeight)
+                            yoff = Qt.binding(() => bye ? -10 : 0)
                         }
 
-                        Behavior on opacity { NumberAnimation { duration: 250} } // fades faster than be clipped
+                        Behavior on opacity { NumberAnimation { duration: 250 } } // fades faster than be clipped
 
                         Behavior on height {
                             NumberAnimation {
@@ -543,7 +554,7 @@ Item {
                                 easing.type: bye ? Easing.InQuad : Easing.OutQuad
                                 onRunningChanged: {
                                     if (!running && delegateRoot.bye) {
-                                        sleepBlockerRoot.remove(model.appName);
+                                        sleepBlockerRoot.removeapp(model.appName);
                                     }
                                 }
                             }

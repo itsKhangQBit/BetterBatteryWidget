@@ -3,34 +3,7 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
-    <group name="General">
-        <entry name="fontSize" type="Int">
-            <default>12</default>
-        </entry>
-        <entry name="fontBold" type="Bool">
-            <default>true</default>
-        </entry>
-        <entry name="percentColor" type="String">
-            <default>#ffffff</default>
-        </entry>
-        <entry name="fontItalic" type="Bool">
-            <default>false</default>
-        </entry>
-        <entry name="fontUnderline" type="Bool">
-            <default>false</default>
-        </entry>
-        <entry name="iconSize" type="Int">
-            <default>24</default>
-        </entry>
-        <entry name="fontPadding" type="Int">
-            <default>5</default>
-        </entry>
-        <entry name="fontFamily" type="String">
-            <default></default>
-        </entry>
-        <entry name="fontposR" type="Bool">
-            <default>false</default>
-        </entry>
+    <group name="Features">
         <entry name="padMin" type="Bool">
             <default>true</default>
         </entry>
@@ -48,6 +21,57 @@
         </entry>
         <entry name="pinned" type="Bool">
             <default>false</default>
+        </entry>
+    </group>
+    <group name="Appearance">
+        <entry name="panelfontSize" type="Int">
+            <default>12</default>
+        </entry>
+        <entry name="panelfontBold" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="panelpercentColor" type="String">
+            <default>#ffffff</default>
+        </entry>
+        <entry name="panelfontItalic" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="panelfontUnderline" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="paneliconSize" type="Int">
+            <default>24</default>
+        </entry>
+        <entry name="panelfontPad" type="Int">
+            <default>5</default>
+        </entry>
+        <entry name="panelfontFamily" type="String">
+            <default></default>
+        </entry>
+        <entry name="panelfontPosR" type="Bool">
+            <default>false</default>
+        </entry>
+
+        <entry name="popupfontSize" type="Int">
+            <default>48</default>
+        </entry>
+        <entry name="popupfontBold" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="popuppercentColor" type="String">
+            <default>#ffffff</default>
+        </entry>
+        <entry name="popupfontItalic" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="popupfontUnderline" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="popupfontFamily" type="String">
+            <default></default>
+        </entry>
+        <entry name="popuppercentPos" type="Int">
+            <default>0</default>
         </entry>
     </group>
 </kcfg>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-17 14:30+0700\n"
+"POT-Creation-Date: 2026-05-20 22:09+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,20 +25,32 @@ msgstr ""
 msgid "Appearance"
 msgstr ""
 
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Font family:"
+#: ../contents/config/config.qml ../contents/ui/config/ConfigFeatures.qml
+msgid "Features"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Font size:"
+msgid "Panel appearance"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage color on taskbar:"
+msgid "Panel percentage font family:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Font formatting:"
+msgid "Default"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Panel font size:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage color on panel:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Panel font formatting:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
@@ -54,15 +66,15 @@ msgid "Underline"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Icon size:"
+msgid "Panel icon size:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage position:"
+msgid "Panel percentage position:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "On the right"
+msgid "Right"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
@@ -70,26 +82,54 @@ msgid "Font padding:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
+msgid "Popup appearance"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Popup percentage font family:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage color on popup:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Popup font formatting:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Position:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Left"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Center"
+msgstr ""
+
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Add leading zero before:"
 msgstr ""
 
-#: ../contents/ui/config/ConfigAppearance.qml
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Hours"
 msgstr ""
 
-#: ../contents/ui/config/ConfigAppearance.qml
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Minutes"
 msgstr ""
 
-#: ../contents/ui/config/ConfigAppearance.qml
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Simplified time"
 msgstr ""
 
-#: ../contents/ui/config/ConfigAppearance.qml
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Enable time remaining"
 msgstr ""
 
-#: ../contents/ui/config/ConfigAppearance.qml
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Enable battery health"
 msgstr ""
 

@@ -18,7 +18,7 @@ Item {
     }
 
     Plasma5Support.DataSource {
-        id: exec
+        id: sleepstat
         engine: "executable"
         interval: 2000
         connectedSources: []
@@ -88,7 +88,7 @@ Item {
     }
 
     function chkCafeStat() {
-        exec.runCMD('systemd-inhibit --list --no-legend')
+        batMgr.check('systemd-inhibit --list --no-legend')
     }
 
     function chgCafeStat() {
@@ -98,8 +98,8 @@ Item {
 
     function getBlockerList() {
         // dbus is finally the wayyyyyy
-        sleepchk.runCMD("dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.ListInhibitors");
         sleepchk.runCMD("id -u");
+        sleepchk.runCMD("dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.ListInhibitors");
     }
 
     function runCafe() {
@@ -114,12 +114,13 @@ Item {
     }
 
     // here's the function to remove the app
-    function remove(app) {
+    function removeapp(app) {
         for (let i = 0; i < appListModel.count; i++) {
             if (appListModel.get(i).appName === app) {
                 appListModel.remove(i);
                 // update the variable ourselves
                 sleepBlockerRoot.hasBlocker = (sleepBlockerRoot.appList.length > 0);
+
                 break;
             }
         }
@@ -173,7 +174,7 @@ Item {
                     newApps.push(appName + " [" + nameCount[appName] + "]"); // add numberings
                 }
             }
-            sleepBlockerRoot.appList = newApps; //push the list
+            sleepBlockerRoot.appList = newApps; // push the list
 
             // if no more then remove
             for (let appchoose = appListModel.count - 1; appchoose >= 0; appchoose--) {

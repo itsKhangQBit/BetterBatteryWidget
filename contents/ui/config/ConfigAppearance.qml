@@ -2,126 +2,271 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kquickcontrols as KQuickControls
 import QtQuick.Dialogs // for the font dialog
-import "../libs" as LibConfig
 
-Item {
+ScrollView {
+    anchors.fill: root
+    Layout.fillHeight: true
+    Layout.fillWidth: true
+    ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+    ScrollBar.vertical.policy: ScrollBar.AsNeeded
+    clip: true
     id: root
 
-    property alias cfg_fontSize: fontSizeSpinBox.value
-    property alias cfg_fontBold: fontBoldCheckBox.checked
-    property alias cfg_fontItalic: fontItalicCheckBox.checked
-    property alias cfg_fontUnderline: fontUnderlineCheckbox.checked
-    property alias cfg_iconSize: iconSizeSpinBox.value
-    property alias cfg_fontPad: fontPadSpinBox.value
-    property alias cfg_fontposR: fontposRCheckBox.checked
-    property alias cfg_padHr: padHrChkBox.checked
-    property alias cfg_padMin: padMinChkBox.checked
-    property alias cfg_simpleTime: simpleTimeChkBox.checked
-    property alias cfg_timeLeft: timeLeftChkBox.checked
-    property alias cfg_healthLeft: healthLeftChkBox.checked
-    property alias cfg_percentColor: colorPicker.color
+    property alias cfg_panelfontSize: panelfontSize.value
+    property alias cfg_panelfontBold: panelfontBold.checked
+    property alias cfg_panelpercentColor: panelcolorPicker.color
+    property alias cfg_panelfontItalic: panelfontItalic.checked
+    property alias cfg_panelfontUnderline: panelfontUnderline.checked
+    property alias cfg_paneliconSize: paneliconSize.value
+    property alias cfg_panelfontPad: panelfontPad.value
+    property alias cfg_panelfontPosR: panelfontPosR.checked
+    property var cfg_panelfontFamily
 
-    ScrollView {
-        anchors.fill: root
-        Layout.fillHeight: true
-        Layout.fillWidth: true
-        ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
-        ScrollBar.vertical.policy: ScrollBar.AsNeeded
-        clip: true
+    property alias cfg_popupfontSize: popupfontSize.value
+    property alias cfg_popupfontBold: popupfontBold.checked
+    property alias cfg_popuppercentColor: popupcolorPicker.color
+    property alias cfg_popupfontItalic: popupfontItalic.checked
+    property alias cfg_popupfontUnderline: popupfontUnderline.checked
+    property alias cfg_popupfontPos: popupposSlider.value
+    property var cfg_popupfontFamily
 
-        Kirigami.FormLayout {
-            id: form
+    // this is just for QML engine to not throw any warnings
+    property bool cfg_padMin
+    property bool cfg_padHr
+    property bool cfg_simpleTime
+    property bool cfg_timeLeft
+    property bool cfg_healthLeft
+    property bool cfg_pinned
 
-            LibConfig.FontFamily {
-                Kirigami.FormData.label: i18n("Font family:")
-                configKey: 'fontFamily'
+    // OMG shut up QML!!!
+    property bool cfg_padMinDefault
+    property bool cfg_padHrDefault
+    property bool cfg_simpleTimeDefault
+    property bool cfg_timeLeftDefault
+    property bool cfg_healthLeftDefault
+    property bool cfg_pinnedDefault
+
+    property int cfg_panelfontSizeDefault
+    property bool cfg_panelfontBoldDefault
+    property string cfg_panelpercentColorDefault
+    property bool cfg_panelfontItalicDefault
+    property bool cfg_panelfontUnderlineDefault
+    property int cfg_paneliconSizeDefault
+    property int cfg_panelfontPadDefault
+    property string cfg_panelfontFamilyDefault
+    property bool cfg_panelfontPosRDefault
+
+    property int cfg_popupfontSizeDefault
+    property bool cfg_popupfontBoldDefault
+    property string cfg_popuppercentColorDefault
+    property bool cfg_popupfontItalicDefault
+    property bool cfg_popupfontUnderlineDefault
+    property string cfg_popupfontFamilyDefault
+    property int cfg_popuppercentPosDefault
+
+
+    Kirigami.FormLayout {
+
+        PlasmaComponents.Label {
+            text: i18n("Panel appearance")
+            font.pixelSize: 18
+        }
+
+        FontDialog {
+            id: panelfontDiag
+            onSelectedFontChanged: {
+                plasmoid.configuration.panelfontFamily = selectedFont.family
+                panelfontDropdown.displayText = selectedFont.family
+            }
+        }
+
+        RowLayout {
+            PlasmaComponents.Label {
+                text: i18n("Panel percentage font family:")
             }
 
-            SpinBox {
-                id: fontSizeSpinBox
-                Kirigami.FormData.label: i18n("Font size:")
-                from: 6
-                to: 72
-                value: root.cfg_fontSize
+            PlasmaComponents.Button {
+                id: panelfontDropdown
+                Layout.fillWidth: true
+                text: plasmoid.configuration.panelfontFamily || i18n("Default")
+                onClicked: {
+                    panelfontDiag.selectedFont.family = plasmoid.configuration.panelfontFamily
+                    panelfontDiag.open()
+                }
+            }
+        }
+
+        SpinBox {
+            id: panelfontSize
+            Kirigami.FormData.label: i18n("Panel font size:")
+            from: 6
+            to: 72
+            value: root.cfg_panelfontSize
+        }
+
+        RowLayout {
+            Label {
+                text: i18n("Percentage color on panel:")
+            }
+
+            KQuickControls.ColorButton {
+                id: panelcolorPicker
+                color: cfg_panelpercentColor
+
+                // save my color pls
+                onColorChanged: cfg_panelpercentColor = color.toString()
+            }
+        }
+
+        CheckBox {
+            id: panelfontBold
+            Kirigami.FormData.label: i18n("Panel font formatting:")
+            text: i18n("Bold")
+        }
+
+        CheckBox {
+            id: panelfontItalic
+            text: i18n("Italic")
+        }
+
+        CheckBox {
+            id: panelfontUnderline
+            text: i18n("Underline")
+        }
+
+        SpinBox {
+            id: paneliconSize
+            Kirigami.FormData.label: i18n("Panel icon size:")
+            from: 16
+            to: 128
+        }
+
+        CheckBox {
+            id: panelfontPosR
+            Kirigami.FormData.label: i18n("Panel percentage position:")
+            text: i18n("Right")
+        }
+
+        SpinBox {
+            id: panelfontPad
+            Kirigami.FormData.label: i18n("Font padding:")
+            from: -100
+            to: 100
+        }
+
+        PlasmaComponents.Label {
+            text: i18n("Popup appearance")
+            font.pixelSize: 18
+        }
+
+        FontDialog {
+            id: popupfontDiag
+            onSelectedFontChanged: {
+                plasmoid.configuration.popupfontFamily = selectedFont.family
+                popupfontDropdown.displayText = selectedFont.family
+            }
+        }
+
+        RowLayout {
+            PlasmaComponents.Label {
+                text: i18n("Popup percentage font family:")
+            }
+
+            PlasmaComponents.Button {
+                id: popupfontDropdown
+                Layout.fillWidth: true
+                text: plasmoid.configuration.popupfontFamily || i18n("Default")
+                onClicked: {
+                    popupfontDiag.selectedFont.family = plasmoid.configuration.popupfontFamily
+                    popupfontDiag.open()
+                }
+            }
+        }
+
+        SpinBox {
+            id: popupfontSize
+            Kirigami.FormData.label: i18n("Popup font size:")
+            from: 6
+            to: 72
+            value: root.cfg_popupfontSize
+        }
+
+        RowLayout {
+            Label {
+                text: i18n("Percentage color on popup:")
+            }
+
+            KQuickControls.ColorButton {
+                id: popupcolorPicker
+                color: cfg_popuppercentColor
+
+                // save my color pls
+                onColorChanged: cfg_popuppercentColor = color.toString()
+            }
+        }
+
+        CheckBox {
+            id: popupfontBold
+            Kirigami.FormData.label: i18n("Popup font formatting:")
+            text: i18n("Bold")
+        }
+
+        CheckBox {
+            id: popupfontItalic
+            text: i18n("Italic")
+        }
+
+        CheckBox {
+            id: popupfontUnderline
+            text: i18n("Underline")
+        }
+
+        ColumnLayout {
+            Layout.fillWidth: true
+
+            PlasmaComponents.Label {
+                text: i18n("Position:")
+            }
+
+
+            PlasmaComponents.Slider { // lol, a freaking slider just for the position
+                id: popupposSlider
+                Layout.fillWidth: true
+                from: 0
+                to: 2
+                value: plasmoid.configuration.popuppercentPos
+                stepSize: 1
+                onMoved: {
+                    plasmoid.configuration.popuppercentPos = value;
+                }
             }
 
             RowLayout {
-                Label {
-                    text: i18n("Percentage color on taskbar:")
+                id: popupposLabel
+                Layout.fillWidth: true
+                // space each icon equally.. or let it space itself!
+
+                PlasmaComponents.Label {
+                    Layout.alignment: Qt.AlignLeft
+                    text: i18n("Left")
                 }
 
-                KQuickControls.ColorButton {
-                    id: colorPicker
-                    color: cfg_percentColor
+                Item { Layout.fillWidth: true }
 
-                    // save my color pls
-                    onColorChanged: cfg_percentColor = color.toString()
+                PlasmaComponents.Label {
+                    Layout.alignment: Qt.AlignCenter
+                    text: i18n("Center")
                 }
-            }
 
-            CheckBox {
-                id: fontBoldCheckBox
-                Kirigami.FormData.label: i18n("Font formatting:")
-                text: i18n("Bold")
-            }
+                Item { Layout.fillWidth: true }
 
-            CheckBox {
-                id: fontItalicCheckBox
-                text: i18n("Italic")
-            }
-
-            CheckBox {
-                id: fontUnderlineCheckbox
-                text: i18n("Underline")
-            }
-
-            SpinBox {
-                id: iconSizeSpinBox
-                Kirigami.FormData.label: i18n("Icon size:")
-                from: 16
-                to: 128
-            }
-
-            CheckBox {
-                id: fontposRCheckBox
-                Kirigami.FormData.label: i18n("Percentage position:")
-                text: i18n("On the right")
-            }
-
-            SpinBox {
-                id: fontPadSpinBox
-                Kirigami.FormData.label: i18n("Font padding:")
-                from: -100
-                to: 100
-            }
-
-            CheckBox {
-                id: padHrChkBox
-                Kirigami.FormData.label: i18n("Add leading zero before:")
-                text: i18n("Hours")
-            }
-
-            CheckBox {
-                id: padMinChkBox
-                text: i18n("Minutes")
-            }
-
-            CheckBox {
-                id: simpleTimeChkBox
-                Kirigami.FormData.label: i18n("Simplified time")
-            }
-
-
-            CheckBox {
-                id: timeLeftChkBox
-                Kirigami.FormData.label: i18n("Enable time remaining")
-            }
-
-            CheckBox {
-                id: healthLeftChkBox
-                Kirigami.FormData.label: i18n("Enable battery health")
+                PlasmaComponents.Label {
+                    Layout.alignment: Qt.AlignRight
+                    text: i18n("Right")
+                }
             }
         }
     }

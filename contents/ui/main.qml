@@ -14,7 +14,7 @@ PlasmoidItem {
     property string icon: "battery-000"
     property string health: "100%"
     property string timeleft: "0"
-    property alias exec: exec //need the alias so that we can call exec from FullPopup
+    property alias getBatHealth: getBatHealth //need the alias so that we can call getBatHealth from FullPopup
 
     Plasma5Support.DataSource {
         id: batterySrc
@@ -49,7 +49,7 @@ PlasmoidItem {
     }
 
     Plasma5Support.DataSource {
-        id: exec
+        id: getBatHealth
         engine: "executable"
         connectedSources: []
         interval: 60000
@@ -69,7 +69,7 @@ PlasmoidItem {
             }
         }
 
-        function runCMD(cmd) {
+        function get(cmd) {
             connectSource(cmd);
         }
     }
@@ -78,7 +78,7 @@ PlasmoidItem {
     compactRepresentation: MouseArea {
 
         Layout.preferredWidth: plasmoidRow.implicitWidth + Kirigami.Units.smallSpacing
-        Layout.preferredHeight: Plasmoid.configuration.iconSize
+        Layout.preferredHeight: Plasmoid.configuration.paneliconSize
         // get the click action to open the popup
         property bool wasExpanded: false
         onPressed: wasExpanded = root.expanded
@@ -95,12 +95,12 @@ PlasmoidItem {
             PlasmaComponents.Label {
                 id: percent
                 text: root.percent + "%"
-                font.pixelSize: Plasmoid.configuration.fontSize
-                color: Plasmoid.configuration.percentColor || Kirigami.Theme.textColor
-                font.bold: Plasmoid.configuration.fontBold
-                font.italic: Plasmoid.configuration.fontItalic
-                font.underline: Plasmoid.configuration.fontUnderline
-                font.family: Plasmoid.configuration.fontFamily || Kirigami.Theme.defaultFont.family
+                font.pixelSize: Plasmoid.configuration.panelfontSize
+                color: Plasmoid.configuration.panelpercentColor || Kirigami.Theme.textColor
+                font.bold: Plasmoid.configuration.panelfontBold
+                font.italic: Plasmoid.configuration.panelfontItalic
+                font.underline: Plasmoid.configuration.panelfontUnderline
+                font.family: Plasmoid.configuration.panelfontFamily || Kirigami.Theme.defaultFont.family
             }
 
             Kirigami.Icon {
@@ -114,8 +114,8 @@ PlasmoidItem {
                 }
 
                 // Use config from settings
-                Layout.preferredWidth: Plasmoid.configuration.iconSize
-                Layout.preferredHeight: Plasmoid.configuration.iconSize
+                Layout.preferredWidth: Plasmoid.configuration.paneliconSize
+                Layout.preferredHeight: Plasmoid.configuration.paneliconSize
             }
         }
     }

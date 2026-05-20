@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-17 14:30+0700\n"
+"POT-Creation-Date: 2026-05-20 22:09+0700\n"
 "PO-Revision-Date: 2026-05-15 10:24+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -26,21 +26,33 @@ msgstr "De betere accuwidget"
 msgid "Appearance"
 msgstr "Vormgeving"
 
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Font family:"
-msgstr "Lettertype:"
+#: ../contents/config/config.qml ../contents/ui/config/ConfigFeatures.qml
+msgid "Features"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Font size:"
-msgstr "Tekstgrootte:"
+msgid "Panel appearance"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage color on taskbar:"
-msgstr "Percentagekleur op paneel:"
+msgid "Panel percentage font family:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Font formatting:"
-msgstr "Tekstopmaak:"
+msgid "Default"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Panel font size:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage color on panel:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Panel font formatting:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Bold"
@@ -55,42 +67,70 @@ msgid "Underline"
 msgstr "Onderstrepen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Icon size:"
-msgstr "Pictogramgrootte:"
+msgid "Panel icon size:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage position:"
-msgstr "Percentage tonen:"
+msgid "Panel percentage position:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "On the right"
-msgstr "Aan rechterkant"
+msgid "Right"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Font padding:"
 msgstr "Tekstopvulling:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
+msgid "Popup appearance"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Popup percentage font family:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage color on popup:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Popup font formatting:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Position:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Left"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Center"
+msgstr ""
+
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Add leading zero before:"
 msgstr "Voorloopnul toevoegen aan:"
 
-#: ../contents/ui/config/ConfigAppearance.qml
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Hours"
 msgstr "Uren"
 
-#: ../contents/ui/config/ConfigAppearance.qml
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Minutes"
 msgstr "Minuten"
 
-#: ../contents/ui/config/ConfigAppearance.qml
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Simplified time"
 msgstr "Eenvoudige tijdweergave"
 
-#: ../contents/ui/config/ConfigAppearance.qml
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Enable time remaining"
 msgstr "Resterende tijd tonen"
 
-#: ../contents/ui/config/ConfigAppearance.qml
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Enable battery health"
 msgstr "Gezondheidsstatus van accu tonen"
 
@@ -158,3 +198,24 @@ msgstr "Standaardlettertype"
 #: ../contents/ui/main.qml
 msgid "Calculating..."
 msgstr "Bezig met berekenen..."
+
+#~ msgid "Font family:"
+#~ msgstr "Lettertype:"
+
+#~ msgid "Font size:"
+#~ msgstr "Tekstgrootte:"
+
+#~ msgid "Percentage color on taskbar:"
+#~ msgstr "Percentagekleur op paneel:"
+
+#~ msgid "Font formatting:"
+#~ msgstr "Tekstopmaak:"
+
+#~ msgid "Icon size:"
+#~ msgstr "Pictogramgrootte:"
+
+#~ msgid "Percentage position:"
+#~ msgstr "Percentage tonen:"
+
+#~ msgid "On the right"
+#~ msgstr "Aan rechterkant"

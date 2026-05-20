@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-14 21:52+0700\n"
+"POT-Creation-Date: 2026-05-20 22:09+0700\n"
 "PO-Revision-Date: 2026-04-24 21:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -26,21 +26,33 @@ msgstr "Besseres Batteriewidget"
 msgid "Appearance"
 msgstr "Darstellung"
 
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Font family:"
-msgstr "Schriftart:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Font size:"
-msgstr "Schriftgröße:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage color on taskbar:"
+#: ../contents/config/config.qml ../contents/ui/config/ConfigFeatures.qml
+msgid "Features"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Font formatting:"
-msgstr "Schriftformat:"
+msgid "Panel appearance"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Panel percentage font family:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Default"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Panel font size:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage color on panel:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Panel font formatting:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Bold"
@@ -55,48 +67,84 @@ msgid "Underline"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Icon size:"
-msgstr "Symbolgröße:"
+msgid "Panel icon size:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage position:"
-msgstr "Ladezustandsposition:"
+msgid "Panel percentage position:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "On the right"
-msgstr "Rechts"
+msgid "Right"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Font padding:"
 msgstr "Schriftabstand:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
+msgid "Popup appearance"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Popup percentage font family:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage color on popup:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Popup font formatting:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Position:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Left"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Center"
+msgstr ""
+
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Add leading zero before:"
 msgstr "Führende 0 hinzufügen zu:"
 
-#: ../contents/ui/config/ConfigAppearance.qml
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Hours"
 msgstr "Stunden"
 
-#: ../contents/ui/config/ConfigAppearance.qml
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Minutes"
 msgstr "Minuten"
 
-#: ../contents/ui/config/ConfigAppearance.qml
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Simplified time"
 msgstr "Einfache Zeit"
 
-#: ../contents/ui/config/ConfigAppearance.qml
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Enable time remaining"
 msgstr "Verbleibende Zeit anzeigen"
 
-#: ../contents/ui/config/ConfigAppearance.qml
+#: ../contents/ui/config/ConfigFeatures.qml
 msgid "Enable battery health"
 msgstr "Akkuzustand anzeigen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery percentage"
 msgstr "Energie und Akku"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Back"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Keep applet open"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Fully charged"
@@ -150,3 +198,21 @@ msgstr "Standard"
 #: ../contents/ui/main.qml
 msgid "Calculating..."
 msgstr "Berechnen..."
+
+#~ msgid "Font family:"
+#~ msgstr "Schriftart:"
+
+#~ msgid "Font size:"
+#~ msgstr "Schriftgröße:"
+
+#~ msgid "Font formatting:"
+#~ msgstr "Schriftformat:"
+
+#~ msgid "Icon size:"
+#~ msgstr "Symbolgröße:"
+
+#~ msgid "Percentage position:"
+#~ msgstr "Ladezustandsposition:"
+
+#~ msgid "On the right"
+#~ msgstr "Rechts"
