@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-20 22:09+0700\n"
+"POT-Creation-Date: 2026-05-21 09:52+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -78,27 +78,31 @@ msgid "Right"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Font padding:"
+msgid "Panel font padding:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Popup appearance"
+msgid "Applet popup appearance"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Popup percentage font family:"
+msgid "Applet popup percentage font family:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage color on popup:"
+msgid "Applet popup font size:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Popup font formatting:"
+msgid "Applet popup percentage color:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Position:"
+msgid "Applet popup font formatting:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Applet popup percentage position:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
@@ -142,7 +146,7 @@ msgid "Back"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml
-msgid "Keep applet open"
+msgid "Keep applet popup open"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml
@@ -187,11 +191,6 @@ msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Apps blocking sleep:"
-msgstr ""
-
-#: ../contents/ui/libs/FontFamily.qml
-msgctxt "Use default font"
-msgid "Default"
 msgstr ""
 
 #: ../contents/ui/main.qml

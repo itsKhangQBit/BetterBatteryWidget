@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-20 22:09+0700\n"
+"POT-Creation-Date: 2026-05-21 09:52+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,7 +43,7 @@ msgstr "Mặc định"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel font size:"
-msgstr "Cỡ chữ:"
+msgstr "Cỡ chữ trên panel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage color on panel:"
@@ -51,7 +51,7 @@ msgstr "Màu của phần trăm trên panel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel font formatting:"
-msgstr "Định dạng phông:"
+msgstr "Định dạng phông trên panel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Bold"
@@ -67,39 +67,43 @@ msgstr "Chữ gạch chân"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel icon size:"
-msgstr "Kích cỡ biểu tượng:"
+msgstr "Kích cỡ biểu tượng trên panel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel percentage position:"
-msgstr "Vị trí phần trăm:"
+msgstr "Vị trí phần trăm trên panel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Right"
 msgstr "Phải"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Font padding:"
-msgstr "Khoảng cách chữ và pin:"
+msgid "Panel font padding:"
+msgstr "Khoảng cách chữ và pin trên panel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Popup appearance"
-msgstr "Giao diện ở popup"
+msgid "Applet popup appearance"
+msgstr "Giao diện ở applet popup"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Popup percentage font family:"
-msgstr "Phông chữ ở popup:"
+msgid "Applet popup percentage font family:"
+msgstr "Phông chữ ở applet popup:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage color on popup:"
-msgstr "Màu của phần trăm trên panel:"
+msgid "Applet popup font size:"
+msgstr "Cỡ chữ ở applet popup"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Popup font formatting:"
+msgid "Applet popup percentage color:"
+msgstr "Màu của phần trăm trên applet popup:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Applet popup font formatting:"
 msgstr "Định dạng phông:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Position:"
-msgstr "Vị trí phần trăm:"
+msgid "Applet popup percentage position:"
+msgstr "Vị trí phần trăm trên applet popup:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Left"
@@ -131,7 +135,7 @@ msgstr "Xem thời gian còn lại"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Enable battery health"
-msgstr "Xem sức chứa pin còn lại"
+msgstr "Xem sức khỏe pin còn lại"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery percentage"
@@ -142,8 +146,8 @@ msgid "Back"
 msgstr "Quay lại"
 
 #: ../contents/ui/FullPopup.qml
-msgid "Keep applet open"
-msgstr "Giữ cho applet mở"
+msgid "Keep applet popup open"
+msgstr "Giữ cho applet popup mở"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Fully charged"
@@ -163,7 +167,7 @@ msgstr "Thời gian sạc còn lại: "
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery time left: "
-msgstr "Thời gian dùng còn lại: "
+msgstr "Thời gian pin còn lại: "
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery health: "
@@ -171,7 +175,7 @@ msgstr "Sức khỏe pin: "
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep"
-msgstr "Chặn ngủ"
+msgstr "Chống ngủ"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Apps blocking sleep"
@@ -188,11 +192,6 @@ msgstr "Cài đặt năng lượng..."
 #: ../contents/ui/FullPopup.qml
 msgid "Apps blocking sleep:"
 msgstr "Các ứng dụng đang chặn ngủ:"
-
-#: ../contents/ui/libs/FontFamily.qml
-msgctxt "Use default font"
-msgid "Default"
-msgstr "Phông mặc định"
 
 #: ../contents/ui/main.qml
 msgid "Calculating..."

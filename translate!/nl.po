@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-20 22:09+0700\n"
+"POT-Creation-Date: 2026-05-21 09:52+0700\n"
 "PO-Revision-Date: 2026-05-20 19:45+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -79,28 +79,32 @@ msgid "Right"
 msgstr "Rechts"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Font padding:"
-msgstr "Tekstopvulling:"
+msgid "Panel font padding:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Popup appearance"
-msgstr "Tekstballonvormgeving"
+msgid "Applet popup appearance"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Popup percentage font family:"
-msgstr "Percentagelettertype op tekstballon:"
+msgid "Applet popup percentage font family:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage color on popup:"
-msgstr "Percentagekleur op tekstballon:"
+msgid "Applet popup font size:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Popup font formatting:"
-msgstr "Tekstopmaak op tekstballon:"
+msgid "Applet popup percentage color:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Position:"
-msgstr "Locatie:"
+msgid "Applet popup font formatting:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Applet popup percentage position:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Left"
@@ -143,8 +147,8 @@ msgid "Back"
 msgstr "Terug"
 
 #: ../contents/ui/FullPopup.qml
-msgid "Keep applet open"
-msgstr "Applet open houden"
+msgid "Keep applet popup open"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Fully charged"
@@ -190,32 +194,31 @@ msgstr "Energie-instellingen..."
 msgid "Apps blocking sleep:"
 msgstr "Programma's die de slaapstand onderdrukken:"
 
-#: ../contents/ui/libs/FontFamily.qml
-msgctxt "Use default font"
-msgid "Default"
-msgstr "Standaardlettertype"
-
 #: ../contents/ui/main.qml
 msgid "Calculating..."
 msgstr "Bezig met berekenen..."
 
-#~ msgid "Font family:"
-#~ msgstr "Lettertype:"
+#~ msgid "Keep applet open"
+#~ msgstr "Applet open houden"
 
-#~ msgid "Font size:"
-#~ msgstr "Tekstgrootte:"
+#~ msgid "Font padding:"
+#~ msgstr "Tekstopvulling:"
 
-#~ msgid "Percentage color on taskbar:"
-#~ msgstr "Percentagekleur op paneel:"
+#~ msgid "Position:"
+#~ msgstr "Locatie:"
 
-#~ msgid "Font formatting:"
-#~ msgstr "Tekstopmaak:"
+#~ msgid "Popup appearance"
+#~ msgstr "Tekstballonvormgeving"
 
-#~ msgid "Icon size:"
-#~ msgstr "Pictogramgrootte:"
+#~ msgid "Popup percentage font family:"
+#~ msgstr "Percentagelettertype op tekstballon:"
 
-#~ msgid "Percentage position:"
-#~ msgstr "Percentage tonen:"
+#~ msgid "Percentage color on popup:"
+#~ msgstr "Percentagekleur op tekstballon:"
 
-#~ msgid "On the right"
-#~ msgstr "Aan rechterkant"
+#~ msgid "Popup font formatting:"
+#~ msgstr "Tekstopmaak op tekstballon:"
+
+#~ msgctxt "Use default font"
+#~ msgid "Default"
+#~ msgstr "Standaardlettertype"
