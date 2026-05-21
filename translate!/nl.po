@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-20 22:09+0700\n"
-"PO-Revision-Date: 2026-05-15 10:24+0200\n"
+"PO-Revision-Date: 2026-05-20 19:45+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -28,31 +28,31 @@ msgstr "Vormgeving"
 
 #: ../contents/config/config.qml ../contents/ui/config/ConfigFeatures.qml
 msgid "Features"
-msgstr ""
+msgstr "Functies"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel appearance"
-msgstr ""
+msgstr "Vormgeving op paneel"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel percentage font family:"
-msgstr ""
+msgstr "Percentagelettertype op paneel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Default"
-msgstr ""
+msgstr "Standaard"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel font size:"
-msgstr ""
+msgstr "Tekstgrootte op paneel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage color on panel:"
-msgstr ""
+msgstr "Percentagekleur op paneel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel font formatting:"
-msgstr ""
+msgstr "Tekstopmaak op paneel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Bold"
@@ -68,15 +68,15 @@ msgstr "Onderstrepen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel icon size:"
-msgstr ""
+msgstr "Paneelpictogramgrootte:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel percentage position:"
-msgstr ""
+msgstr "Percentagelocatie op paneel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Right"
-msgstr ""
+msgstr "Rechts"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Font padding:"
@@ -84,31 +84,31 @@ msgstr "Tekstopvulling:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Popup appearance"
-msgstr ""
+msgstr "Tekstballonvormgeving"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Popup percentage font family:"
-msgstr ""
+msgstr "Percentagelettertype op tekstballon:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage color on popup:"
-msgstr ""
+msgstr "Percentagekleur op tekstballon:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Popup font formatting:"
-msgstr ""
+msgstr "Tekstopmaak op tekstballon:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Position:"
-msgstr ""
+msgstr "Locatie:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Left"
-msgstr ""
+msgstr "Links"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Center"
-msgstr ""
+msgstr "Midden"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Add leading zero before:"
