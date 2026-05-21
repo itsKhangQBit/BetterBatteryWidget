@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-21 09:52+0700\n"
-"PO-Revision-Date: 2026-05-20 19:45+0200\n"
+"PO-Revision-Date: 2026-05-21 10:03+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -80,31 +80,31 @@ msgstr "Rechts"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel font padding:"
-msgstr ""
+msgstr "Tekstopvulling op paneel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup appearance"
-msgstr ""
+msgstr "Pop-upvormgeving"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup percentage font family:"
-msgstr ""
+msgstr "Percentagelettertype op pop-up:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup font size:"
-msgstr ""
+msgstr "Tektsgrootte op pop-up:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup percentage color:"
-msgstr ""
+msgstr "Percentagekleur op pop-up:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup font formatting:"
-msgstr ""
+msgstr "Tekstopmaak op pop-up:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup percentage position:"
-msgstr ""
+msgstr "Percentagelocatie op pop-up:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Left"
@@ -148,7 +148,7 @@ msgstr "Terug"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Keep applet popup open"
-msgstr ""
+msgstr "Pop-up geopend houden"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Fully charged"
