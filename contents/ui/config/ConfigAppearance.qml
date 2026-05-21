@@ -23,15 +23,15 @@ ScrollView {
     property alias cfg_paneliconSize: paneliconSize.value
     property alias cfg_panelfontPad: panelfontPad.value
     property alias cfg_panelfontPosR: panelfontPosR.checked
-    property var cfg_panelfontFamily
+    property alias cfg_panelfontFamily: panelfontDiag.selectedFont.family
 
     property alias cfg_popupfontSize: popupfontSize.value
     property alias cfg_popupfontBold: popupfontBold.checked
     property alias cfg_popuppercentColor: popupcolorPicker.color
     property alias cfg_popupfontItalic: popupfontItalic.checked
     property alias cfg_popupfontUnderline: popupfontUnderline.checked
-    property alias cfg_popupfontPos: popupposSlider.value
-    property var cfg_popupfontFamily
+    property alias cfg_popuppercentPos: popupposSlider.value
+    property alias cfg_popupfontFamily: popupfontDiag.selectedFont.family
 
     // this is just for QML engine to not throw any warnings
     property bool cfg_padMin
@@ -69,17 +69,19 @@ ScrollView {
 
 
     Kirigami.FormLayout {
+        property string title: "" // shut up QML
 
         PlasmaComponents.Label {
             text: i18n("Panel appearance")
             font.pixelSize: 18
+            topPadding: Kirigami.Units.largeSpacing
+            font.bold: true
         }
 
         FontDialog {
             id: panelfontDiag
             onSelectedFontChanged: {
                 plasmoid.configuration.panelfontFamily = selectedFont.family
-                panelfontDropdown.displayText = selectedFont.family
             }
         }
 
@@ -152,27 +154,28 @@ ScrollView {
 
         SpinBox {
             id: panelfontPad
-            Kirigami.FormData.label: i18n("Font padding:")
+            Kirigami.FormData.label: i18n("Panel font padding:")
             from: -100
             to: 100
         }
 
         PlasmaComponents.Label {
-            text: i18n("Popup appearance")
+            text: i18n("Applet popup appearance")
             font.pixelSize: 18
+            font.bold: true
         }
 
         FontDialog {
             id: popupfontDiag
             onSelectedFontChanged: {
                 plasmoid.configuration.popupfontFamily = selectedFont.family
-                popupfontDropdown.displayText = selectedFont.family
+                plasmoid.configuration.writeConfig() // SAVE THE CONFIG TO THE DRIVE FOR ME, why do you only save it in RAM?
             }
         }
 
         RowLayout {
             PlasmaComponents.Label {
-                text: i18n("Popup percentage font family:")
+                text: i18n("Applet popup percentage font family:")
             }
 
             PlasmaComponents.Button {
@@ -180,6 +183,7 @@ ScrollView {
                 Layout.fillWidth: true
                 text: plasmoid.configuration.popupfontFamily || i18n("Default")
                 onClicked: {
+                    console.log(plasmoid.configuration.popupfontFamily)
                     popupfontDiag.selectedFont.family = plasmoid.configuration.popupfontFamily
                     popupfontDiag.open()
                 }
@@ -188,7 +192,7 @@ ScrollView {
 
         SpinBox {
             id: popupfontSize
-            Kirigami.FormData.label: i18n("Popup font size:")
+            Kirigami.FormData.label: i18n("Applet popup font size:")
             from: 6
             to: 72
             value: root.cfg_popupfontSize
@@ -196,7 +200,7 @@ ScrollView {
 
         RowLayout {
             Label {
-                text: i18n("Percentage color on popup:")
+                text: i18n("Applet popup percentage color:")
             }
 
             KQuickControls.ColorButton {
@@ -210,7 +214,7 @@ ScrollView {
 
         CheckBox {
             id: popupfontBold
-            Kirigami.FormData.label: i18n("Popup font formatting:")
+            Kirigami.FormData.label: i18n("Applet popup font formatting:")
             text: i18n("Bold")
         }
 
@@ -228,7 +232,7 @@ ScrollView {
             Layout.fillWidth: true
 
             PlasmaComponents.Label {
-                text: i18n("Position:")
+                text: i18n("Applet popup percentage position:")
             }
 
 

@@ -87,9 +87,9 @@ PlasmoidItem {
         RowLayout {
             id: plasmoidRow
             // Offset the percentage to the right or left, its your choice
-            layoutDirection: Plasmoid.configuration.fontposR ? Qt.RightToLeft : Qt.LeftToRight
+            layoutDirection: Plasmoid.configuration.panelfontPosR ? Qt.RightToLeft : Qt.LeftToRight
             anchors.fill: parent
-            spacing: plasmoid.configuration.fontPad
+            spacing: plasmoid.configuration.panelfontPad
             height: parent.height
 
             PlasmaComponents.Label {
@@ -126,7 +126,7 @@ PlasmoidItem {
     }
 
     function formatTime(msec) {
-        if (msec < 0 || isNaN(msec) || msec === null) {
+        if (msec < 0 || isNaN(msec) || msec === "") {
             return i18n("Calculating...");
         } else {
             let tMin = Math.floor(msec / 60000);

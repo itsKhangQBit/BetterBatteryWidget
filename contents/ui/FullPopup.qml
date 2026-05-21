@@ -219,7 +219,7 @@ Item {
                     Plasmoid.configuration.pinned = !Plasmoid.configuration.pinned
                 }
                 PlasmaComponents.ToolTip {
-                    text: i18n("Keep applet open")
+                    text: i18n("Keep applet popup open")
                 }
             }
         }
@@ -255,6 +255,11 @@ Item {
                     return widgetdata.isCharge ? i18n("Charging") : i18n("Discharging")
                 }
                 opacity: 0.7
+                Layout.alignment: {
+                    let alignlist = [Qt.AlignLeft, Qt.AlignHCenter, Qt.AlignRight]
+                    let pos = Plasmoid.configuration.popuppercentPos || 0
+                    return alignlist[pos]
+                }
             }
 
             PlasmaComponents.Label {
@@ -268,7 +273,7 @@ Item {
                 Layout.topMargin: -5
                 Layout.alignment: {
                     let alignlist = [Qt.AlignLeft, Qt.AlignHCenter, Qt.AlignRight]
-                    let pos = Plasmoid.configuration.popuppercentPos || 0
+                    let pos = plasmoid.configuration.popuppercentPos || 0
                     return alignlist[pos]
                 }
             }

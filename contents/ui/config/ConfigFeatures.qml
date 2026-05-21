@@ -69,10 +69,13 @@ ScrollView {
     property int cfg_popuppercentPosDefault
 
     Kirigami.FormLayout {
+        property string title: "" // shut up QML
 
         PlasmaComponents.Label {
             text: i18n("Features")
             font.pixelSize: 18
+            topPadding: Kirigami.Units.largeSpacing
+            font.bold: true
         }
 
         CheckBox {

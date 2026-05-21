@@ -41,7 +41,7 @@ Item {
         }
 
         // just for running cmds below
-        function runCMD(cmd) {
+        function check(cmd) {
             if (connectedSources.indexOf(cmd) === -1) {
                 connectSource(cmd);
             }
@@ -88,7 +88,7 @@ Item {
     }
 
     function chkCafeStat() {
-        batMgr.check('systemd-inhibit --list --no-legend')
+        sleepstat.check('systemd-inhibit --list --no-legend')
     }
 
     function chgCafeStat() {
@@ -148,7 +148,7 @@ Item {
                         dbusuid = parseInt(dbusuidLine.replace("uint32", "").trim(), 10);
                     }
 
-                    //console.log(blockwhat, name, dbusuid) debugging
+                    //console.log(blockwhat, name, dbusuid) //debugging
 
                     // now we check the conditions, see if it shall be display
                     if (dbusuid === sleepBlockerRoot.uid && (blockwhat.includes("sleep") || blockwhat.includes("idle"))) {
