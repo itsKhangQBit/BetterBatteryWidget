@@ -28,31 +28,31 @@ msgstr "Darstellung"
 
 #: ../contents/config/config.qml ../contents/ui/config/ConfigFeatures.qml
 msgid "Features"
-msgstr ""
+msgstr "Funktionen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel appearance"
-msgstr ""
+msgstr "Panel-Aussehen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel percentage font family:"
-msgstr ""
+msgstr "Schriftfamilie der Prozentanzeige im Panel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel font size:"
-msgstr ""
+msgstr "Panel Schriftgröße:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage color on panel:"
-msgstr ""
+msgstr "Farbe der Prozentanzeige im Panel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel font formatting:"
-msgstr ""
+msgstr "Formattierung der Schrift im Panel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Bold"
@@ -60,59 +60,59 @@ msgstr "Fett"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Italic"
-msgstr ""
+msgstr "Kursiv"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Underline"
-msgstr ""
+msgstr "Unterstrichen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel icon size:"
-msgstr ""
+msgstr "Icongröße im Panel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel percentage position:"
-msgstr ""
+msgstr "Position der Prozentanzeige im Panel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Right"
-msgstr ""
+msgstr "Rechts"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel font padding:"
-msgstr ""
+msgstr "Padding der Schrift im Panel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup appearance"
-msgstr ""
+msgstr "Applet Popup Aussehen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup percentage font family:"
-msgstr ""
+msgstr "Schriftfamilie der Prozentanzeige im Applet Popup:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup font size:"
-msgstr ""
+msgstr "Schriftgröße im Applet Popup:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup percentage color:"
-msgstr ""
+msgstr "Schriftfarbe der Prozentanzeige im Applet Popup:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup font formatting:"
-msgstr ""
+msgstr "Schriftformatierung im Applet Popup:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup percentage position:"
-msgstr ""
+msgstr "Position der Prozentanzeige im Applet Popup:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Left"
-msgstr ""
+msgstr "Links"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Center"
-msgstr ""
+msgstr "Zentriert"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Add leading zero before:"
@@ -128,7 +128,7 @@ msgstr "Minuten"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Simplified time"
-msgstr "Einfache Zeit"
+msgstr "Vereinfachte Zeit"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Enable time remaining"
@@ -140,15 +140,15 @@ msgstr "Akkuzustand anzeigen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery percentage"
-msgstr "Energie und Akku"
+msgstr "Akkustand"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Back"
-msgstr ""
+msgstr "Zurück"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Keep applet popup open"
-msgstr ""
+msgstr "Applet Popup offen lassen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Fully charged"
@@ -180,7 +180,7 @@ msgstr "Standby verhindern"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Apps blocking sleep"
-msgstr ""
+msgstr "Apps, die Standby verhindern"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power saving mode"
@@ -189,10 +189,6 @@ msgstr "Energieprofil"
 #: ../contents/ui/FullPopup.qml
 msgid "Power settings..."
 msgstr "Energieeinstellungen..."
-
-#: ../contents/ui/FullPopup.qml
-msgid "Apps blocking sleep:"
-msgstr ""
 
 #: ../contents/ui/main.qml
 msgid "Calculating..."
