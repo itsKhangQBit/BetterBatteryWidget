@@ -35,7 +35,7 @@ A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default w
 
 **Please help me translate this applet into multi languages, if you can!! I'd be very grateful for that!**
 
-**Language translated:**
+**Translated languages:**
 
 [+] English
 
@@ -43,10 +43,11 @@ A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default w
 
 [+] Dutch
 
-[ ] France
+[ ] French
 
 [+] German
 
 [ ] Spanish
 
-(sorry if my English is terrible) **🇻🇳 FROM VIỆT NAM WITH LOVE!!! 🪷**
+(sorry if my English is terrible, I tried my best)
+**🇻🇳 FROM VIỆT NAM WITH LOVE!!! 🪷**
