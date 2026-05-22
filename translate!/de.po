@@ -190,31 +190,10 @@ msgstr "Energieprofil"
 msgid "Power settings..."
 msgstr "Energieeinstellungen..."
 
+#: ../contents/ui/FullPopup.qml
+msgid "Apps blocking sleep:"
+msgstr ""
+
 #: ../contents/ui/main.qml
 msgid "Calculating..."
 msgstr "Berechnen..."
-
-#~ msgid "Font padding:"
-#~ msgstr "Schriftabstand:"
-
-#~ msgctxt "Use default font"
-#~ msgid "Default"
-#~ msgstr "Standard"
-
-#~ msgid "Font family:"
-#~ msgstr "Schriftart:"
-
-#~ msgid "Font size:"
-#~ msgstr "Schriftgröße:"
-
-#~ msgid "Font formatting:"
-#~ msgstr "Schriftformat:"
-
-#~ msgid "Icon size:"
-#~ msgstr "Symbolgröße:"
-
-#~ msgid "Percentage position:"
-#~ msgstr "Ladezustandsposition:"
-
-#~ msgid "On the right"
-#~ msgstr "Rechts"

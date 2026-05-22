@@ -175,7 +175,7 @@ msgstr "Sức khỏe pin: "
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep"
-msgstr "Chống ngủ"
+msgstr "Chặn ngủ"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Apps blocking sleep"
