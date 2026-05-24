@@ -9,20 +9,21 @@ A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default w
 
 **Features:** 
 - Battery percentage
-- Percentage font, styles (Bold, Italic, Underline), size, position, color customization
-- Battery icon size
+- Percentage font, styles (Bold, Italic, Underline), size, position, color customization both on panel and in the applet popup
+- Battery icon size, rotation (vertical / horizontal)
 - Sleep block & list of apps blocking sleep
 - Time remaining (charge / discharge)
+- Battery health
 
 **Credits:**
-- Command Output - zren (https://store.kde.org/p/2136636/) for FontFamily and ComboBox libraries
+~~- Command Output - zren (https://store.kde.org/p/2136636/) for FontFamily and ComboBox libraries~~ I no longer use zren's library, switched from a ComboBox / Dropdown to a Dialog.
 
 **Changelogs**
 - version 1.0: initial
-- version 2.0: added battery saver feature, translated into dutch language by @Vistaus
+- version 2.0: added battery saver feature, translated to Dutch by @Vistaus
 - version 3.0: added sleep blocker, charge / usage time remaining (you can enable / disable this feature), battery health feature
-- version 4.0: polished everything up, fixed the feature battery saver to be A LOT BETTER.
-- version 5.0: added sleepblocking app lists, more customization
+- version 4.0: polished everything up, fixed the feature battery saver to be A LOT BETTER, translated to German by @Gamernist and @rr1111.
+- version 5.0: added sleep blocking app lists, more customization
 
 # Images
 ![Taskbar icon](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/taskbar.png)
@@ -33,7 +34,7 @@ A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default w
 <br><br>
 ![Popup / Full representation (Dutch)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/fullrep_nl.png)
 
-**Please help me translate this applet into multi languages, if you can!! I'd be very grateful for that!**
+**Please help me translate this applet into multiple languages, if you can!! I'd be very grateful for that!**
 
 **Translated languages:**
 
@@ -48,6 +49,10 @@ A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default w
 [+] German
 
 [ ] Spanish
+
+
+**Help installing from my repository:**
+There's 2 versions of Plasma. If you're on **Plasma 6** (like me) then **this is the branch** you need. **Otherwise** (if you use Plasma 5), **switch to the plasma-5 branch**.
 
 (sorry if my English is terrible, I tried my best)
 **🇻🇳 FROM VIỆT NAM WITH LOVE!!! 🪷**
