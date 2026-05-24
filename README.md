@@ -54,5 +54,7 @@ A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default w
 **Help installing from my repository:**
 There's 2 versions of Plasma. If you're on **Plasma 6** (like me) then **this is the branch** you need. **Otherwise** (if you use Plasma 5), **switch to the plasma-5 branch**.
 
+Some features might not work as expected... and if you find one then make an issue, I'll try my best to fix it!
+
 (sorry if my English is terrible, I tried my best)
 **🇻🇳 FROM VIỆT NAM WITH LOVE!!! 🪷**
