@@ -176,15 +176,15 @@ msgstr "Wird entladen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Charge time left:"
-msgstr ""
+msgstr "Verbleidende Ladezeit:"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery time left:"
-msgstr ""
+msgstr "Verbleibende Laufzeit:"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery health:"
-msgstr ""
+msgstr "Akkuzustand:"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep"
@@ -209,15 +209,6 @@ msgstr ""
 #: ../contents/ui/main.qml
 msgid "Calculating..."
 msgstr "Berechnen..."
-
-#~ msgid "Charge time left: "
-#~ msgstr "Verbleidende Ladezeit: "
-
-#~ msgid "Battery time left: "
-#~ msgstr "Verbleibende Laufzeit: "
-
-#~ msgid "Battery health: "
-#~ msgstr "Akkuzustand: "
 
 #~ msgid "Panel percentage font family:"
 #~ msgstr "Schriftfamilie der Prozentanzeige im Panel:"
