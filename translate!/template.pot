@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-21 09:52+0700\n"
+"POT-Creation-Date: 2026-05-24 00:29+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,6 +50,10 @@ msgid "Percentage color on panel:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
+msgid "Use custom color for panel percentage"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel font formatting:"
 msgstr ""
 
@@ -67,6 +71,10 @@ msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel icon size:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Vertical battery icon"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
@@ -95,6 +103,10 @@ msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup percentage color:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Use custom color for applet popup percentage"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml

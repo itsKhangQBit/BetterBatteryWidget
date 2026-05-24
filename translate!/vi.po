@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-21 09:52+0700\n"
+"POT-Creation-Date: 2026-05-24 00:29+0700\n"
 "PO-Revision-Date: 2026-05-21 15:20+0700\n"
 "Last-Translator: itsKhangQBit <minhkhangdinh24013@gmail.com>\n"
 "Language-Team: \n"
@@ -50,6 +50,10 @@ msgid "Percentage color on panel:"
 msgstr "Màu của phần trăm trên panel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
+msgid "Use custom color for panel percentage"
+msgstr "Chọn màu tùy chỉnh cho phần trăm trên panel"
+
+#: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel font formatting:"
 msgstr "Định dạng phông trên panel:"
 
@@ -68,6 +72,10 @@ msgstr "Chữ gạch chân"
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel icon size:"
 msgstr "Kích cỡ biểu tượng trên panel:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Vertical battery icon"
+msgstr "Biểu tượng pin thẳng đứng"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Panel percentage position:"
@@ -96,6 +104,10 @@ msgstr "Cỡ chữ ở applet popup"
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup percentage color:"
 msgstr "Màu của phần trăm trên applet popup:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Use custom color for applet popup percentage"
+msgstr "Chọn màu tùy chỉnh cho phần trăm trong applet popup"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup font formatting:"
