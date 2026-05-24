@@ -265,7 +265,15 @@ Item {
             PlasmaComponents.Label {
                 text: widgetdata.percent + "%"
                 font.pixelSize: Plasmoid.configuration.popupfontSize
-                color: Plasmoid.configuration.popuppercentColor || Kirigami.Theme.textColor
+                color: {
+                    if (Plasmoid.configuration.popupcustomcolor) return Plasmoid.configuration.popuppercentColor || Kirigami.Theme.textColor;
+                    let percentInt = parseInt(widgetdata.percent, 10)
+                    if (isNaN(percentInt)) return "#FF361C" // what the hell is the percentage
+                        if (percentInt === 100) return "#63DB00" // full
+                            if (percentInt >= 50) return "#7EA300" // still going strong
+                                if (percentInt >= 20) return "#DBD727" // should find your charger
+                                    return "#D41900" // go charge, emergencyyyyyy
+                }
                 font.bold: Plasmoid.configuration.popupfontBold
                 font.italic: Plasmoid.configuration.popupfontItalic
                 font.underline: Plasmoid.configuration.popupfontUnderline

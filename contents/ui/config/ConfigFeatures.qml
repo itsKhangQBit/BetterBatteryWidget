@@ -25,6 +25,8 @@ ScrollView {
     property int cfg_panelfontPad
     property bool cfg_panelfontPosR
     property bool cfg_panelfontFamily
+    property bool cfg_panelcustomcolor
+    property bool cfg_paneliconRotate
 
     property int cfg_popupfontSize
     property bool cfg_popupfontBold
@@ -33,6 +35,7 @@ ScrollView {
     property bool cfg_popupfontUnderline
     property int cfg_popuppercentPos
     property bool cfg_popupfontFamily
+    property bool cfg_popupcustomcolor
 
     // this is what we need
     property alias cfg_padMin: padMin.checked
@@ -42,7 +45,7 @@ ScrollView {
     property alias cfg_healthLeft: healthLeft.checked
     property bool cfg_pinned
 
-    // OMG shut up QML!!!
+    // YOU SHADAP! - Bung Moktar at Malaysia Parliament
     property bool cfg_padMinDefault
     property bool cfg_padHrDefault
     property bool cfg_simpleTimeDefault
@@ -59,6 +62,8 @@ ScrollView {
     property int cfg_panelfontPadDefault
     property string cfg_panelfontFamilyDefault
     property bool cfg_panelfontPosRDefault
+    property bool cfg_panelcustomcolorDefault
+    property bool cfg_paneliconRotateDefault
 
     property int cfg_popupfontSizeDefault
     property bool cfg_popupfontBoldDefault
@@ -67,6 +72,7 @@ ScrollView {
     property bool cfg_popupfontUnderlineDefault
     property string cfg_popupfontFamilyDefault
     property int cfg_popuppercentPosDefault
+    property bool cfg_popupcustomcolorDefault
 
     Kirigami.FormLayout {
         property string title: "" // shut up QML

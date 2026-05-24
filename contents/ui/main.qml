@@ -89,14 +89,22 @@ PlasmoidItem {
             // Offset the percentage to the right or left, its your choice
             layoutDirection: Plasmoid.configuration.panelfontPosR ? Qt.RightToLeft : Qt.LeftToRight
             anchors.fill: parent
-            spacing: plasmoid.configuration.panelfontPad
+            spacing: Plasmoid.configuration.panelfontPad
             height: parent.height
 
             PlasmaComponents.Label {
                 id: percent
                 text: root.percent + "%"
                 font.pixelSize: Plasmoid.configuration.panelfontSize
-                color: Plasmoid.configuration.panelpercentColor || Kirigami.Theme.textColor
+                color: {
+                    if (Plasmoid.configuration.panelcustomcolor) return Plasmoid.configuration.panelpercentColor || Kirigami.Theme.textColor;
+                    let percentInt = parseInt(root.percent, 10)
+                    if (isNaN(percentInt)) return "#FF361C" // what the hell is the percentage
+                        if (percentInt === 100) return "#63DB00" // full
+                            if (percentInt >= 50) return "#7EA300" // still going strong
+                                if (percentInt >= 20) return "#DBD727" // should find your charger
+                                    return "#D41900" // go charge, emergencyyyyyy
+                }
                 font.bold: Plasmoid.configuration.panelfontBold
                 font.italic: Plasmoid.configuration.panelfontItalic
                 font.underline: Plasmoid.configuration.panelfontUnderline
@@ -111,6 +119,14 @@ PlasmoidItem {
                     let base = "battery-" + percent
                     root.icon = root.isCharge ? base + "-charging" : base;
                     return root.icon;
+                }
+                rotation: Plasmoid.configuration.paneliconRotate ? -90 : 0
+                // for some god who knows reason, i love animations
+                Behavior on rotation {
+                    NumberAnimation {
+                        duration: 400
+                        easing.type: Easing.InOutQuad
+                    }
                 }
 
                 // Use config from settings

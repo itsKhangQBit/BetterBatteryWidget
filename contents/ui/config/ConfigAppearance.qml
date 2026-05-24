@@ -10,7 +10,7 @@ ScrollView {
     anchors.fill: root
     Layout.fillHeight: true
     Layout.fillWidth: true
-    ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+    ScrollBar.horizontal.policy: ScrollBar.AsNeeded
     ScrollBar.vertical.policy: ScrollBar.AsNeeded
     clip: true
     id: root
@@ -24,6 +24,8 @@ ScrollView {
     property alias cfg_panelfontPad: panelfontPad.value
     property alias cfg_panelfontPosR: panelfontPosR.checked
     property alias cfg_panelfontFamily: panelfontDiag.selectedFont.family
+    property alias cfg_panelcustomcolor: panelcustomcolor.checked
+    property alias cfg_paneliconRotate: paneliconRotate.checked
 
     property alias cfg_popupfontSize: popupfontSize.value
     property alias cfg_popupfontBold: popupfontBold.checked
@@ -32,6 +34,7 @@ ScrollView {
     property alias cfg_popupfontUnderline: popupfontUnderline.checked
     property alias cfg_popuppercentPos: popupposSlider.value
     property alias cfg_popupfontFamily: popupfontDiag.selectedFont.family
+    property alias cfg_popupcustomcolor: popupcustomcolor.checked
 
     // this is just for QML engine to not throw any warnings
     property bool cfg_padMin
@@ -41,7 +44,7 @@ ScrollView {
     property bool cfg_healthLeft
     property bool cfg_pinned
 
-    // OMG shut up QML!!!
+    // YOU SHADAP! - Bung Moktar at Malaysia Parliament (RIP)
     property bool cfg_padMinDefault
     property bool cfg_padHrDefault
     property bool cfg_simpleTimeDefault
@@ -58,6 +61,8 @@ ScrollView {
     property int cfg_panelfontPadDefault
     property string cfg_panelfontFamilyDefault
     property bool cfg_panelfontPosRDefault
+    property bool cfg_panelcustomcolorDefault
+    property bool cfg_paneliconRotateDefault
 
     property int cfg_popupfontSizeDefault
     property bool cfg_popupfontBoldDefault
@@ -66,6 +71,7 @@ ScrollView {
     property bool cfg_popupfontUnderlineDefault
     property string cfg_popupfontFamilyDefault
     property int cfg_popuppercentPosDefault
+    property bool cfg_popupcustomcolorDefault
 
 
     Kirigami.FormLayout {
@@ -123,6 +129,12 @@ ScrollView {
             }
         }
 
+
+        CheckBox {
+            id: panelcustomcolor
+            text: i18n("Use custom color for panel percentage")
+        }
+
         CheckBox {
             id: panelfontBold
             Kirigami.FormData.label: i18n("Panel font formatting:")
@@ -144,6 +156,11 @@ ScrollView {
             Kirigami.FormData.label: i18n("Panel icon size:")
             from: 16
             to: 128
+        }
+
+        CheckBox {
+            id: paneliconRotate
+            text: i18n("Vertical battery icon")
         }
 
         CheckBox {
@@ -169,7 +186,6 @@ ScrollView {
             id: popupfontDiag
             onSelectedFontChanged: {
                 plasmoid.configuration.popupfontFamily = selectedFont.family
-                plasmoid.configuration.writeConfig() // SAVE THE CONFIG TO THE DRIVE FOR ME, why do you only save it in RAM?
             }
         }
 
@@ -210,6 +226,11 @@ ScrollView {
                 // save my color pls
                 onColorChanged: cfg_popuppercentColor = color.toString()
             }
+        }
+
+        CheckBox {
+            id: popupcustomcolor
+            text: i18n("Use custom color for applet popup percentage")
         }
 
         CheckBox {
