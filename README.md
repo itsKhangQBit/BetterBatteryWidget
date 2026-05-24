@@ -27,6 +27,7 @@ A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default w
 
 # Images
 ![Taskbar icon](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/taskbar.png)
+![Taskbar icon with customization](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/taskbar+color.png)
 <br><br>
 ![Popup / Full representation (English)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/fullrep_en.png)
 <br><br>
