@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-21 09:52+0700\n"
+"POT-Creation-Date: 2026-05-24 14:02+0700\n"
 "PO-Revision-Date: 2026-04-24 21:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -35,24 +35,20 @@ msgid "Panel appearance"
 msgstr "Panel-Aussehen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel percentage font family:"
-msgstr "Schriftfamilie der Prozentanzeige im Panel:"
+msgid "Percentage font family:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Default"
 msgstr "Standard"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel font size:"
-msgstr "Panel Schriftgröße:"
+msgid "Percentage font size:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage color on panel:"
-msgstr "Farbe der Prozentanzeige im Panel:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel font formatting:"
-msgstr "Formattierung der Schrift im Panel:"
+msgid "Percentage font formatting:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Bold"
@@ -67,44 +63,60 @@ msgid "Underline"
 msgstr "Unterstrichen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel icon size:"
-msgstr "Icongröße im Panel:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel percentage position:"
-msgstr "Position der Prozentanzeige im Panel:"
+msgid "Percentage position:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Right"
 msgstr "Rechts"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel font padding:"
-msgstr "Padding der Schrift im Panel:"
+msgid "Percentage font padding:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage fixed color:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Enable dynamic percentage color"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Custom dynamic color:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "High percentage"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Midrange percentage"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Low percentage"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Change color to Midrange when below:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Change color to Low when below:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Icon size:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Vertical battery icon"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup appearance"
 msgstr "Applet Popup Aussehen"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup percentage font family:"
-msgstr "Schriftfamilie der Prozentanzeige im Applet Popup:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup font size:"
-msgstr "Schriftgröße im Applet Popup:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup percentage color:"
-msgstr "Schriftfarbe der Prozentanzeige im Applet Popup:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup font formatting:"
-msgstr "Schriftformatierung im Applet Popup:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup percentage position:"
-msgstr "Position der Prozentanzeige im Applet Popup:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Left"
@@ -163,16 +175,16 @@ msgid "Discharging"
 msgstr "Wird entladen"
 
 #: ../contents/ui/FullPopup.qml
-msgid "Charge time left: "
-msgstr "Verbleidende Ladezeit: "
+msgid "Charge time left:"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
-msgid "Battery time left: "
-msgstr "Verbleibende Laufzeit: "
+msgid "Battery time left:"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
-msgid "Battery health: "
-msgstr "Akkuzustand: "
+msgid "Battery health:"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep"
@@ -197,3 +209,48 @@ msgstr ""
 #: ../contents/ui/main.qml
 msgid "Calculating..."
 msgstr "Berechnen..."
+
+#~ msgid "Charge time left: "
+#~ msgstr "Verbleidende Ladezeit: "
+
+#~ msgid "Battery time left: "
+#~ msgstr "Verbleibende Laufzeit: "
+
+#~ msgid "Battery health: "
+#~ msgstr "Akkuzustand: "
+
+#~ msgid "Panel percentage font family:"
+#~ msgstr "Schriftfamilie der Prozentanzeige im Panel:"
+
+#~ msgid "Panel font size:"
+#~ msgstr "Panel Schriftgröße:"
+
+#~ msgid "Percentage color on panel:"
+#~ msgstr "Farbe der Prozentanzeige im Panel:"
+
+#~ msgid "Panel font formatting:"
+#~ msgstr "Formattierung der Schrift im Panel:"
+
+#~ msgid "Panel icon size:"
+#~ msgstr "Icongröße im Panel:"
+
+#~ msgid "Panel percentage position:"
+#~ msgstr "Position der Prozentanzeige im Panel:"
+
+#~ msgid "Panel font padding:"
+#~ msgstr "Padding der Schrift im Panel:"
+
+#~ msgid "Applet popup percentage font family:"
+#~ msgstr "Schriftfamilie der Prozentanzeige im Applet Popup:"
+
+#~ msgid "Applet popup font size:"
+#~ msgstr "Schriftgröße im Applet Popup:"
+
+#~ msgid "Applet popup percentage color:"
+#~ msgstr "Schriftfarbe der Prozentanzeige im Applet Popup:"
+
+#~ msgid "Applet popup font formatting:"
+#~ msgstr "Schriftformatierung im Applet Popup:"
+
+#~ msgid "Applet popup percentage position:"
+#~ msgstr "Position der Prozentanzeige im Applet Popup:"

@@ -265,14 +265,18 @@ Item {
             PlasmaComponents.Label {
                 text: widgetdata.percent + "%"
                 font.pixelSize: Plasmoid.configuration.popupfontSize
-                color: {
-                    if (Plasmoid.configuration.popupcustomcolor) return Plasmoid.configuration.popuppercentColor || Kirigami.Theme.textColor;
+                opacity: {
                     let percentInt = parseInt(widgetdata.percent, 10)
-                    if (isNaN(percentInt)) return "#FF361C" // what the hell is the percentage
-                        if (percentInt === 100) return "#63DB00" // full
-                            if (percentInt >= 50) return "#7EA300" // still going strong
-                                if (percentInt >= 20) return "#DBD727" // should find your charger
-                                    return "#D41900" // go charge, emergencyyyyyy
+                    if (isNaN(percentInt)) return 0.8;
+                    return 1
+                }
+                color: {
+                    if (!Plasmoid.configuration.popupcustomcolor) return Plasmoid.configuration.popuppercentColor || Kirigami.Theme.textColor;
+                    let percentInt = parseInt(widgetdata.percent, 10)
+                    if (isNaN(percentInt)) return "#FFFFFF" // what the hell is the percentage
+                        if (percentInt >= Plasmoid.configuration.popupMidpercent) return Plasmoid.configuration.popupdynamicHighcolor // still going strong
+                            if (percentInt >= Plasmoid.configuration.popupLowpercent) return Plasmoid.configuration.popupdynamicMidcolor
+                                return Plasmoid.configuration.popupdynamicLowcolor // go charge, emergencyyyyyy
                 }
                 font.bold: Plasmoid.configuration.popupfontBold
                 font.italic: Plasmoid.configuration.popupfontItalic
@@ -300,7 +304,7 @@ Item {
                 columns: 2
 
                 PlasmaComponents.Label {
-                    text: widgetdata.isCharge ? i18n("Charge time left: ") : i18n("Battery time left: ");
+                    text: widgetdata.isCharge ? i18n("Charge time left:") : i18n("Battery time left:");
                     opacity: 0.7
                     Layout.topMargin: 3
                     visible: Plasmoid.configuration.timeLeft && !widgetdata.isFull
@@ -315,7 +319,7 @@ Item {
                 }
 
                 PlasmaComponents.Label {
-                    text: i18n("Battery health: ")
+                    text: i18n("Battery health:")
                     opacity: 0.7
                     Layout.fillWidth: true
                     visible: Plasmoid.configuration.healthLeft

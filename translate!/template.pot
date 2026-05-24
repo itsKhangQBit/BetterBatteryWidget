@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-24 00:29+0700\n"
+"POT-Creation-Date: 2026-05-24 14:02+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgid "Panel appearance"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel percentage font family:"
+msgid "Percentage font family:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
@@ -42,19 +42,11 @@ msgid "Default"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel font size:"
+msgid "Percentage font size:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage color on panel:"
-msgstr ""
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Use custom color for panel percentage"
-msgstr ""
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel font formatting:"
+msgid "Percentage font formatting:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
@@ -70,15 +62,7 @@ msgid "Underline"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel icon size:"
-msgstr ""
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Vertical battery icon"
-msgstr ""
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel percentage position:"
+msgid "Percentage position:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
@@ -86,35 +70,51 @@ msgid "Right"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel font padding:"
+msgid "Percentage font padding:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage fixed color:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Enable dynamic percentage color"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Custom dynamic color:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "High percentage"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Midrange percentage"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Low percentage"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Change color to Midrange when below:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Change color to Low when below:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Icon size:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Vertical battery icon"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup appearance"
-msgstr ""
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup percentage font family:"
-msgstr ""
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup font size:"
-msgstr ""
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup percentage color:"
-msgstr ""
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Use custom color for applet popup percentage"
-msgstr ""
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup font formatting:"
-msgstr ""
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup percentage position:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
@@ -174,15 +174,15 @@ msgid "Discharging"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml
-msgid "Charge time left: "
+msgid "Charge time left:"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml
-msgid "Battery time left: "
+msgid "Battery time left:"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml
-msgid "Battery health: "
+msgid "Battery health:"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml

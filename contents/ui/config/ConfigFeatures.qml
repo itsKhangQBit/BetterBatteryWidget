@@ -75,7 +75,10 @@ ScrollView {
     property bool cfg_popupcustomcolorDefault
 
     Kirigami.FormLayout {
+        id: formLayout
+        anchors.fill: parent
         property string title: "" // shut up QML
+        anchors.margins: Kirigami.Units.smallSpacing
 
         PlasmaComponents.Label {
             text: i18n("Features")

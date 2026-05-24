@@ -95,15 +95,19 @@ PlasmoidItem {
             PlasmaComponents.Label {
                 id: percent
                 text: root.percent + "%"
+                opacity: {
+                    let percentInt = parseInt(root.percent, 10)
+                    if (isNaN(percentInt)) return 0.8;
+                    return 1
+                }
                 font.pixelSize: Plasmoid.configuration.panelfontSize
                 color: {
-                    if (Plasmoid.configuration.panelcustomcolor) return Plasmoid.configuration.panelpercentColor || Kirigami.Theme.textColor;
+                    if (!Plasmoid.configuration.panelcustomcolor) return Plasmoid.configuration.panelpercentColor || Kirigami.Theme.textColor;
                     let percentInt = parseInt(root.percent, 10)
-                    if (isNaN(percentInt)) return "#FF361C" // what the hell is the percentage
-                        if (percentInt === 100) return "#63DB00" // full
-                            if (percentInt >= 50) return "#7EA300" // still going strong
-                                if (percentInt >= 20) return "#DBD727" // should find your charger
-                                    return "#D41900" // go charge, emergencyyyyyy
+                    if (isNaN(percentInt)) return "#FFFFFF" // what the hell is the percentage
+                            if (percentInt >= Plasmoid.configuration.panelMidpercent) return Plasmoid.configuration.paneldynamicHighcolor // still going strong
+                                if (percentInt >= Plasmoid.configuration.popupLowpercent) return Plasmoid.configuration.paneldynamicMidcolor
+                                    return Plasmoid.configuration.paneldynamicLowcolor // go charge, emergencyyyyyy
                 }
                 font.bold: Plasmoid.configuration.panelfontBold
                 font.italic: Plasmoid.configuration.panelfontItalic

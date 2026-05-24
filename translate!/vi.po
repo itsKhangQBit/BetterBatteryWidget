@@ -3,13 +3,12 @@
 # This file is distributed under the same license as the betterbatterywidget package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-24 00:29+0700\n"
-"PO-Revision-Date: 2026-05-21 15:20+0700\n"
+"POT-Creation-Date: 2026-05-24 14:02+0700\n"
+"PO-Revision-Date: 2026-05-24 13:36+0700\n"
 "Last-Translator: itsKhangQBit <minhkhangdinh24013@gmail.com>\n"
 "Language-Team: \n"
 "Language: vi\n"
@@ -34,28 +33,20 @@ msgid "Panel appearance"
 msgstr "Giao diện trên panel"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel percentage font family:"
-msgstr "Phông chữ trên panel:"
+msgid "Percentage font family:"
+msgstr "Phông chữ phần trăm:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Default"
 msgstr "Mặc định"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel font size:"
-msgstr "Cỡ chữ trên panel:"
+msgid "Percentage font size:"
+msgstr "Cỡ chữ phần trăm:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage color on panel:"
-msgstr "Màu của phần trăm trên panel:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Use custom color for panel percentage"
-msgstr "Chọn màu tùy chỉnh cho phần trăm trên panel"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel font formatting:"
-msgstr "Định dạng phông trên panel:"
+msgid "Percentage font formatting:"
+msgstr "Định dạng phông chữ phần trăm:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Bold"
@@ -70,52 +61,60 @@ msgid "Underline"
 msgstr "Chữ gạch chân"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel icon size:"
-msgstr "Kích cỡ biểu tượng trên panel:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Vertical battery icon"
-msgstr "Biểu tượng pin thẳng đứng"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel percentage position:"
-msgstr "Vị trí phần trăm trên panel:"
+msgid "Percentage position:"
+msgstr "Vị trí phần trăm:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Right"
 msgstr "Phải"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel font padding:"
-msgstr "Khoảng cách chữ và pin trên panel:"
+msgid "Percentage font padding:"
+msgstr "Khoảng đệm giữa phần trăm và biểu tượng:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage fixed color:"
+msgstr "Màu phần trăm cố định:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Enable dynamic percentage color"
+msgstr "Bật màu phần trăm động"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Custom dynamic color:"
+msgstr "Chọn màu phần trăm động:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "High percentage"
+msgstr "Phần trăm pin cao"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Midrange percentage"
+msgstr "Phần trăm pin trung bình"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Low percentage"
+msgstr "Phần trăm pin thấp"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Change color to Midrange when below:"
+msgstr "Đổi sang màu pin trung bình khi dưới:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Change color to Low when below:"
+msgstr "Đổi sang màu pin thấp khi dưới:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Icon size:"
+msgstr "Kích cỡ biểu tượng pin:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Vertical battery icon"
+msgstr "Biểu tượng pin thẳng đứng"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup appearance"
-msgstr "Giao diện ở applet popup"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup percentage font family:"
-msgstr "Phông chữ ở applet popup:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup font size:"
-msgstr "Cỡ chữ ở applet popup"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup percentage color:"
-msgstr "Màu của phần trăm trên applet popup:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Use custom color for applet popup percentage"
-msgstr "Chọn màu tùy chỉnh cho phần trăm trong applet popup"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup font formatting:"
-msgstr "Định dạng phông:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup percentage position:"
-msgstr "Vị trí phần trăm trên applet popup:"
+msgstr "Giao diện trong applet popup"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Left"
@@ -143,11 +142,11 @@ msgstr "Thời gian rút gọn"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Enable time remaining"
-msgstr "Xem thời gian còn lại"
+msgstr "Hiện thời gian sạc/dùng còn lại"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Enable battery health"
-msgstr "Xem sức khỏe pin còn lại"
+msgstr "Hiện sức khỏe pin còn lại"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery percentage"
@@ -174,20 +173,20 @@ msgid "Discharging"
 msgstr "Đang dùng pin"
 
 #: ../contents/ui/FullPopup.qml
-msgid "Charge time left: "
-msgstr "Thời gian sạc còn lại: "
+msgid "Charge time left:"
+msgstr "Thời gian sạc còn lại:"
 
 #: ../contents/ui/FullPopup.qml
-msgid "Battery time left: "
-msgstr "Thời gian pin còn lại: "
+msgid "Battery time left:"
+msgstr "Thời gian pin còn lại:"
 
 #: ../contents/ui/FullPopup.qml
-msgid "Battery health: "
-msgstr "Sức khỏe pin: "
+msgid "Battery health:"
+msgstr "Sức khỏe pin:"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep"
-msgstr "Chặn ngủ"
+msgstr "Chặn chế độ ngủ"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Apps blocking sleep"

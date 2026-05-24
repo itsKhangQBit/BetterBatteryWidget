@@ -52,7 +52,22 @@
             <default>false</default>
         </entry>
         <entry name="panelcustomcolor" type="Bool">
-            <default>true</default>
+            <default>false</default>
+        </entry>
+        <entry name="paneldynamicHighcolor" type="String">
+            <default>#41c347</default><!-- weird color choice, you might know I took it from somewhere... this is color picked btw -->
+        </entry>
+        <entry name="paneldynamicMidcolor" type="String">
+            <default>#ffff00</default>
+        </entry>
+        <entry name="paneldynamicLowcolor" type="String">
+            <default>#fd575b</default>
+        </entry>
+        <entry name="panelMidpercent" type="Int">
+            <default>75</default>
+        </entry>
+        <entry name="panelLowpercent" type="Int">
+            <default>20</default>
         </entry>
         <entry name="paneliconRotate" type="Bool">
             <default>false</default>
@@ -80,7 +95,22 @@
             <default>0</default>
         </entry>
         <entry name="popupcustomcolor" type="Bool">
-            <default>true</default>
+            <default>false</default>
+        </entry>
+        <entry name="popupdynamicHighcolor" type="String">
+            <default>#41c347</default>
+        </entry>
+        <entry name="popupdynamicMidcolor" type="String">
+            <default>#ffff00</default>
+        </entry>
+        <entry name="popupdynamicLowcolor" type="String">
+            <default>#fd575b</default>
+        </entry>
+        <entry name="popupMidpercent" type="Int">
+            <default>75</default>
+        </entry>
+        <entry name="popupLowpercent" type="Int">
+            <default>20</default>
         </entry>
     </group>
 </kcfg>

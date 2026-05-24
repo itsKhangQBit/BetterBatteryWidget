@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-21 09:52+0700\n"
+"POT-Creation-Date: 2026-05-24 14:02+0700\n"
 "PO-Revision-Date: 2026-05-21 10:03+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -35,24 +35,20 @@ msgid "Panel appearance"
 msgstr "Vormgeving op paneel"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel percentage font family:"
-msgstr "Percentagelettertype op paneel:"
+msgid "Percentage font family:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Default"
 msgstr "Standaard"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel font size:"
-msgstr "Tekstgrootte op paneel:"
+msgid "Percentage font size:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage color on panel:"
-msgstr "Percentagekleur op paneel:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel font formatting:"
-msgstr "Tekstopmaak op paneel:"
+msgid "Percentage font formatting:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Bold"
@@ -67,44 +63,60 @@ msgid "Underline"
 msgstr "Onderstrepen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel icon size:"
-msgstr "Paneelpictogramgrootte:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel percentage position:"
-msgstr "Percentagelocatie op paneel:"
+msgid "Percentage position:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Right"
 msgstr "Rechts"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel font padding:"
-msgstr "Tekstopvulling op paneel:"
+msgid "Percentage font padding:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage fixed color:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Enable dynamic percentage color"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Custom dynamic color:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "High percentage"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Midrange percentage"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Low percentage"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Change color to Midrange when below:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Change color to Low when below:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Icon size:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Vertical battery icon"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup appearance"
 msgstr "Pop-upvormgeving"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup percentage font family:"
-msgstr "Percentagelettertype op pop-up:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup font size:"
-msgstr "Tektsgrootte op pop-up:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup percentage color:"
-msgstr "Percentagekleur op pop-up:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup font formatting:"
-msgstr "Tekstopmaak op pop-up:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup percentage position:"
-msgstr "Percentagelocatie op pop-up:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Left"
@@ -163,16 +175,16 @@ msgid "Discharging"
 msgstr "Aan het ontladen"
 
 #: ../contents/ui/FullPopup.qml
-msgid "Charge time left: "
-msgstr "Resterende oplaadtijd: "
+msgid "Charge time left:"
+msgstr "Resterende oplaadtijd:"
 
 #: ../contents/ui/FullPopup.qml
-msgid "Battery time left: "
-msgstr "Resterende accuduur: "
+msgid "Battery time left:"
+msgstr "Resterende accuduur:"
 
 #: ../contents/ui/FullPopup.qml
-msgid "Battery health: "
-msgstr "Accugezondheid: "
+msgid "Battery health:"
+msgstr "Accugezondheid:"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep"
@@ -198,27 +210,38 @@ msgstr "Programma's die de slaapstand onderdrukken:"
 msgid "Calculating..."
 msgstr "Bezig met berekenen..."
 
-#~ msgid "Keep applet open"
-#~ msgstr "Applet open houden"
+#~ msgid "Panel percentage font family:"
+#~ msgstr "Percentagelettertype op paneel:"
 
-#~ msgid "Font padding:"
-#~ msgstr "Tekstopvulling:"
+#~ msgid "Panel font size:"
+#~ msgstr "Tekstgrootte op paneel:"
 
-#~ msgid "Position:"
-#~ msgstr "Locatie:"
+#~ msgid "Percentage color on panel:"
+#~ msgstr "Percentagekleur op paneel:"
 
-#~ msgid "Popup appearance"
-#~ msgstr "Tekstballonvormgeving"
+#~ msgid "Panel font formatting:"
+#~ msgstr "Tekstopmaak op paneel:"
 
-#~ msgid "Popup percentage font family:"
-#~ msgstr "Percentagelettertype op tekstballon:"
+#~ msgid "Panel icon size:"
+#~ msgstr "Paneelpictogramgrootte:"
 
-#~ msgid "Percentage color on popup:"
-#~ msgstr "Percentagekleur op tekstballon:"
+#~ msgid "Panel percentage position:"
+#~ msgstr "Percentagelocatie op paneel:"
 
-#~ msgid "Popup font formatting:"
-#~ msgstr "Tekstopmaak op tekstballon:"
+#~ msgid "Panel font padding:"
+#~ msgstr "Tekstopvulling op paneel:"
 
-#~ msgctxt "Use default font"
-#~ msgid "Default"
-#~ msgstr "Standaardlettertype"
+#~ msgid "Applet popup percentage font family:"
+#~ msgstr "Percentagelettertype op pop-up:"
+
+#~ msgid "Applet popup font size:"
+#~ msgstr "Tektsgrootte op pop-up:"
+
+#~ msgid "Applet popup percentage color:"
+#~ msgstr "Percentagekleur op pop-up:"
+
+#~ msgid "Applet popup font formatting:"
+#~ msgstr "Tekstopmaak op pop-up:"
+
+#~ msgid "Applet popup percentage position:"
+#~ msgstr "Percentagelocatie op pop-up:"
