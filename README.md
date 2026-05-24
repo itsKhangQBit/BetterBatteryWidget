@@ -30,10 +30,12 @@ A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default w
 ![Taskbar icon with customization](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/taskbar+color.png)
 <br><br>
 ![Popup / Full representation (English)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/fullrep_en.png)
-<br><br>
-![Popup / Full representation (Vietnamese)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/fullrep_vi.png)
-<br><br>
+![Popup / Full representation (Vietnamese)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/fullrep_vi.png)\
 ![Popup / Full representation (Dutch)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/fullrep_nl.png)
+<br><br>
+![Settings (panel)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/setting+panel.png)
+![Settings (popup)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/setting+popup.png)
+![Settings (features)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/setting+features.png)
 
 **Please help me translate this applet into multiple languages, if you can!! I'd be very grateful for that!**
 
