@@ -350,7 +350,7 @@ Item {
             PlasmaComponents.Switch {
                 id: caffeineButton
                 icon.name: sleepBlockerRoot.blockSleep ? "system-suspend-inhibited" : "system-suspend-uninhibited"
-                text: i18n("Block sleep")
+                text: i18n("Block sleep & screen lock")
                 checked:sleepBlockerRoot.blockSleep
                 onToggled: {
                     sleepBlockerRoot.runCafe()
@@ -358,7 +358,7 @@ Item {
             }
 
             PlasmaComponents.Label {
-                text: i18n("Apps blocking sleep")
+                text: i18n("Apps blocking sleep / screen lock")
                 color: "white"
                 opacity: !sleepBlockerRoot.hasBlocker ? 0 : (clickArea.pressed ? 0.5 : (clickArea.containsMouse ? 0.7 : 1.0))
                 visible: opacity > 0
@@ -502,7 +502,8 @@ Item {
 
             PlasmaComponents.Label {
                 id: applabel
-                text: i18n("Apps blocking sleep:")
+                text: i18n("Apps blocking sleep / screen lock:")
+                font.pixelSize: Plasmoid.configuration.nosleepTitleFontsize
                 font.bold: true
             }
 
@@ -542,6 +543,7 @@ Item {
                         id: delegateRoot
 
                         text: model.appName
+                        font.pixelSize: plasmoid.configuration.nosleepAppFontsize
                         wrapMode: Text.WordWrap
                         ListView.delayRemove: true
                         //clip: true // looks nicer without clip, i've changed my mind :)))
@@ -551,6 +553,7 @@ Item {
                         // so... we fix the bug by animating it ourselves!
                         opacity: 0
                         height: 0
+                        width: ListView.view.width
                         property real yoff: -10
 
                         transform: Translate {

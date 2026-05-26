@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-24 14:02+0700\n"
-"PO-Revision-Date: 2026-05-24 13:36+0700\n"
+"POT-Creation-Date: 2026-05-26 18:17+0700\n"
+"PO-Revision-Date: 2026-05-26 10:47+0700\n"
 "Last-Translator: itsKhangQBit <minhkhangdinh24013@gmail.com>\n"
 "Language-Team: \n"
 "Language: vi\n"
@@ -29,8 +29,8 @@ msgid "Features"
 msgstr "Tính năng"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel appearance"
-msgstr "Giao diện trên panel"
+msgid "Applet panel appearance"
+msgstr "Giao diện panel của applet"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font family:"
@@ -114,7 +114,7 @@ msgstr "Biểu tượng pin thẳng đứng"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup appearance"
-msgstr "Giao diện trong applet popup"
+msgstr "Giao diện popup của applet"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Left"
@@ -123,6 +123,18 @@ msgstr "Trái"
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Center"
 msgstr "Giữa"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Other customizations"
+msgstr "Các tùy chỉnh giao diện khác"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Sleep blocking tab title font size:"
+msgstr "Cỡ chữ tiêu đề tab chặn ngủ / khóa"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Sleep blocking tab item font size:"
+msgstr "Cỡ chữ các mục tab chặn ngủ / khóa"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Add leading zero before:"
@@ -185,12 +197,12 @@ msgid "Battery health:"
 msgstr "Sức khỏe pin:"
 
 #: ../contents/ui/FullPopup.qml
-msgid "Block sleep"
-msgstr "Chặn chế độ ngủ"
+msgid "Block sleep & screen lock"
+msgstr "Chặn ngủ / khóa"
 
 #: ../contents/ui/FullPopup.qml
-msgid "Apps blocking sleep"
-msgstr "Các ứng dụng đang chặn ngủ"
+msgid "Apps blocking sleep / screen lock"
+msgstr "Danh sách chặn ngủ / khóa"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power saving mode"
@@ -201,8 +213,8 @@ msgid "Power settings..."
 msgstr "Cài đặt năng lượng..."
 
 #: ../contents/ui/FullPopup.qml
-msgid "Apps blocking sleep:"
-msgstr "Các ứng dụng đang chặn ngủ:"
+msgid "Apps blocking sleep / screen lock:"
+msgstr "Danh sách chặn ngủ / khóa:"
 
 #: ../contents/ui/main.qml
 msgid "Calculating..."

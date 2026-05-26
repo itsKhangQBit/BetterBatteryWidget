@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-24 14:02+0700\n"
+"POT-Creation-Date: 2026-05-26 18:17+0700\n"
 "PO-Revision-Date: 2026-05-24 16:07+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -31,8 +31,8 @@ msgid "Features"
 msgstr "Functies"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel appearance"
-msgstr "Vormgeving op paneel"
+msgid "Applet panel appearance"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font family:"
@@ -126,6 +126,18 @@ msgstr "Links"
 msgid "Center"
 msgstr "Midden"
 
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Other customizations"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Sleep blocking tab title font size:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Sleep blocking tab item font size:"
+msgstr ""
+
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Add leading zero before:"
 msgstr "Voorloopnul toevoegen aan:"
@@ -187,12 +199,12 @@ msgid "Battery health:"
 msgstr "Accugezondheid:"
 
 #: ../contents/ui/FullPopup.qml
-msgid "Block sleep"
-msgstr "Slaapstand onderdrukken"
+msgid "Block sleep & screen lock"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
-msgid "Apps blocking sleep"
-msgstr "Programma's die de slaapstand onderdrukken"
+msgid "Apps blocking sleep / screen lock"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power saving mode"
@@ -203,12 +215,24 @@ msgid "Power settings..."
 msgstr "Energie-instellingen..."
 
 #: ../contents/ui/FullPopup.qml
-msgid "Apps blocking sleep:"
-msgstr "Programma's die de slaapstand onderdrukken:"
+msgid "Apps blocking sleep / screen lock:"
+msgstr ""
 
 #: ../contents/ui/main.qml
 msgid "Calculating..."
 msgstr "Bezig met berekenen..."
+
+#~ msgid "Panel appearance"
+#~ msgstr "Vormgeving op paneel"
+
+#~ msgid "Block sleep"
+#~ msgstr "Slaapstand onderdrukken"
+
+#~ msgid "Apps blocking sleep"
+#~ msgstr "Programma's die de slaapstand onderdrukken"
+
+#~ msgid "Apps blocking sleep:"
+#~ msgstr "Programma's die de slaapstand onderdrukken:"
 
 #~ msgid "Panel percentage font family:"
 #~ msgstr "Percentagelettertype op paneel:"
