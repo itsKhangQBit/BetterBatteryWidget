@@ -24,6 +24,7 @@ A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default w
 - version 3.0: added sleep blocker, charge / usage time remaining (you can enable / disable this feature), battery health feature
 - version 4.0: polished everything up, fixed the feature battery saver to be A LOT BETTER, translated to German by @Gamernist and @rr1111.
 - version 5.0: added sleep blocking app lists, more customization
+- version 6.0: fixed the sleep blocking app lists feature backend to be "like" KDE
 
 # Images
 ![Taskbar icon](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/taskbar.png)
