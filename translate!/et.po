@@ -1,271 +1,225 @@
-# Translation of betterbatterywidget in nl
+# Translation of betterbatterywidget in et
 # Copyright (C) 2026
 # This file is distributed under the same license as the betterbatterywidget package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-26 18:17+0700\n"
-"PO-Revision-Date: 2026-05-27 10:34+0200\n"
-"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
-"Language-Team: \n"
-"Language: nl\n"
+"PO-Revision-Date: 2026-05-27 04:17+0000\n"
+"Last-Translator: Priit Jõerüüt <jrtcdbrg@noreply.codeberg.org>\n"
+"Language-Team: Estonian <https://translate.codeberg.org/projects/"
+"betterbatterywidget_plasma/language-names/et/>\n"
+"Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.9\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.5\n"
 
 #: ../metadata.desktop
 msgid "Better battery widget"
-msgstr "De betere accuwidget"
+msgstr "Parem akuvidin"
 
 #: ../contents/config/config.qml
 msgid "Appearance"
-msgstr "Vormgeving"
+msgstr "Välimus"
 
 #: ../contents/config/config.qml ../contents/ui/config/ConfigFeatures.qml
 msgid "Features"
-msgstr "Functies"
+msgstr "Funktsionaalsused"
 
 #: ../contents/ui/config/ConfigAppearance.qml
+#, fuzzy
 msgid "Applet panel appearance"
-msgstr "Vormgeving op paneel"
+msgstr "Välimus"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font family:"
-msgstr "Percentagelettertype:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Default"
-msgstr "Standaard"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font size:"
-msgstr "Tekstgrootte:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font formatting:"
-msgstr "Tekstopmaak:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Bold"
-msgstr "Vetgedrukt"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Italic"
-msgstr "Cursief"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Underline"
-msgstr "Onderstrepen"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage position:"
-msgstr "Percentagelocatie:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Right"
-msgstr "Rechts"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font padding:"
-msgstr "Tekstopvulling:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage fixed color:"
-msgstr "Vaste percentagekleur:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Enable dynamic percentage color"
-msgstr "Dynamische percentagekleuren gebruiken"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Custom dynamic color:"
-msgstr "Zelfgekozen dynamische kleuren:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "High percentage"
-msgstr "Hoog accuniveau"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Midrange percentage"
-msgstr "Middelmatig accuniveau"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Low percentage"
-msgstr "Laag accuniveau"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Change color to Midrange when below:"
-msgstr "Kleur veranderen naar middelmatig indien onder de:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Change color to Low when below:"
-msgstr "Kleur veranderen naar laag indien onder de:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Icon size:"
-msgstr "Pictogramgrootte:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Vertical battery icon"
-msgstr "Verticaal accupictogram gebruiken"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup appearance"
-msgstr "Pop-upvormgeving"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Left"
-msgstr "Links"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Center"
-msgstr "Midden"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Other customizations"
-msgstr "Overige aanpassingen"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Sleep blocking tab title font size:"
-msgstr "Tekstgrootte van slaaponderdrukkingstitel:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Sleep blocking tab item font size:"
-msgstr "Tekstgrootte van slaaponderdrukkingsitem:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Add leading zero before:"
-msgstr "Voorloopnul toevoegen aan:"
+msgstr ""
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Hours"
-msgstr "Uren"
+msgstr ""
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Minutes"
-msgstr "Minuten"
+msgstr ""
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Simplified time"
-msgstr "Eenvoudige tijdweergave"
+msgstr ""
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Enable time remaining"
-msgstr "Resterende tijd tonen"
+msgstr ""
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Enable battery health"
-msgstr "Gezondheidsstatus van accu tonen"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery percentage"
-msgstr "Accupercentage"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Back"
-msgstr "Terug"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Keep applet popup open"
-msgstr "Pop-up geopend houden"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Fully charged"
-msgstr "Volledig opgeladen"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Charging"
-msgstr "Aan het opladen"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Discharging"
-msgstr "Aan het ontladen"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Charge time left:"
-msgstr "Resterende oplaadtijd:"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery time left:"
-msgstr "Resterende accuduur:"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery health:"
-msgstr "Accugezondheid:"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep & screen lock"
-msgstr "Slaapstand en schermvergrendeling"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Apps blocking sleep / screen lock"
-msgstr "Programma's die slapen/vergrendelen onderdrukken"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power saving mode"
-msgstr "Energiebesparingsmodus"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power settings..."
-msgstr "Energie-instellingen..."
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Apps blocking sleep / screen lock:"
-msgstr "Programma's die slapen/vergrendelen onderdrukken:"
+msgstr ""
 
 #: ../contents/ui/main.qml
 msgid "Calculating..."
-msgstr "Bezig met berekenen..."
-
-#~ msgid "Panel appearance"
-#~ msgstr "Vormgeving op paneel"
-
-#~ msgid "Block sleep"
-#~ msgstr "Slaapstand onderdrukken"
-
-#~ msgid "Apps blocking sleep"
-#~ msgstr "Programma's die de slaapstand onderdrukken"
-
-#~ msgid "Apps blocking sleep:"
-#~ msgstr "Programma's die de slaapstand onderdrukken:"
-
-#~ msgid "Panel percentage font family:"
-#~ msgstr "Percentagelettertype op paneel:"
-
-#~ msgid "Panel font size:"
-#~ msgstr "Tekstgrootte op paneel:"
-
-#~ msgid "Percentage color on panel:"
-#~ msgstr "Percentagekleur op paneel:"
-
-#~ msgid "Panel font formatting:"
-#~ msgstr "Tekstopmaak op paneel:"
-
-#~ msgid "Panel icon size:"
-#~ msgstr "Paneelpictogramgrootte:"
-
-#~ msgid "Panel percentage position:"
-#~ msgstr "Percentagelocatie op paneel:"
-
-#~ msgid "Panel font padding:"
-#~ msgstr "Tekstopvulling op paneel:"
-
-#~ msgid "Applet popup percentage font family:"
-#~ msgstr "Percentagelettertype op pop-up:"
-
-#~ msgid "Applet popup font size:"
-#~ msgstr "Tektsgrootte op pop-up:"
-
-#~ msgid "Applet popup percentage color:"
-#~ msgstr "Percentagekleur op pop-up:"
-
-#~ msgid "Applet popup font formatting:"
-#~ msgstr "Tekstopmaak op pop-up:"
-
-#~ msgid "Applet popup percentage position:"
-#~ msgstr "Percentagelocatie op pop-up:"
+msgstr ""

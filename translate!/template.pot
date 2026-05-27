@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-24 14:02+0700\n"
+"POT-Creation-Date: 2026-05-26 18:17+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgid "Features"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel appearance"
+msgid "Applet panel appearance"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
@@ -125,6 +125,18 @@ msgstr ""
 msgid "Center"
 msgstr ""
 
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Other customizations"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Sleep blocking tab title font size:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Sleep blocking tab item font size:"
+msgstr ""
+
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Add leading zero before:"
 msgstr ""
@@ -186,11 +198,11 @@ msgid "Battery health:"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml
-msgid "Block sleep"
+msgid "Block sleep & screen lock"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml
-msgid "Apps blocking sleep"
+msgid "Apps blocking sleep / screen lock"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml
@@ -202,7 +214,7 @@ msgid "Power settings..."
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml
-msgid "Apps blocking sleep:"
+msgid "Apps blocking sleep / screen lock:"
 msgstr ""
 
 #: ../contents/ui/main.qml
