@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-24 14:02+0700\n"
+"POT-Creation-Date: 2026-05-26 18:17+0700\n"
 "PO-Revision-Date: 2026-04-24 21:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -31,8 +31,8 @@ msgid "Features"
 msgstr "Funktionen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-msgid "Panel appearance"
-msgstr "Panel-Aussehen"
+msgid "Applet panel appearance"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font family:"
@@ -126,6 +126,18 @@ msgstr "Links"
 msgid "Center"
 msgstr "Zentriert"
 
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Other customizations"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Sleep blocking tab title font size:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Sleep blocking tab item font size:"
+msgstr ""
+
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Add leading zero before:"
 msgstr "Führende 0 hinzufügen zu:"
@@ -187,12 +199,12 @@ msgid "Battery health:"
 msgstr "Akkuzustand:"
 
 #: ../contents/ui/FullPopup.qml
-msgid "Block sleep"
-msgstr "Standby verhindern"
+msgid "Block sleep & screen lock"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
-msgid "Apps blocking sleep"
-msgstr "Apps, die Standby verhindern"
+msgid "Apps blocking sleep / screen lock"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power saving mode"
@@ -203,12 +215,21 @@ msgid "Power settings..."
 msgstr "Energieeinstellungen..."
 
 #: ../contents/ui/FullPopup.qml
-msgid "Apps blocking sleep:"
+msgid "Apps blocking sleep / screen lock:"
 msgstr ""
 
 #: ../contents/ui/main.qml
 msgid "Calculating..."
 msgstr "Berechnen..."
+
+#~ msgid "Panel appearance"
+#~ msgstr "Panel-Aussehen"
+
+#~ msgid "Block sleep"
+#~ msgstr "Standby verhindern"
+
+#~ msgid "Apps blocking sleep"
+#~ msgstr "Apps, die Standby verhindern"
 
 #~ msgid "Panel percentage font family:"
 #~ msgstr "Schriftfamilie der Prozentanzeige im Panel:"

@@ -1,221 +1,271 @@
-# Translation of betterbatterywidget in vi
+# Translation of betterbatterywidget in nl
 # Copyright (C) 2026
 # This file is distributed under the same license as the betterbatterywidget package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-26 18:17+0700\n"
-"PO-Revision-Date: 2026-05-26 10:47+0700\n"
-"Last-Translator: itsKhangQBit <minhkhangdinh24013@gmail.com>\n"
+"PO-Revision-Date: 2026-05-24 16:07+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
-"Language: vi\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
 
 #: ../metadata.desktop
 msgid "Better battery widget"
-msgstr "Better battery widget"
+msgstr "De betere accuwidget"
 
 #: ../contents/config/config.qml
 msgid "Appearance"
-msgstr "Giao diện"
+msgstr "Vormgeving"
 
 #: ../contents/config/config.qml ../contents/ui/config/ConfigFeatures.qml
 msgid "Features"
-msgstr "Tính năng"
+msgstr "Functies"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet panel appearance"
-msgstr "Giao diện panel của applet"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font family:"
-msgstr "Phông chữ phần trăm:"
+msgstr "Percentagelettertype:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Default"
-msgstr "Mặc định"
+msgstr "Standaard"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font size:"
-msgstr "Cỡ chữ phần trăm:"
+msgstr "Tekstgrootte:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font formatting:"
-msgstr "Định dạng phông chữ phần trăm:"
+msgstr "Tekstopmaak:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Bold"
-msgstr "Chữ đậm"
+msgstr "Vetgedrukt"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Italic"
-msgstr "Chữ nghiêng"
+msgstr "Cursief"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Underline"
-msgstr "Chữ gạch chân"
+msgstr "Onderstrepen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage position:"
-msgstr "Vị trí phần trăm:"
+msgstr "Percentagelocatie:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Right"
-msgstr "Phải"
+msgstr "Rechts"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font padding:"
-msgstr "Khoảng đệm giữa phần trăm và biểu tượng:"
+msgstr "Tekstopvulling:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage fixed color:"
-msgstr "Màu phần trăm cố định:"
+msgstr "Vaste percentagekleur:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Enable dynamic percentage color"
-msgstr "Bật màu phần trăm động"
+msgstr "Dynamische percentagekleuren gebruiken"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Custom dynamic color:"
-msgstr "Chọn màu phần trăm động:"
+msgstr "Zelfgekozen dynamische kleuren:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "High percentage"
-msgstr "Phần trăm pin cao"
+msgstr "Hoog accuniveau"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Midrange percentage"
-msgstr "Phần trăm pin trung bình"
+msgstr "Middelmatig accuniveau"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Low percentage"
-msgstr "Phần trăm pin thấp"
+msgstr "Laag accuniveau"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Change color to Midrange when below:"
-msgstr "Đổi sang màu pin trung bình khi dưới:"
+msgstr "Kleur veranderen naar middelmatig indien onder de:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Change color to Low when below:"
-msgstr "Đổi sang màu pin thấp khi dưới:"
+msgstr "Kleur veranderen naar laag indien onder de:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Icon size:"
-msgstr "Kích cỡ biểu tượng pin:"
+msgstr "Pictogramgrootte:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Vertical battery icon"
-msgstr "Biểu tượng pin thẳng đứng"
+msgstr "Verticaal accupictogram gebruiken"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup appearance"
-msgstr "Giao diện popup của applet"
+msgstr "Pop-upvormgeving"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Left"
-msgstr "Trái"
+msgstr "Links"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Center"
-msgstr "Giữa"
+msgstr "Midden"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Other customizations"
-msgstr "Các tùy chỉnh giao diện khác"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Sleep blocking tab title font size:"
-msgstr "Cỡ chữ tiêu đề tab chặn ngủ / khóa"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Sleep blocking tab item font size:"
-msgstr "Cỡ chữ các mục tab chặn ngủ / khóa"
+msgstr ""
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Add leading zero before:"
-msgstr "Thêm số 0 trước:"
+msgstr "Voorloopnul toevoegen aan:"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Hours"
-msgstr "Giờ"
+msgstr "Uren"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Minutes"
-msgstr "Phút"
+msgstr "Minuten"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Simplified time"
-msgstr "Thời gian rút gọn"
+msgstr "Eenvoudige tijdweergave"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Enable time remaining"
-msgstr "Hiện thời gian sạc/dùng còn lại"
+msgstr "Resterende tijd tonen"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Enable battery health"
-msgstr "Hiện sức khỏe pin còn lại"
+msgstr "Gezondheidsstatus van accu tonen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery percentage"
-msgstr "Phần trăm pin"
+msgstr "Accupercentage"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Back"
-msgstr "Quay lại"
+msgstr "Terug"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Keep applet popup open"
-msgstr "Giữ cho applet popup mở"
+msgstr "Pop-up geopend houden"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Fully charged"
-msgstr "Đã sạc đầy pin"
+msgstr "Volledig opgeladen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Charging"
-msgstr "Đang sạc pin"
+msgstr "Aan het opladen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Discharging"
-msgstr "Đang dùng pin"
+msgstr "Aan het ontladen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Charge time left:"
-msgstr "Thời gian sạc còn lại:"
+msgstr "Resterende oplaadtijd:"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery time left:"
-msgstr "Thời gian pin còn lại:"
+msgstr "Resterende accuduur:"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery health:"
-msgstr "Sức khỏe pin:"
+msgstr "Accugezondheid:"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep & screen lock"
-msgstr "Chặn ngủ / khóa"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Apps blocking sleep / screen lock"
-msgstr "Danh sách chặn ngủ / khóa"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power saving mode"
-msgstr "Chế độ tiết kiệm pin"
+msgstr "Energiebesparingsmodus"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power settings..."
-msgstr "Cài đặt năng lượng..."
+msgstr "Energie-instellingen..."
 
 #: ../contents/ui/FullPopup.qml
 msgid "Apps blocking sleep / screen lock:"
-msgstr "Danh sách chặn ngủ / khóa:"
+msgstr ""
 
 #: ../contents/ui/main.qml
 msgid "Calculating..."
-msgstr "Đang tính..."
+msgstr "Bezig met berekenen..."
+
+#~ msgid "Panel appearance"
+#~ msgstr "Vormgeving op paneel"
+
+#~ msgid "Block sleep"
+#~ msgstr "Slaapstand onderdrukken"
+
+#~ msgid "Apps blocking sleep"
+#~ msgstr "Programma's die de slaapstand onderdrukken"
+
+#~ msgid "Apps blocking sleep:"
+#~ msgstr "Programma's die de slaapstand onderdrukken:"
+
+#~ msgid "Panel percentage font family:"
+#~ msgstr "Percentagelettertype op paneel:"
+
+#~ msgid "Panel font size:"
+#~ msgstr "Tekstgrootte op paneel:"
+
+#~ msgid "Percentage color on panel:"
+#~ msgstr "Percentagekleur op paneel:"
+
+#~ msgid "Panel font formatting:"
+#~ msgstr "Tekstopmaak op paneel:"
+
+#~ msgid "Panel icon size:"
+#~ msgstr "Paneelpictogramgrootte:"
+
+#~ msgid "Panel percentage position:"
+#~ msgstr "Percentagelocatie op paneel:"
+
+#~ msgid "Panel font padding:"
+#~ msgstr "Tekstopvulling op paneel:"
+
+#~ msgid "Applet popup percentage font family:"
+#~ msgstr "Percentagelettertype op pop-up:"
+
+#~ msgid "Applet popup font size:"
+#~ msgstr "Tektsgrootte op pop-up:"
+
+#~ msgid "Applet popup percentage color:"
+#~ msgstr "Percentagekleur op pop-up:"
+
+#~ msgid "Applet popup font formatting:"
+#~ msgstr "Tekstopmaak op pop-up:"
+
+#~ msgid "Applet popup percentage position:"
+#~ msgstr "Percentagelocatie op pop-up:"
