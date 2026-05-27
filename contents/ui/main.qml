@@ -128,8 +128,8 @@ PlasmoidItem {
                 // for some god who knows reason, i love animations
                 Behavior on rotation {
                     NumberAnimation {
-                        duration: 400
-                        easing.type: Easing.InOutQuad
+                        duration: 1000
+                        easing.type: Easing.InOutQuint
                     }
                 }
 

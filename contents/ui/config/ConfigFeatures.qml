@@ -4,7 +4,7 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kquickcontrols as KQuickControls
-import QtQuick.Dialogs // for the font dialog
+import QtQuick.Dialogs // for the color dialog
 
 ScrollView {
     anchors.fill: root
@@ -36,6 +36,9 @@ ScrollView {
     property int cfg_popuppercentPos
     property bool cfg_popupfontFamily
     property bool cfg_popupcustomcolor
+
+    property int cfg_nosleepTitleFontsize
+    property int cfg_nosleepAppFontsize
 
     // this is what we need
     property alias cfg_padMin: padMin.checked
@@ -73,6 +76,9 @@ ScrollView {
     property string cfg_popupfontFamilyDefault
     property int cfg_popuppercentPosDefault
     property bool cfg_popupcustomcolorDefault
+
+    property int cfg_nosleepTitleFontsizeDefault
+    property int cfg_nosleepAppFontsizeDefault
 
     Kirigami.FormLayout {
         id: formLayout

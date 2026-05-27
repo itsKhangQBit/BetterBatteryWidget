@@ -4,7 +4,7 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kquickcontrols as KQuickControls
-import QtQuick.Dialogs // for the font dialog
+import QtQuick.Dialogs // for the color dialog
 
 ScrollView {
     Layout.fillHeight: true
@@ -44,6 +44,9 @@ ScrollView {
     property alias cfg_popupdynamicLowcolor: popupdynamicLowcolor.color
     property alias cfg_popupMidpercent: popupMidpercent.value
     property alias cfg_popupLowpercent: popupLowpercent.value
+
+    property alias cfg_nosleepTitleFontsize: nosleepTitleFontsize.value //goddamn variable too long :(((
+    property alias cfg_nosleepAppFontsize: nosleepAppFontsize.value
 
     // this is just for QML engine to not throw any warnings
     property bool cfg_padMin
@@ -92,6 +95,8 @@ ScrollView {
     property int cfg_popupMidpercentDefault
     property int cfg_popupLowpercentDefault
 
+    property int cfg_nosleepTitleFontsizeDefault
+    property int cfg_nosleepAppFontsizeDefault
 
     Kirigami.FormLayout {
         id: formLayout
@@ -101,7 +106,7 @@ ScrollView {
 
         PlasmaComponents.Label {
             anchors.margins: Kirigami.Units.smallSpacing
-            text: i18n("Panel appearance")
+            text: i18n("Applet panel appearance")
             font.pixelSize: 18
             font.bold: true
         }
@@ -509,6 +514,28 @@ ScrollView {
                     value: root.cfg_popupLowpercent
                 }
             }
+        }
+
+        PlasmaComponents.Label {
+            text: i18n("Other customizations")
+            font.pixelSize: 18
+            font.bold: true
+        }
+
+        SpinBox {
+            id: nosleepTitleFontsize
+            Kirigami.FormData.label: i18n("Sleep blocking tab title font size:")
+            from: 1
+            to: 100
+            value: root.cfg_nosleepTitleFontsize
+        }
+
+        SpinBox {
+            id: nosleepAppFontsize
+            Kirigami.FormData.label: i18n("Sleep blocking tab item font size:")
+            from: 1
+            to: 100
+            value: root.cfg_nosleepAppFontsize
         }
     }
 }
