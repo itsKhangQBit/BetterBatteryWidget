@@ -112,5 +112,12 @@
         <entry name="popupLowpercent" type="Int">
             <default>20</default>
         </entry>
+
+        <entry name="nosleepAppFontsize" type="Int">
+            <default>13</default>
+        </entry>
+        <entry name="nosleepTitleFontsize" type="Int">
+            <default>16</default>
+        </entry>
     </group>
 </kcfg>
