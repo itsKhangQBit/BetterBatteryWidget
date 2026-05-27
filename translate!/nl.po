@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-26 18:17+0700\n"
-"PO-Revision-Date: 2026-05-24 16:07+0200\n"
+"PO-Revision-Date: 2026-05-27 10:34+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -32,7 +32,7 @@ msgstr "Functies"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet panel appearance"
-msgstr ""
+msgstr "Vormgeving op paneel"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font family:"
@@ -128,15 +128,15 @@ msgstr "Midden"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Other customizations"
-msgstr ""
+msgstr "Overige aanpassingen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Sleep blocking tab title font size:"
-msgstr ""
+msgstr "Tekstgrootte van slaaponderdrukkingstitel:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Sleep blocking tab item font size:"
-msgstr ""
+msgstr "Tekstgrootte van slaaponderdrukkingsitem:"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Add leading zero before:"
@@ -200,11 +200,11 @@ msgstr "Accugezondheid:"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep & screen lock"
-msgstr ""
+msgstr "Slaapstand en schermvergrendeling"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Apps blocking sleep / screen lock"
-msgstr ""
+msgstr "Programma's die slapen/vergrendelen onderdrukken"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power saving mode"
@@ -216,7 +216,7 @@ msgstr "Energie-instellingen..."
 
 #: ../contents/ui/FullPopup.qml
 msgid "Apps blocking sleep / screen lock:"
-msgstr ""
+msgstr "Programma's die slapen/vergrendelen onderdrukken:"
 
 #: ../contents/ui/main.qml
 msgid "Calculating..."
