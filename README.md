@@ -66,7 +66,7 @@ If you like to contribute to my repository then this might be the fastest way to
 - Open a pull request and I'll happily merge it!
 
 **Help installing from my repository:**
-There's 2 versions of Plasma. If you're on **Plasma 5** (like me) then **this is the branch** you need. **Otherwise** (if you use Plasma 6), **switch to the plasma-6 branch**.
+There's 2 versions of Plasma. If you're on **Plasma 5** then **this is the branch** you need. **Otherwise** (if you use Plasma 6), **switch to the plasma-6 branch**.
 
 Some features might not work as expected... and if you find one then make an issue, I'll try my best to fix it!
 
