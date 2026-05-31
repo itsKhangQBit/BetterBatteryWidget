@@ -1,0 +1,229 @@
+# Translation of betterbatterywidget in vi
+# Copyright (C) 2026
+# This file is distributed under the same license as the betterbatterywidget package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: betterbatterywidget\n"
+"Report-Msgid-Bugs-To: https://github.com/itsKhangQBit/BetterBatteryWidget\n"
+"POT-Creation-Date: 2026-05-30 21:35+0700\n"
+"PO-Revision-Date: 2026-05-26 10:47+0700\n"
+"Last-Translator: itsKhangQBit <minhkhangdinh24013@gmail.com>\n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../metadata.desktop
+msgid "Better battery widget"
+msgstr "Better battery widget"
+
+#: ../contents/config/config.qml
+msgid "Appearance"
+msgstr "Giao diện"
+
+#: ../contents/config/config.qml ../contents/ui/config/ConfigFeatures.qml
+msgid "Features"
+msgstr "Tính năng"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Applet panel appearance"
+msgstr "Giao diện panel của applet"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage font family:"
+msgstr "Phông chữ phần trăm:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Default"
+msgstr "Mặc định"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage font size:"
+msgstr "Cỡ chữ phần trăm:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage font formatting:"
+msgstr "Định dạng phông chữ phần trăm:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Bold"
+msgstr "Chữ đậm"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Italic"
+msgstr "Chữ nghiêng"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Underline"
+msgstr "Chữ gạch chân"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage position:"
+msgstr "Vị trí phần trăm:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Right"
+msgstr "Phải"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage font padding:"
+msgstr "Khoảng đệm giữa phần trăm và biểu tượng:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage fixed color:"
+msgstr "Màu phần trăm cố định:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Enable dynamic percentage color"
+msgstr "Bật màu phần trăm động"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Custom dynamic color:"
+msgstr "Chọn màu phần trăm động:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "High percentage"
+msgstr "Phần trăm pin cao"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Midrange percentage"
+msgstr "Phần trăm pin trung bình"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Low percentage"
+msgstr "Phần trăm pin thấp"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Change color to Midrange when below:"
+msgstr "Đổi sang màu pin trung bình khi dưới:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Change color to Low when below:"
+msgstr "Đổi sang màu pin thấp khi dưới:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Icon size:"
+msgstr "Kích cỡ biểu tượng pin:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Vertical battery icon"
+msgstr "Biểu tượng pin thẳng đứng"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Show percentage"
+msgstr "Hiện phần trăm"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Show icon"
+msgstr "Hiện biểu tuợng"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Applet popup appearance"
+msgstr "Giao diện popup của applet"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Left"
+msgstr "Trái"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Center"
+msgstr "Giữa"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Other customizations"
+msgstr "Các tùy chỉnh giao diện khác"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Sleep blocking tab title font size:"
+msgstr "Cỡ chữ tiêu đề tab chặn ngủ / khóa:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Sleep blocking tab item font size:"
+msgstr "Cỡ chữ các mục tab chặn ngủ / khóa:"
+
+#: ../contents/ui/config/ConfigFeatures.qml
+msgid "Add leading zero before:"
+msgstr "Thêm số 0 trước:"
+
+#: ../contents/ui/config/ConfigFeatures.qml
+msgid "Hours"
+msgstr "Giờ"
+
+#: ../contents/ui/config/ConfigFeatures.qml
+msgid "Minutes"
+msgstr "Phút"
+
+#: ../contents/ui/config/ConfigFeatures.qml
+msgid "Simplified time"
+msgstr "Thời gian rút gọn"
+
+#: ../contents/ui/config/ConfigFeatures.qml
+msgid "Enable time remaining"
+msgstr "Hiện thời gian sạc/dùng còn lại"
+
+#: ../contents/ui/config/ConfigFeatures.qml
+msgid "Enable battery health"
+msgstr "Hiện sức khỏe pin còn lại"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Battery percentage"
+msgstr "Phần trăm pin"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Back"
+msgstr "Quay lại"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Keep applet popup open"
+msgstr "Giữ cho applet popup mở"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Fully charged"
+msgstr "Đã sạc đầy pin"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Charging"
+msgstr "Đang sạc pin"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Discharging"
+msgstr "Đang dùng pin"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Charge time left:"
+msgstr "Thời gian sạc còn lại:"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Battery time left:"
+msgstr "Thời gian pin còn lại:"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Battery health:"
+msgstr "Sức khỏe pin:"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Block sleep & screen lock"
+msgstr "Chặn ngủ / khóa"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Apps blocking sleep / screen lock"
+msgstr "Danh sách chặn ngủ / khóa"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Power saving mode"
+msgstr "Chế độ tiết kiệm pin"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Power settings..."
+msgstr "Cài đặt năng lượng..."
+
+#: ../contents/ui/FullPopup.qml
+msgid "Apps blocking sleep / screen lock:"
+msgstr "Danh sách chặn ngủ / khóa:"
+
+#: ../contents/ui/main.qml
+msgid "Calculating..."
+msgstr "Đang tính..."
