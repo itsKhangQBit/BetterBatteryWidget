@@ -26,16 +26,16 @@ A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default w
 - version 5.0: added sleep blocking app lists, more customization
 
 # Images
-![Taskbar icon](https://codeberg.org/itsKhangQBit/BetterBatteryWidget/src/branch/plasma-6/screenshots/taskbar.png)
-![Taskbar icon with customization](https://codeberg.org/itsKhangQBit/BetterBatteryWidget/src/branch/plasma-6/screenshots/taskbar+color.png)
+![Taskbar icon](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/taskbar.png)
+![Taskbar icon with customization](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/taskbar+color.png)
 <br><br>
-![Popup / Full representation (English)](https://codeberg.org/itsKhangQBit/BetterBatteryWidget/src/branch/plasma-6/screenshots/fullrep_en.png)
-![Popup / Full representation (Vietnamese)](https://codeberg.org/itsKhangQBit/BetterBatteryWidget/src/branch/plasma-6/screenshots/fullrep_vi.png)\
-![Popup / Full representation (Dutch)](https://codeberg.org/itsKhangQBit/BetterBatteryWidget/src/branch/plasma-6/screenshots/fullrep_nl.png)
+![Popup / Full representation (English)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/fullrep_en.png)
+![Popup / Full representation (Vietnamese)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/fullrep_vi.png)\
+![Popup / Full representation (Dutch)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/fullrep_nl.png)
 <br><br>
-![Settings (panel)](https://codeberg.org/itsKhangQBit/BetterBatteryWidget/src/branch/plasma-6/screenshots/setting+panel.png)
-![Settings (popup)](https://codeberg.org/itsKhangQBit/BetterBatteryWidget/src/branch/plasma-6/screenshots/setting+popup.png)
-![Settings (features)](https://codeberg.org/itsKhangQBit/BetterBatteryWidget/src/branch/plasma-6/screenshots/setting+features.png)
+![Settings (panel)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/setting+panel.png)
+![Settings (popup)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/setting+popup.png)
+![Settings (features)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/setting+features.png)
 
 **Please help me translate this applet into multiple languages, if you can!! I'd be very grateful for that!**
 
