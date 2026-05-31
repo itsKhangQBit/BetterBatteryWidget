@@ -14,6 +14,7 @@ PlasmoidItem {
     property string icon: "battery-000"
     property string health: "100%"
     property string timeleft: "0"
+    property bool horizontal: Plasmoid.location === 2 || Plasmoid.location === 4
     property alias getBatHealth: getBatHealth //need the alias so that we can call getBatHealth from FullPopup
 
     Plasma5Support.DataSource {
@@ -79,27 +80,28 @@ PlasmoidItem {
 
         Layout.preferredWidth: plasmoidRow.implicitWidth + Kirigami.Units.smallSpacing
         Layout.preferredHeight: Plasmoid.configuration.paneliconSize
+        Layout.minimumHeight: Plasmoid.configuration.paneliconSize
+        Layout.minimumWidth: plasmoidRow.implicitWidth + Kirigami.Units.smallSpacing
         // get the click action to open the popup
         property bool wasExpanded: false
         onPressed: wasExpanded = root.expanded
         onClicked: root.expanded = !wasExpanded
 
-        RowLayout {
+        GridLayout {
             id: plasmoidRow
             // Offset the percentage to the right or left, its your choice
             layoutDirection: Plasmoid.configuration.panelfontPosR ? Qt.RightToLeft : Qt.LeftToRight
             anchors.fill: parent
-            spacing: Plasmoid.configuration.panelfontPad
+            rowSpacing: Plasmoid.configuration.panelfontPad
+            columnSpacing: Plasmoid.configuration.panelfontPad
             height: parent.height
+
+            rows: horizontal ? -1 : 1
+            columns: horizontal ? 1 : -1
 
             PlasmaComponents.Label {
                 id: percent
                 text: root.percent + "%"
-                opacity: {
-                    let percentInt = parseInt(root.percent, 10)
-                    if (isNaN(percentInt)) return 0.8;
-                    return 1
-                }
                 font.pixelSize: Plasmoid.configuration.panelfontSize
                 color: {
                     if (!Plasmoid.configuration.panelcustomcolor) return Plasmoid.configuration.panelpercentColor || Kirigami.Theme.textColor;
@@ -113,6 +115,20 @@ PlasmoidItem {
                 font.italic: Plasmoid.configuration.panelfontItalic
                 font.underline: Plasmoid.configuration.panelfontUnderline
                 font.family: Plasmoid.configuration.panelfontFamily || Kirigami.Theme.defaultFont.family
+                width: opacity > 0 ? implicitWidth : 0
+                z: 1
+                visible: opacity > 0
+                opacity: {
+                    let percentInt = parseInt(root.percent, 10)
+                    if (isNaN(percentInt)) return Plasmoid.configuration.panelshowPercent ? 0.8 : 0;
+                    return Plasmoid.configuration.panelshowPercent ? 1 : 0
+                }
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: 400
+                        easing.type: Easing.InOutCubic
+                    }
+                }
             }
 
             Kirigami.Icon {
@@ -128,12 +144,24 @@ PlasmoidItem {
                 // for some god who knows reason, i love animations
                 Behavior on rotation {
                     NumberAnimation {
-                        duration: 1000
-                        easing.type: Easing.InOutQuint
+                        duration: 400
+                        easing.type: Easing.InOutQuad
                     }
                 }
-
-                // Use config from settings
+                visible: opacity > 0
+                opacity: {
+                    let percentInt = parseInt(root.percent, 10)
+                    if (isNaN(percentInt)) return Plasmoid.configuration.panelshowIcon ? 0.8 : 0;
+                    return Plasmoid.configuration.panelshowIcon ? 1 : 0
+                }
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: 400
+                        easing.type: Easing.InOutCubic
+                    }
+                }
+                width: opacity > 0 ? implicitWidth : 0
+                z: 0
                 Layout.preferredWidth: Plasmoid.configuration.paneliconSize
                 Layout.preferredHeight: Plasmoid.configuration.paneliconSize
             }

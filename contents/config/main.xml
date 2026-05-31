@@ -55,7 +55,7 @@
             <default>false</default>
         </entry>
         <entry name="paneldynamicHighcolor" type="String">
-            <default>#41c347</default><!-- weird color choice, you might know I took it from somewhere... this is color picked btw -->
+            <default>#43c449</default><!-- weird color choice, you might know I took it from somewhere... this is color picked btw -->
         </entry>
         <entry name="paneldynamicMidcolor" type="String">
             <default>#ffff00</default>
@@ -68,6 +68,12 @@
         </entry>
         <entry name="panelLowpercent" type="Int">
             <default>20</default>
+        </entry>
+        <entry name="panelshowPercent" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="panelshowIcon" type="Bool">
+            <default>true</default>
         </entry>
         <entry name="paneliconRotate" type="Bool">
             <default>false</default>
@@ -98,7 +104,7 @@
             <default>false</default>
         </entry>
         <entry name="popupdynamicHighcolor" type="String">
-            <default>#41c347</default>
+            <default>#43c449</default>
         </entry>
         <entry name="popupdynamicMidcolor" type="String">
             <default>#ffff00</default>

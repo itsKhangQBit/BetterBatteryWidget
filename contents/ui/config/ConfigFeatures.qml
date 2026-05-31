@@ -27,6 +27,8 @@ ScrollView {
     property bool cfg_panelfontFamily
     property bool cfg_panelcustomcolor
     property bool cfg_paneliconRotate
+    property bool cfg_panelshowPercent
+    property bool cfg_panelshowIcon
 
     property int cfg_popupfontSize
     property bool cfg_popupfontBold
@@ -67,6 +69,8 @@ ScrollView {
     property bool cfg_panelfontPosRDefault
     property bool cfg_panelcustomcolorDefault
     property bool cfg_paneliconRotateDefault
+    property bool cfg_panelshowPercentDefault
+    property bool cfg_panelshowIconDefault
 
     property int cfg_popupfontSizeDefault
     property bool cfg_popupfontBoldDefault

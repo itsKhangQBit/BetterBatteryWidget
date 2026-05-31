@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 18:17+0700\n"
+"POT-Creation-Date: 2026-05-30 21:34+0700\n"
 "PO-Revision-Date: 2026-05-26 10:47+0700\n"
 "Last-Translator: itsKhangQBit <minhkhangdinh24013@gmail.com>\n"
 "Language-Team: \n"
@@ -113,6 +113,14 @@ msgid "Vertical battery icon"
 msgstr "Biểu tượng pin thẳng đứng"
 
 #: ../contents/ui/config/ConfigAppearance.qml
+msgid "Show percentage"
+msgstr "Hiện phần trăm"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Show icon"
+msgstr "Hiện biểu tuợng"
+
+#: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup appearance"
 msgstr "Giao diện popup của applet"
 
@@ -130,11 +138,11 @@ msgstr "Các tùy chỉnh giao diện khác"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Sleep blocking tab title font size:"
-msgstr "Cỡ chữ tiêu đề tab chặn ngủ / khóa"
+msgstr "Cỡ chữ tiêu đề tab chặn ngủ / khóa:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Sleep blocking tab item font size:"
-msgstr "Cỡ chữ các mục tab chặn ngủ / khóa"
+msgstr "Cỡ chữ các mục tab chặn ngủ / khóa:"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Add leading zero before:"

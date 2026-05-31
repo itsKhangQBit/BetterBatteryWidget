@@ -30,6 +30,8 @@ ScrollView {
     property alias cfg_paneldynamicLowcolor: paneldynamicLowcolor.color
     property alias cfg_panelMidpercent: panelMidpercent.value
     property alias cfg_panelLowpercent: panelLowpercent.value
+    property alias cfg_panelshowPercent: panelshowPercent.checked
+    property alias cfg_panelshowIcon: panelshowIcon.checked
 
     property alias cfg_popupfontSize: popupfontSize.value
     property alias cfg_popupfontBold: popupfontBold.checked
@@ -80,6 +82,8 @@ ScrollView {
     property string cfg_paneldynamicHighcolorDefault
     property int cfg_panelMidpercentDefault
     property int cfg_panelLowpercentDefault
+    property bool cfg_panelshowPercentDefault
+    property bool cfg_panelshowIconDefault
 
     property int cfg_popupfontSizeDefault
     property bool cfg_popupfontBoldDefault
@@ -301,6 +305,16 @@ ScrollView {
             text: i18n("Vertical battery icon")
         }
 
+        CheckBox {
+            id: panelshowPercent
+            text: i18n("Show percentage")
+        }
+
+        CheckBox {
+            id: panelshowIcon
+            text: i18n("Show icon")
+        }
+
         PlasmaComponents.Label {
             anchors.margins: Kirigami.Units.smallSpacing
             text: i18n("Applet popup appearance")
@@ -371,6 +385,7 @@ ScrollView {
                 to: 2
                 value: plasmoid.configuration.popuppercentPos
                 stepSize: 1
+                snapMode: Slider.SnapOnRelease
                 onMoved: {
                     plasmoid.configuration.popuppercentPos = value;
                 }

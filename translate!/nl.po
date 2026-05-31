@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 18:17+0700\n"
+"POT-Creation-Date: 2026-05-30 21:34+0700\n"
 "PO-Revision-Date: 2026-05-31 10:21+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -113,6 +113,14 @@ msgstr "Pictogramgrootte:"
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Vertical battery icon"
 msgstr "Verticaal accupictogram gebruiken"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Show percentage"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Show icon"
+msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup appearance"

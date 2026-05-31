@@ -21,7 +21,11 @@
         "License": "GPL-2.0+",
         "Name": "Better battery widget",
         "ServiceTypes": ["Plasma/Applet"],
+<<<<<<< HEAD
         "Version": "6.0"
+=======
+        "Version": "6.1"
+>>>>>>> my-code
     },
     "X-Plasma-Provides":"org.kde.plasma.powermanagement",
     "X-Plasma-API-Minimum-Version": "6.0",

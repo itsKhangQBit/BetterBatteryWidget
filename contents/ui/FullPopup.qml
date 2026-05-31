@@ -273,7 +273,7 @@ Item {
                 color: {
                     if (!Plasmoid.configuration.popupcustomcolor) return Plasmoid.configuration.popuppercentColor || Kirigami.Theme.textColor;
                     let percentInt = parseInt(widgetdata.percent, 10)
-                    if (isNaN(percentInt)) return "#FFFFFF" // what the hell is the percentage
+                    if (isNaN(percentInt)) return Kirigami.Theme.textColor // what the hell is the percentage
                         if (percentInt >= Plasmoid.configuration.popupMidpercent) return Plasmoid.configuration.popupdynamicHighcolor // still going strong
                             if (percentInt >= Plasmoid.configuration.popupLowpercent) return Plasmoid.configuration.popupdynamicMidcolor
                                 return Plasmoid.configuration.popupdynamicLowcolor // go charge, emergencyyyyyy
@@ -359,7 +359,6 @@ Item {
 
             PlasmaComponents.Label {
                 text: i18n("Apps blocking sleep / screen lock")
-                color: "white"
                 opacity: !sleepBlockerRoot.hasBlocker ? 0 : (clickArea.pressed ? 0.5 : (clickArea.containsMouse ? 0.7 : 1.0))
                 visible: opacity > 0
                 clip: true
@@ -421,6 +420,7 @@ Item {
                     to: 2
                     value: popupRoot.pwrmgrBackend === "ppd" ? popupRoot.ispwrSave : 0;
                     stepSize: 1
+                    snapMode: Slider.SnapOnRelease
                     onMoved: {
                         popupRoot.batSaver(value);
                     }

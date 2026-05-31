@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 18:17+0700\n"
+"POT-Creation-Date: 2026-05-30 21:34+0700\n"
 "PO-Revision-Date: 2026-04-24 21:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -112,6 +112,14 @@ msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Vertical battery icon"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Show percentage"
+msgstr ""
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Show icon"
 msgstr ""
 
 #: ../contents/ui/config/ConfigAppearance.qml

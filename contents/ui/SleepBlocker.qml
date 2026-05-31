@@ -144,10 +144,10 @@ Item {
 
             for (let i = 0; i < parsedshit.length; i+=2) { // jump 2 lines after we done
                 let rawName = parsedshit[i] || ""; // string "zen"
-                let rawWhy = parsedshit[i + 1] || ""; // string "Playing video: "BFDI: TPOT 20: Alone"
+                let rawWhy = parsedshit[i + 1] || ""; // string "Playing video: "BFDI:TPOT 22: Suite Escape"
                 // string zen
                 let name = rawName.substring(rawName.indexOf('"') + 1, rawName.lastIndexOf('"'));
-                // string Playing video: "BFDI: TPOT 20: Alone
+                // string Playing video: "Cách làm Phở gà chuẩn vị Hà Nội"
                 let why = rawWhy.substring(rawWhy.indexOf('"') + 1, rawWhy.lastIndexOf('"'));
                 //console.log(name)
 
@@ -212,7 +212,7 @@ Item {
             sleepBlockerRoot.hasBlocker = (newApps.length > 0);
 
         } catch(e) {
-            console.log("Oops, I can't parse the JSON! [" + e + "]");
+            console.log("Oops, I can't parse the data! [" + e + "]");
         }
     }
 }
