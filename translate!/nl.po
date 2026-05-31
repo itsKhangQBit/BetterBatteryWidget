@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-26 18:17+0700\n"
-"PO-Revision-Date: 2026-05-27 10:34+0200\n"
+"PO-Revision-Date: 2026-05-31 10:21+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -32,7 +32,7 @@ msgstr "Functies"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet panel appearance"
-msgstr "Vormgeving op paneel"
+msgstr "Vormgeving van applet"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font family:"
@@ -200,7 +200,7 @@ msgstr "Accugezondheid:"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep & screen lock"
-msgstr "Slaapstand en schermvergrendeling"
+msgstr "Slaapstandonderdrukking en schermvergrendeling"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Apps blocking sleep / screen lock"
