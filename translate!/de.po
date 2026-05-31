@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-30 21:34+0700\n"
+"POT-Creation-Date: 2026-05-31 22:48+0700\n"
 "PO-Revision-Date: 2026-04-24 21:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -229,48 +229,3 @@ msgstr ""
 #: ../contents/ui/main.qml
 msgid "Calculating..."
 msgstr "Berechnen..."
-
-#~ msgid "Panel appearance"
-#~ msgstr "Panel-Aussehen"
-
-#~ msgid "Block sleep"
-#~ msgstr "Standby verhindern"
-
-#~ msgid "Apps blocking sleep"
-#~ msgstr "Apps, die Standby verhindern"
-
-#~ msgid "Panel percentage font family:"
-#~ msgstr "Schriftfamilie der Prozentanzeige im Panel:"
-
-#~ msgid "Panel font size:"
-#~ msgstr "Panel Schriftgröße:"
-
-#~ msgid "Percentage color on panel:"
-#~ msgstr "Farbe der Prozentanzeige im Panel:"
-
-#~ msgid "Panel font formatting:"
-#~ msgstr "Formattierung der Schrift im Panel:"
-
-#~ msgid "Panel icon size:"
-#~ msgstr "Icongröße im Panel:"
-
-#~ msgid "Panel percentage position:"
-#~ msgstr "Position der Prozentanzeige im Panel:"
-
-#~ msgid "Panel font padding:"
-#~ msgstr "Padding der Schrift im Panel:"
-
-#~ msgid "Applet popup percentage font family:"
-#~ msgstr "Schriftfamilie der Prozentanzeige im Applet Popup:"
-
-#~ msgid "Applet popup font size:"
-#~ msgstr "Schriftgröße im Applet Popup:"
-
-#~ msgid "Applet popup percentage color:"
-#~ msgstr "Schriftfarbe der Prozentanzeige im Applet Popup:"
-
-#~ msgid "Applet popup font formatting:"
-#~ msgstr "Schriftformatierung im Applet Popup:"
-
-#~ msgid "Applet popup percentage position:"
-#~ msgstr "Position der Prozentanzeige im Applet Popup:"

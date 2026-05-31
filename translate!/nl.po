@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-30 21:34+0700\n"
+"POT-Creation-Date: 2026-05-31 22:48+0700\n"
 "PO-Revision-Date: 2026-05-31 10:21+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -229,51 +229,3 @@ msgstr "Programma's die slapen/vergrendelen onderdrukken:"
 #: ../contents/ui/main.qml
 msgid "Calculating..."
 msgstr "Bezig met berekenen..."
-
-#~ msgid "Panel appearance"
-#~ msgstr "Vormgeving op paneel"
-
-#~ msgid "Block sleep"
-#~ msgstr "Slaapstand onderdrukken"
-
-#~ msgid "Apps blocking sleep"
-#~ msgstr "Programma's die de slaapstand onderdrukken"
-
-#~ msgid "Apps blocking sleep:"
-#~ msgstr "Programma's die de slaapstand onderdrukken:"
-
-#~ msgid "Panel percentage font family:"
-#~ msgstr "Percentagelettertype op paneel:"
-
-#~ msgid "Panel font size:"
-#~ msgstr "Tekstgrootte op paneel:"
-
-#~ msgid "Percentage color on panel:"
-#~ msgstr "Percentagekleur op paneel:"
-
-#~ msgid "Panel font formatting:"
-#~ msgstr "Tekstopmaak op paneel:"
-
-#~ msgid "Panel icon size:"
-#~ msgstr "Paneelpictogramgrootte:"
-
-#~ msgid "Panel percentage position:"
-#~ msgstr "Percentagelocatie op paneel:"
-
-#~ msgid "Panel font padding:"
-#~ msgstr "Tekstopvulling op paneel:"
-
-#~ msgid "Applet popup percentage font family:"
-#~ msgstr "Percentagelettertype op pop-up:"
-
-#~ msgid "Applet popup font size:"
-#~ msgstr "Tektsgrootte op pop-up:"
-
-#~ msgid "Applet popup percentage color:"
-#~ msgstr "Percentagekleur op pop-up:"
-
-#~ msgid "Applet popup font formatting:"
-#~ msgstr "Tekstopmaak op pop-up:"
-
-#~ msgid "Applet popup percentage position:"
-#~ msgstr "Percentagelocatie op pop-up:"
