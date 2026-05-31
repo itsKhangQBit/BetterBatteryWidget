@@ -1,0 +1,30 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "minhkhangdinh24013@gmail.com",
+                "Name": "itsKhangQBit"
+            },
+            {
+                "Email": "vistausss@fastmail.com",
+                "Name": "Heimen Stoffels (Vistaus)"
+            },
+            {
+                "Name": "Gamernist"
+            }
+        ],
+        "Category": "Battery",
+        "Description": "Just another simple battery plasmoid.",
+        "Icon": "battery-working",
+        "Id": "com.itsKhang.betterbatterywidget",
+        "License": "GPL-2.0+",
+        "Name": "Better battery widget",
+        "ServiceTypes": ["Plasma/Applet"],
+        "Version": "6.1"
+    },
+    "X-Plasma-Provides":"org.kde.plasma.powermanagement",
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "X-Plasma-NotificationAreaCategory": "SystemServices"
+}

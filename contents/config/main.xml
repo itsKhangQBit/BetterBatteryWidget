@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+    <group name="Features">
+        <entry name="padMin" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="padHr" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="simpleTime" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="timeLeft" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="healthLeft" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="pinned" type="Bool">
+            <default>false</default>
+        </entry>
+    </group>
+    <group name="Appearance">
+        <entry name="panelfontSize" type="Int">
+            <default>14</default>
+        </entry>
+        <entry name="panelfontBold" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="panelpercentColor" type="String">
+            <default>#ffffff</default>
+        </entry>
+        <entry name="panelfontItalic" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="panelfontUnderline" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="paneliconSize" type="Int">
+            <default>24</default>
+        </entry>
+        <entry name="panelfontPad" type="Int">
+            <default>2</default>
+        </entry>
+        <entry name="panelfontFamily" type="String">
+            <default></default>
+        </entry>
+        <entry name="panelfontPosR" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="panelcustomcolor" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="paneldynamicHighcolor" type="String">
+            <default>#43c449</default><!-- weird color choice, you might know I took it from somewhere... this is color picked btw -->
+        </entry>
+        <entry name="paneldynamicMidcolor" type="String">
+            <default>#ffff00</default>
+        </entry>
+        <entry name="paneldynamicLowcolor" type="String">
+            <default>#fd575b</default>
+        </entry>
+        <entry name="panelMidpercent" type="Int">
+            <default>75</default>
+        </entry>
+        <entry name="panelLowpercent" type="Int">
+            <default>20</default>
+        </entry>
+        <entry name="panelshowPercent" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="panelshowIcon" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="paneliconRotate" type="Bool">
+            <default>false</default>
+        </entry>
+
+        <entry name="popupfontSize" type="Int">
+            <default>48</default>
+        </entry>
+        <entry name="popupfontBold" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="popuppercentColor" type="String">
+            <default>#ffffff</default>
+        </entry>
+        <entry name="popupfontItalic" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="popupfontUnderline" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="popupfontFamily" type="String">
+            <default></default>
+        </entry>
+        <entry name="popuppercentPos" type="Int">
+            <default>0</default>
+        </entry>
+        <entry name="popupcustomcolor" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="popupdynamicHighcolor" type="String">
+            <default>#43c449</default>
+        </entry>
+        <entry name="popupdynamicMidcolor" type="String">
+            <default>#ffff00</default>
+        </entry>
+        <entry name="popupdynamicLowcolor" type="String">
+            <default>#fd575b</default>
+        </entry>
+        <entry name="popupMidpercent" type="Int">
+            <default>75</default>
+        </entry>
+        <entry name="popupLowpercent" type="Int">
+            <default>20</default>
+        </entry>
+
+        <entry name="nosleepAppFontsize" type="Int">
+            <default>13</default>
+        </entry>
+        <entry name="nosleepTitleFontsize" type="Int">
+            <default>16</default>
+        </entry>
+    </group>
+</kcfg>
