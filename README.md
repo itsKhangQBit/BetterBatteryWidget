@@ -56,16 +56,23 @@ A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default w
 [-] Estonian (4%)
 
 **Help translating this project:**
+
 If you like to contribute to my repository then this might be the fastest way to do it, more languages are welcome!
-- Clone this repository (I assume you know how to clone)
-- Go to the "translate!" directory and find the file "template.pot"
-- Open it in any editor you like (e.g. Kate, Lokalize, ...)
-- Fill in your language (and your name, email if you like)
-- Translate the strings
-- Once done, save the file as "[your locale].po"
-- Open a pull request and I'll happily merge it!
+- The best way to translate is going to my translation project (https://translate.codeberg.org/projects/betterbatterywidget_plasma/language-names/) and make a translation there. Once done you can download your translation file and open a pull request with your file.
+
+- Or if you like to do it the "classic" way:
+
+- - Clone this repository (I assume you know how to clone)
+- - Go to the "translate!" directory and find the file "template.pot"
+- - Open it in any editor you like (e.g. Kate, Lokalize, ...)
+- - Fill in your language (and your name, email if you like)
+- - Translate the strings
+- - Once done, save the file as "[your locale].po"
+- - Open a pull request and I'll happily merge it!
+
 
 **Help installing from my repository:**
+
 There's 2 versions of Plasma. If you're on **Plasma 5** then **this is the branch** you need. **Otherwise** (if you use Plasma 6 like me), **switch to the plasma-6 branch**.
 
 Some features might not work as expected... and if you find one then make an issue, I'll try my best to fix it!
