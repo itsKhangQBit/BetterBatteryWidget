@@ -220,7 +220,7 @@ Item {
             }
 
             PlasmaComponents.ToolButton {
-                icon.name: "pin-receptacle"
+                icon.name: plasmoid.configuration.pinned ? "window-unpin" : "window-pin"
                 checkable: true
                 checked: plasmoid.configuration.pinned
                 visible: plasmoid.location !== 0

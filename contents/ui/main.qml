@@ -16,6 +16,7 @@ Item {
     property string timeleft: "0"
     property bool expanded: false
     property alias exec: exec
+    property bool horizontal: plasmoid.location === 5 || plasmoid.location === 6 // make sure that it's left/right, no quick shi like >= 5
 
     PlasmaCore.DataSource {
         id: batterySrc
@@ -26,7 +27,6 @@ Item {
     }
 
     Plasmoid.hideOnWindowDeactivate: !plasmoid.configuration.pinned // had to link with the xml so that it works
-
 
     // we have to set a timer so that it actually updates fast
     Timer {
@@ -86,13 +86,17 @@ Item {
         onPressed: wasExpanded = root.expanded
         onClicked: Plasmoid.expanded = !wasExpanded
 
-        RowLayout {
+        GridLayout {
             id: plasmoidRow
             // Offset the percentage to the right or left
             layoutDirection: plasmoid.configuration.panelfontPosR ? Qt.RightToLeft : Qt.LeftToRight
             anchors.fill: parent
-            spacing: plasmoid.configuration.panelfontPad
+            rowSpacing: Plasmoid.configuration.panelfontPad
+            columnSpacing: Plasmoid.configuration.panelfontPad
             height: parent.height
+
+            rows: horizontal ? -1 : 1
+            columns: horizontal ? 1 : -1
 
             PlasmaComponents.Label {
                 id: percent
