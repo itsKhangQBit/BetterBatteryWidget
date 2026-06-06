@@ -1,4 +1,4 @@
-# Translation of betterbatterywidget in et
+# Translation of betterbatterywidget in LANGUAGE
 # Copyright (C) 2026
 # This file is distributed under the same license as the betterbatterywidget package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-31 22:48+0700\n"
-"PO-Revision-Date: 2026-05-27 04:17+0000\n"
+"POT-Creation-Date: 2026-05-30 21:34+0700\n"
+"PO-Revision-Date: 2026-06-03 15:44+0000\n"
 "Last-Translator: Priit Jõerüüt <jrtcdbrg@noreply.codeberg.org>\n"
 "Language-Team: Estonian <https://translate.codeberg.org/projects/"
 "betterbatterywidget_plasma/language-names/et/>\n"
@@ -32,9 +32,8 @@ msgid "Features"
 msgstr "Funktsionaalsused"
 
 #: ../contents/ui/config/ConfigAppearance.qml
-#, fuzzy
 msgid "Applet panel appearance"
-msgstr "Välimus"
+msgstr "Rakendi riba välimus"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font family:"

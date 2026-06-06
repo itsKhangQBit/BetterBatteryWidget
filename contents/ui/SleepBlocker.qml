@@ -137,11 +137,6 @@ Item {
             let count = 0;
             let total = parsedshit.length / 2;
 
-            if (total === 0) {
-                goProcess([], []); //brotha can you update for the final time?
-                return;
-            }
-
             for (let i = 0; i < parsedshit.length; i+=2) { // jump 2 lines after we done
                 let rawName = parsedshit[i] || ""; // string "zen"
                 let rawWhy = parsedshit[i + 1] || ""; // string "Playing video: "BFDI:TPOT 22: Suite Escape"
@@ -150,11 +145,6 @@ Item {
                 // string Playing video: "Cách làm Phở gà chuẩn vị Hà Nội"
                 let why = rawWhy.substring(rawWhy.indexOf('"') + 1, rawWhy.lastIndexOf('"'));
                 //console.log(name)
-
-                if (total === 0) {
-                    goProcess([], []); // just to make sure
-                    return;
-                }
 
                 if (name !== pcName && name !== "") {
                     rawApps.push(name);

@@ -14,7 +14,7 @@ PlasmoidItem {
     property string icon: "battery-000"
     property string health: "100%"
     property string timeleft: "0"
-    property bool horizontal: Plasmoid.location === 2 || Plasmoid.location === 4
+    property bool horizontal: Plasmoid.location === 5 || Plasmoid.location === 6 // make sure that it's left/right, no quick shi like >= 5
     property alias getBatHealth: getBatHealth //need the alias so that we can call getBatHealth from FullPopup
 
     Plasma5Support.DataSource {
