@@ -110,7 +110,7 @@ Item {
         popupRoot.exec.runCMD("which powerprofilesctl");
         sleepBlockerRoot.chkCafeStat();
         sleepBlockerRoot.getBlockerList();
-        widgetdata.exec.runCMD("cat /sys/class/power_supply/BAT*/charge_full /sys/class/power_supply/BAT*/charge_full_design");
+        widgetdata.exec.runCMD("upower -i $(upower -e | grep battery | head -n 1) | awk '/capacity/ {print $2}' | tr -d ' %' | tr ',' '.'");
     }
 
     Component.onDestruction: {
