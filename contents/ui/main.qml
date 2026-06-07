@@ -80,7 +80,9 @@ Item {
     Plasmoid.compactRepresentation: MouseArea {
 
         Layout.preferredWidth: plasmoidRow.implicitWidth + Kirigami.Units.smallSpacing
-        Layout.preferredHeight: plasmoid.configuration.paneliconSize
+        Layout.preferredHeight: plasmoidRow.implicitHeight + Kirigami.Units.smallSpacing
+        Layout.minimumWidth: plasmoidRow.implicitWidth + Kirigami.Units.smallSpacing
+        Layout.minimumHeight: plasmoidRow.implicitHeight + Kirigami.Units.smallSpacing
         // get the click action to open the popup
         property bool wasExpanded
         onPressed: wasExpanded = root.expanded
