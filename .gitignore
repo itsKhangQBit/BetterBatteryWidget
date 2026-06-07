@@ -1,0 +1,5 @@
+# dont track those githubs
+.github/
+
+# license too long
+LICENSE
