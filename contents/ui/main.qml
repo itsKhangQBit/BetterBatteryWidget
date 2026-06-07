@@ -56,18 +56,12 @@ PlasmoidItem {
         interval: 60000
         onNewData: (sourceName, data) => {
             var output = data["stdout"].trim() || "";
-            // split the line to read the values
-            var line = output.trim().split('\n');
 
-            if (line.length >= 2) {
-                let chargeFull = parseInt(line[0]);
-                let chargeNew = parseInt(line[1]);
-
-                let bathealth = parseFloat(((chargeFull / chargeNew) * 100).toFixed(2)); // Make the calcs, cut the decimals, throw the unnecessary 0s away
-                // instead of root.health = bathealth + "%";, which might display "110%"
-                // we use this!
-                root.health = (bathealth > 100) ? "100%" : bathealth + "%";
-            }
+            // take the raw stuff, it's already processed
+            let bathealth = parseFloat(output).toFixed(2) || "broken"; // just convert :)))
+            // instead of root.health = bathealth + "%";, which might display "110%"
+            // we use this!
+            root.health = isNaN(bathealth) ? "--" : (bathealth > 100) ? "100%" : bathealth + "%";
         }
 
         function get(cmd) {

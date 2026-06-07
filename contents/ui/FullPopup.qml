@@ -99,7 +99,7 @@ Item {
         // is there TLP or power-profiles-daemon
         popupRoot.batMgr.check("which tlp");
         popupRoot.batMgr.check("which powerprofilesctl");
-        widgetdata.getBatHealth.get("cat /sys/class/power_supply/BAT*/charge_full /sys/class/power_supply/BAT*/charge_full_design");
+        widgetdata.getBatHealth.get("upower -i $(upower -e | grep battery | head -n 1) | awk '/capacity/ {print $2}' | tr -d ' %' | tr ',' '.'");
         sleepBlockerRoot.chkCafeStat();
         sleepBlockerRoot.getBlockerList();
     }
