@@ -112,7 +112,7 @@ msgstr "Icongröße:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Vertical battery icon"
-msgstr "Vertikales Batterieicon
+msgstr "Vertikales Batterieicon"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Show percentage"
