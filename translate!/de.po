@@ -32,11 +32,11 @@ msgstr "Funktionen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet panel appearance"
-msgstr ""
+msgstr "Panel Erscheinung"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font family:"
-msgstr ""
+msgstr "Prozentanzeige Schriftfamilie:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Default"
@@ -44,11 +44,11 @@ msgstr "Standard"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font size:"
-msgstr ""
+msgstr "Prozentanzeige Schriftgröße:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font formatting:"
-msgstr ""
+msgstr "Prozentanzeige Schriftformat:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Bold"
@@ -64,7 +64,7 @@ msgstr "Unterstrichen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage position:"
-msgstr ""
+msgstr "Prozentanzeige Position:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Right"
@@ -72,55 +72,55 @@ msgstr "Rechts"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage font padding:"
-msgstr ""
+msgstr "Prozentanzeige Schriftabstand"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage fixed color:"
-msgstr ""
+msgstr "Prozentanzeige statische Farbe:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Enable dynamic percentage color"
-msgstr ""
+msgstr "Dynamische Farbe der Prozentanzeige aktivieren"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Custom dynamic color:"
-msgstr ""
+msgstr "Eigene dynamische Farbe:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "High percentage"
-msgstr ""
+msgstr "Hoher Prozentsatz"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Midrange percentage"
-msgstr ""
+msgstr "Mittlerer Prozentsatz"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Low percentage"
-msgstr ""
+msgstr "Niedriger Prozentsatz"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Change color to Midrange when below:"
-msgstr ""
+msgstr "Mittlere Farbe wenn unter:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Change color to Low when below:"
-msgstr ""
+msgstr "Niedrige Farbe wenn unter:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Icon size:"
-msgstr ""
+msgstr "Icongröße:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Vertical battery icon"
-msgstr ""
+msgstr "Vertikales Batterieicon
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Show percentage"
-msgstr ""
+msgstr "Prozent anzeigen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Show icon"
-msgstr ""
+msgstr "Icon anzeigen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Applet popup appearance"
@@ -136,15 +136,15 @@ msgstr "Zentriert"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Other customizations"
-msgstr ""
+msgstr "Andere Anpassungen"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Sleep blocking tab title font size:"
-msgstr ""
+msgstr "Schriftgröße der Ruhezustand-Titelleiste"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Sleep blocking tab item font size:"
-msgstr ""
+msgstr "Schriftgröße der Ruhezustand-Items"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Add leading zero before:"
@@ -208,11 +208,11 @@ msgstr "Akkuzustand:"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep & screen lock"
-msgstr ""
+msgstr "Ruhezustand & Sperrbildschirm blockieren"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Apps blocking sleep / screen lock"
-msgstr ""
+msgstr "Apps, die Ruhezustand / Sperrbildschirm blockieren"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power saving mode"
@@ -224,7 +224,7 @@ msgstr "Energieeinstellungen..."
 
 #: ../contents/ui/FullPopup.qml
 msgid "Apps blocking sleep / screen lock:"
-msgstr ""
+msgstr "Apps, die Ruhezustand / Sperrbildschirm blockieren:"
 
 #: ../contents/ui/main.qml
 msgid "Calculating..."
