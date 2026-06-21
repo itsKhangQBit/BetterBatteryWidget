@@ -50,7 +50,7 @@ ScrollView {
     property alias cfg_healthLeft: healthLeft.checked
     property bool cfg_pinned
 
-    // YOU SHADAP! - Bung Moktar at Malaysia Parliament
+    // This is my floor, you sit down - Bung Mokhtar at Malaysia Parliament
     property bool cfg_padMinDefault
     property bool cfg_padHrDefault
     property bool cfg_simpleTimeDefault

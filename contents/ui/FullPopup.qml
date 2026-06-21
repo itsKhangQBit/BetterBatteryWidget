@@ -554,7 +554,7 @@ Item {
                         opacity: 0
                         height: 0
                         width: ListView.view.width
-                        property real yoff: -10
+                        property int yoff: -10
 
                         transform: Translate {
                             y: delegateRoot.yoff // we have to translate so y of our app stays at the correct pos
@@ -562,7 +562,7 @@ Item {
 
                         Component.onCompleted: {
                             opacity = Qt.binding(() => bye ? 0 : 1)
-                            height = Qt.binding(() => bye ? 0 : implicitHeight)
+                            height = Qt.binding(() => bye ? 0 : 72)
                             yoff = Qt.binding(() => bye ? -10 : 0)
                         }
 

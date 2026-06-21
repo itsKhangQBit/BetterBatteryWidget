@@ -4,6 +4,7 @@ import org.kde.plasma.plasmoid
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.plasma5support as Plasma5Support
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.private.batterymonitor
 
 PlasmoidItem {
     id: root
@@ -13,9 +14,10 @@ PlasmoidItem {
     property bool isFull: false
     property string icon: "battery-000"
     property string health: "100%"
-    property string timeleft: "0"
-    property bool horizontal: Plasmoid.location === 5 || Plasmoid.location === 6 // make sure that it's left/right, no quick shi like >= 5
+    property string timeleft: "0" // string because it'll say "Error: Cannot assign QString to int"
+    readonly property bool horizontal: Plasmoid.location === 5 || Plasmoid.location === 6 // make sure that it's left/right, no quick shi like >= 5
     property alias getBatHealth: getBatHealth //need the alias so that we can call getBatHealth from FullPopup
+    property string rawTimeleft: "0"
 
     Plasma5Support.DataSource {
         id: batterySrc
@@ -38,14 +40,33 @@ PlasmoidItem {
 
     // make a func so that the code looks neater
     function updateData() {
+        //getBatTime.get("qdbus --system org.freedesktop.UPower /org/freedesktop/UPower/devices/battery_BAT0 org.freedesktop.UPower.Device.TimeToEmpty") // raw fallback
+
         let data = batterySrc.data["Battery"]
         if (data) {
             root.percent = data["Percent"].toString() || "--"
             root.isCharge = (data["State"] === "Charging" || data["State"] === "FullyCharged" || data["PluggedIn"] === true)
 
             root.isFull = (data["State"] === "FullyCharged")
+
             root.timeleft = data["Smoothed Remaining msec"] || ""
+            //console.log(root.rawTimeleft, root.timeleft)
+            //if (root.timeleft === "") root.timeleft = root.rawTimeleft // fallback if undefied
             root.timeleft = formatTime(root.timeleft)
+        }
+    }
+
+    Plasma5Support.DataSource {
+        id: getBatTime
+        engine: "executable"
+        connectedSources: []
+        onNewData: (sourceName, data) => {
+            root.rawTimeleft = parseInt(getBatTime.data["stdout"]) || ""
+            disconnectSource(sourceName)
+        }
+
+        function get(cmd) {
+            connectSource(cmd);
         }
     }
 

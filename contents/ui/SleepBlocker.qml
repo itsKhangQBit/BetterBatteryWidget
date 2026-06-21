@@ -139,7 +139,7 @@ Item {
 
             for (let i = 0; i < parsedshit.length; i+=2) { // jump 2 lines after we done
                 let rawName = parsedshit[i] || ""; // string "zen"
-                let rawWhy = parsedshit[i + 1] || ""; // string "Playing video: "BFDI:TPOT 22: Suite Escape"
+                let rawWhy = parsedshit[i + 1] || ""; // string "Playing video: "BFDI:TPOT S5E22: Suite Escape" (Object show fan caught in 8K UltraHD)
                 // string zen
                 let name = rawName.substring(rawName.indexOf('"') + 1, rawName.lastIndexOf('"'));
                 // string Playing video: "Cách làm Phở gà chuẩn vị Hà Nội"
