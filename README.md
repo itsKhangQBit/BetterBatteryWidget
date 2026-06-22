@@ -49,7 +49,7 @@ A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default w
 
 [-] French
 
-[54%] German
+[+] German
 
 [-] Spanish
 
