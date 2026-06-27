@@ -1,0 +1,230 @@
+# Translation of betterbatterywidget in es
+# Copyright (C) 2026
+# This file is distributed under the same license as the betterbatterywidget package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: betterbatterywidget\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-31 22:48+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: AnVenecoGM <aorlando90@outlook.es>\n"
+"Language-Team: Spanish <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../metadata.desktop
+msgid "Better battery widget"
+msgstr "Indicador de batería mejorado"
+
+#: ../contents/config/config.qml
+msgid "Appearance"
+msgstr "Apariencia"
+
+#: ../contents/config/config.qml ../contents/ui/config/ConfigFeatures.qml
+msgid "Features"
+msgstr "Funciones"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Applet panel appearance"
+msgstr "Apariencia del panel del applet"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage font family:"
+msgstr "Tipografía del porcentaje:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Default"
+msgstr "Predeterminada"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage font size:"
+msgstr "Tamaño de la fuente:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage font formatting:"
+msgstr "Formato de la fuente:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Bold"
+msgstr "Negrita"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Italic"
+msgstr "Cursiva"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Underline"
+msgstr "Subrayado"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage position:"
+msgstr "Posición del porcentaje:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Right"
+msgstr "Derecha"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage font padding:"
+msgstr "Espaciado del porcentaje:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Percentage fixed color:"
+msgstr "Color del porcentaje:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Enable dynamic percentage color"
+msgstr "Habilitar color de porcentaje dinámico"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Custom dynamic color:"
+msgstr "Color dinámico personalizado:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "High percentage"
+msgstr "Alto porcentaje"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Midrange percentage"
+msgstr "Porcentaje intermedio"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Low percentage"
+msgstr "Bajo porcentaje"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Change color to Midrange when below:"
+msgstr "Cambiar color de porcentaje intermedio si es menor de:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Change color to Low when below:"
+msgstr "Cambiar color de bajo porcentaje si es menor de:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Icon size:"
+msgstr "Tamaño del icono:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Vertical battery icon"
+msgstr "Icono de batería vertical"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Show percentage"
+msgstr "Mostrar porcentaje"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Show icon"
+msgstr "Mostrar icono"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Applet popup appearance"
+msgstr "Apariencia de la ventana del applet"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Left"
+msgstr "Izquierda"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Center"
+msgstr "Centro"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Other customizations"
+msgstr "Otras personalizaciones"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Sleep blocking tab title font size:"
+msgstr "Tamaño de fuente del título de bloqueo de suspensión:"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Sleep blocking tab item font size:"
+msgstr "Tamaño de fuente de los elementos de bloqueo de suspensión:"
+
+#: ../contents/ui/config/ConfigFeatures.qml
+msgid "Add leading zero before:"
+msgstr "Añadir un cero inicial antes de:"
+
+#: ../contents/ui/config/ConfigFeatures.qml
+msgid "Hours"
+msgstr "Horas"
+
+#: ../contents/ui/config/ConfigFeatures.qml
+msgid "Minutes"
+msgstr "Minutos"
+
+#: ../contents/ui/config/ConfigFeatures.qml
+msgid "Simplified time"
+msgstr "Tiempo simplificado"
+
+#: ../contents/ui/config/ConfigFeatures.qml
+msgid "Enable time remaining"
+msgstr "Habilitar tiempo restante"
+
+#: ../contents/ui/config/ConfigFeatures.qml
+msgid "Enable battery health"
+msgstr "Habilitar salud de la batería"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Battery percentage"
+msgstr "Porcentaje de la batería"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Back"
+msgstr "Atrás"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Keep applet popup open"
+msgstr "Mantener ventana del applet abierta"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Fully charged"
+msgstr "Completamente cargado"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Charging"
+msgstr "Cargando"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Discharging"
+msgstr "Descargándose"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Charge time left:"
+msgstr "Tiempo de carga restante:"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Battery time left:"
+msgstr "Tiempo de batería restante:"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Battery health:"
+msgstr "Salud de la batería:"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Block sleep & screen lock"
+msgstr "Impedir suspensión / bloqueo de pantalla"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Apps blocking sleep / screen lock"
+msgstr "Aplicaciones que impiden la suspensión / bloqueo"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Power saving mode"
+msgstr "Modo ahorro de energía"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Power settings..."
+msgstr "Ajustes de energía..."
+
+#: ../contents/ui/FullPopup.qml
+msgid "Apps blocking sleep / screen lock:"
+msgstr "Aplicaciones que impiden la suspensión / bloqueo:"
+
+#: ../contents/ui/main.qml
+msgid "Calculating..."
+msgstr "Calculando..."
