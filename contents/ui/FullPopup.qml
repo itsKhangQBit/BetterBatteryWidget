@@ -470,11 +470,17 @@ Item {
 
             // settings button
             PlasmaComponents.Button {
-                text: i18n("Power settings...")
+                PlasmaComponents.ToolTip {
+                    text: i18n("Power settings...")
+                }
                 icon.name: "configure"
-                Layout.fillWidth: true
-                onClicked: {
-                    Qt.openUrlExternally("systemsettings://kcm_powerdevilprofilesconfig")
+                Layout.alignment: Qt.AlignLeft
+                MouseArea {
+                    anchors.fill: parent
+                    cursorShape: Qt.PointingHandCursor
+                    onClicked: {
+                        Qt.openUrlExternally("systemsettings://kcm_powerdevilprofilesconfig")
+                    }
                 }
             }
         }
