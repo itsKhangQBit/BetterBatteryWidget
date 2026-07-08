@@ -17,7 +17,6 @@ PlasmoidItem {
     property string timeleft: "0" // string because it'll say "Error: Cannot assign QString to int"
     readonly property bool horizontal: Plasmoid.location === 5 || Plasmoid.location === 6 // make sure that it's left/right, no quick shi like >= 5
     property alias getBatHealth: getBatHealth //need the alias so that we can call getBatHealth from FullPopup
-    property string rawTimeleft: "0"
 
     Plasma5Support.DataSource {
         id: batterySrc
@@ -50,12 +49,13 @@ PlasmoidItem {
             root.isFull = (data["State"] === "FullyCharged")
 
             root.timeleft = data["Smoothed Remaining msec"] || ""
-            //console.log(root.rawTimeleft, root.timeleft)
+            //console.log(root.rawTimeleft, root.timeleft) // unimplemented stuff, working on
             //if (root.timeleft === "") root.timeleft = root.rawTimeleft // fallback if undefied
             root.timeleft = formatTime(root.timeleft)
         }
     }
 
+    /*
     Plasma5Support.DataSource {
         id: getBatTime
         engine: "executable"
@@ -69,6 +69,7 @@ PlasmoidItem {
             connectSource(cmd);
         }
     }
+    */
 
     Plasma5Support.DataSource {
         id: getBatHealth
