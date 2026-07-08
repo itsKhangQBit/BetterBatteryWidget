@@ -51,7 +51,9 @@ A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default w
 
 [+] German
 
-[-] Spanish
+[+] Spanish
+
+[+] Turkish
 
 [7%] Estonian
 
