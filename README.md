@@ -1,5 +1,5 @@
 # BetterBatteryWidget
-https://www.opendesktop.org/p/2355937/
+https://store.kde.org/p/2356482/
 
 Just a simple battery widget, for Plasma.
 
@@ -81,3 +81,5 @@ Some features might not work as expected... and if you find one then make an iss
 
 (sorry if my English is terrible, I tried my best)
 **🇻🇳 FROM VIỆT NAM WITH LOVE!!! 🪷**
+
+(this branch was created at version 3.3.0, but the history was deleted because of a force push when learning Git... however you can still get the oldest version on https://store.kde.org/p/2356482/ if you go to "Files" > "1 files (n archived)". If you do want the oldest version then download version 3.3.1)
