@@ -41,21 +41,7 @@ A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default w
 
 ### **Translated languages:**
 
-[+] English (of course mate)
-
-[+] Vietnamese
-
-[+] Dutch
-
-[-] French
-
-[+] German
-
-[+] Spanish
-
-[+] Turkish
-
-[7%] Estonian
+[![Translation states: [+] English (of course mate) [+] Vietnamese [+] Dutch [-] French [+] German [+] Spanish [+] Turkish [7%] Estonian (this is here so you can see the states if the image doesn't load](https://translate.codeberg.org/widget/betterbatterywidget_plasma/language-names/multi-auto.svg)](https://translate.codeberg.org/engage/betterbatterywidget_plasma/)
 
 ### **Help translating this project:**
 
