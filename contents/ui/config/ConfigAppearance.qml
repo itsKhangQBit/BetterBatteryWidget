@@ -25,6 +25,8 @@ ScrollView {
     property alias cfg_panelfontFamily: panelfontDiag.selectedFont.family
     property alias cfg_panelcustomcolor: panelcustomcolor.checked
     property alias cfg_paneliconRotate: paneliconRotate.checked
+    property alias cfg_chargeIndicatorCustomColor: chargeIndicatorCustomColor.checked
+    property alias cfg_chargeIndicatorColor: chargeIndicatorColorPicker.color
     property alias cfg_paneldynamicHighcolor: paneldynamicHighcolor.color
     property alias cfg_paneldynamicMidcolor: paneldynamicMidcolor.color
     property alias cfg_paneldynamicLowcolor: paneldynamicLowcolor.color
@@ -77,6 +79,8 @@ ScrollView {
     property bool cfg_panelfontPosRDefault
     property bool cfg_panelcustomcolorDefault
     property bool cfg_paneliconRotateDefault
+    property bool cfg_chargeIndicatorCustomColorDefault
+    property string cfg_chargeIndicatorColorDefault
     property string cfg_paneldynamicLowcolorDefault
     property string cfg_paneldynamicMidcolorDefault
     property string cfg_paneldynamicHighcolorDefault
@@ -303,6 +307,32 @@ ScrollView {
         CheckBox {
             id: paneliconRotate
             text: i18n("Vertical battery icon")
+        }
+
+        CheckBox {
+            id: chargeIndicatorCustomColor
+            Kirigami.FormData.label: i18n("Charging indicator:")
+            text: i18n("Use custom charging indicator color")
+        }
+
+        RowLayout {
+            visible: opacity > 0
+            opacity: plasmoid.configuration.chargeIndicatorCustomColor ? 1 : 0
+            Behavior on opacity {
+                NumberAnimation { duration: 200 }
+            }
+
+            PlasmaComponents.Label {
+                text: i18n("Charging indicator color:")
+            }
+
+            KQuickControls.ColorButton {
+                id: chargeIndicatorColorPicker
+                color: plasmoid.configuration.chargeIndicatorColor
+
+                // save my color pls
+                onColorChanged: cfg_chargeIndicatorColor = color.toString()
+            }
         }
 
         CheckBox {
