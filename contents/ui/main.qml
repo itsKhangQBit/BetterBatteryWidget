@@ -151,7 +151,7 @@ PlasmoidItem {
                     let percentInt = parseInt(root.percent, 10)
                     if (isNaN(percentInt)) return "#FFFFFF" // what the hell is the percentage
                             if (percentInt >= Plasmoid.configuration.panelMidpercent) return Plasmoid.configuration.paneldynamicHighcolor // still going strong
-                                if (percentInt >= Plasmoid.configuration.popupLowpercent) return Plasmoid.configuration.paneldynamicMidcolor
+                                if (percentInt >= Plasmoid.configuration.panelLowpercent) return Plasmoid.configuration.paneldynamicMidcolor
                                     return Plasmoid.configuration.paneldynamicLowcolor // go charge, emergencyyyyyy
                 }
                 font.bold: Plasmoid.configuration.panelfontBold
