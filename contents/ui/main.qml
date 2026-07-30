@@ -12,6 +12,7 @@ PlasmoidItem {
     property string percent: "--"
     property bool isCharge: false
     property bool isFull: false
+    property string state: ""
     property string icon: "battery-000"
     property string health: "100%"
     property string timeleft: "0" // string because it'll say "Error: Cannot assign QString to int"
@@ -27,6 +28,31 @@ PlasmoidItem {
     }
 
     hideOnWindowDeactivate: !Plasmoid.configuration.pinned // had to link with the xml so that it works
+
+    toolTipMainText: root.percent + "%"
+    toolTipSubText: {
+        let lines = [stateText()]
+        if (root.state !== "FullyCharged") lines.push(timeText())
+        lines.push(i18n("Health: %1", root.health))
+        return lines.join("\n")
+    }
+
+    function stateText() {
+        switch (root.state) {
+            case "Charging": return i18n("Charging")
+            case "FullyCharged": return i18n("Fully charged")
+            case "Discharging": return i18n("Discharging")
+            case "NotCharging": return i18n("Not charging")
+            case "PendingCharge": return i18n("Pending charge")
+            case "PendingDischarge": return i18n("Pending discharge")
+            default: return root.isCharge ? i18n("Charging") : i18n("Discharging")
+        }
+    }
+
+    function timeText() {
+        if (root.timeleft === i18n("Calculating...")) return root.timeleft
+        return root.isCharge ? i18n("Time until full: %1", root.timeleft) : i18n("Time remaining: %1", root.timeleft)
+    }
 
     // we have to set a timer so that it actually updates fast
     Timer {
@@ -47,6 +73,7 @@ PlasmoidItem {
             root.isCharge = (data["State"] === "Charging" || data["State"] === "FullyCharged" || data["PluggedIn"] === true)
 
             root.isFull = (data["State"] === "FullyCharged")
+            root.state = data["State"] || ""
 
             root.timeleft = data["Smoothed Remaining msec"] || ""
             //console.log(root.rawTimeleft, root.timeleft) // unimplemented stuff, working on
@@ -124,7 +151,7 @@ PlasmoidItem {
                     let percentInt = parseInt(root.percent, 10)
                     if (isNaN(percentInt)) return "#FFFFFF" // what the hell is the percentage
                             if (percentInt >= Plasmoid.configuration.panelMidpercent) return Plasmoid.configuration.paneldynamicHighcolor // still going strong
-                                if (percentInt >= Plasmoid.configuration.popupLowpercent) return Plasmoid.configuration.paneldynamicMidcolor
+                                if (percentInt >= Plasmoid.configuration.panelLowpercent) return Plasmoid.configuration.paneldynamicMidcolor
                                     return Plasmoid.configuration.paneldynamicLowcolor // go charge, emergencyyyyyy
                 }
                 font.bold: Plasmoid.configuration.panelfontBold
@@ -147,15 +174,8 @@ PlasmoidItem {
                 }
             }
 
-            Kirigami.Icon {
-                id: icon
-                source: {
-                    let intpercent = parseInt(root.percent, 10) || 0
-                    let percent = (Math.floor(intpercent / 10) *  10).toString().padStart(3, '0');
-                    let base = "battery-" + percent
-                    root.icon = root.isCharge ? base + "-charging" : base;
-                    return root.icon;
-                }
+            Item {
+                id: iconContainer
                 rotation: Plasmoid.configuration.paneliconRotate ? -90 : 0
                 // for some god who knows reason, i love animations
                 Behavior on rotation {
@@ -176,10 +196,30 @@ PlasmoidItem {
                         easing.type: Easing.InOutCubic
                     }
                 }
-                width: opacity > 0 ? implicitWidth : 0
+                width: opacity > 0 ? icon.implicitWidth : 0
                 z: 0
                 Layout.preferredWidth: Plasmoid.configuration.paneliconSize
                 Layout.preferredHeight: Plasmoid.configuration.paneliconSize
+
+                Kirigami.Icon {
+                    id: icon
+                    anchors.fill: parent
+                    source: {
+                        let intpercent = parseInt(root.percent, 10) || 0
+                        let percent = (Math.floor(intpercent / 10) *  10).toString().padStart(3, '0');
+                        let base = "battery-" + percent
+                        let useCustomCharge = root.isCharge && Plasmoid.configuration.chargeIndicatorCustomColor
+                        root.icon = root.isCharge && !useCustomCharge ? base + "-charging" : base;
+                        return root.icon;
+                    }
+                }
+
+                ChargeIndicator {
+                    anchors.fill: icon
+                    visible: root.isCharge && Plasmoid.configuration.chargeIndicatorCustomColor
+                    color: Plasmoid.configuration.chargeIndicatorColor
+                    z: 1
+                }
             }
         }
     }

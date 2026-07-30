@@ -204,10 +204,21 @@ Item {
 
             Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
             // small icon for fun :)
-            Kirigami.Icon {
-                source: widgetdata.icon
+            Item {
                 width: 22
                 height: 22
+
+                Kirigami.Icon {
+                    id: popupHeaderIcon
+                    anchors.fill: parent
+                    source: widgetdata.icon
+                }
+
+                ChargeIndicator {
+                    anchors.fill: popupHeaderIcon
+                    visible: widgetdata.isCharge && Plasmoid.configuration.chargeIndicatorCustomColor
+                    color: Plasmoid.configuration.chargeIndicatorColor
+                }
             }
 
             PlasmaComponents.ToolButton {
