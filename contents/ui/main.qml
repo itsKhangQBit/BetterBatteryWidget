@@ -29,6 +29,7 @@ PlasmoidItem {
 
     hideOnWindowDeactivate: !Plasmoid.configuration.pinned // had to link with the xml so that it works
 
+    //holy code, thanks @yuridival! (on github)
     toolTipMainText: root.percent + "%"
     toolTipSubText: {
         let lines = [stateText()]
@@ -65,7 +66,6 @@ PlasmoidItem {
 
     // make a func so that the code looks neater
     function updateData() {
-        //getBatTime.get("qdbus --system org.freedesktop.UPower /org/freedesktop/UPower/devices/battery_BAT0 org.freedesktop.UPower.Device.TimeToEmpty") // raw fallback
 
         let data = batterySrc.data["Battery"]
         if (data) {
@@ -81,22 +81,6 @@ PlasmoidItem {
             root.timeleft = formatTime(root.timeleft)
         }
     }
-
-    /*
-    Plasma5Support.DataSource {
-        id: getBatTime
-        engine: "executable"
-        connectedSources: []
-        onNewData: (sourceName, data) => {
-            root.rawTimeleft = parseInt(getBatTime.data["stdout"]) || ""
-            disconnectSource(sourceName)
-        }
-
-        function get(cmd) {
-            connectSource(cmd);
-        }
-    }
-    */
 
     Plasma5Support.DataSource {
         id: getBatHealth
@@ -176,14 +160,6 @@ PlasmoidItem {
 
             Item {
                 id: iconContainer
-                rotation: Plasmoid.configuration.paneliconRotate ? -90 : 0
-                // for some god who knows reason, i love animations
-                Behavior on rotation {
-                    NumberAnimation {
-                        duration: 400
-                        easing.type: Easing.InOutQuad
-                    }
-                }
                 visible: opacity > 0
                 opacity: {
                     let percentInt = parseInt(root.percent, 10)
@@ -204,21 +180,36 @@ PlasmoidItem {
                 Kirigami.Icon {
                     id: icon
                     anchors.fill: parent
+                    rotation: Plasmoid.configuration.paneliconRotate ? -90 : 0
+                    // for some god who knows reason, i love animations
+                    Behavior on rotation {
+                        NumberAnimation {
+                            duration: 400
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
                     source: {
                         let intpercent = parseInt(root.percent, 10) || 0
                         let percent = (Math.floor(intpercent / 10) *  10).toString().padStart(3, '0');
                         let base = "battery-" + percent
                         let useCustomCharge = root.isCharge && Plasmoid.configuration.chargeIndicatorCustomColor
+                        //testing
+                        console.log(icon.paintedHeight, chargeicon.x, chargeicon.y, chargeicon.width, chargeicon.height)
                         root.icon = root.isCharge && !useCustomCharge ? base + "-charging" : base;
                         return root.icon;
                     }
                 }
 
                 ChargeIndicator {
-                    anchors.fill: icon
-                    visible: root.isCharge && Plasmoid.configuration.chargeIndicatorCustomColor
+                    id: chargeicon
+                    anchors.centerIn: icon
+                    iconwidth: icon.paintedWidth
+                    iconheight: icon.paintedHeight
+                    visible: opacity > 0
+                    opacity: root.isCharge && Plasmoid.configuration.chargeIndicatorCustomColor ? 1 : 0
+                    Behavior on opacity { NumberAnimation { duration: 200; easing.type: Easing.OutQuad } }
                     color: Plasmoid.configuration.chargeIndicatorColor
-                    z: 1
+                    z: 99
                 }
             }
         }

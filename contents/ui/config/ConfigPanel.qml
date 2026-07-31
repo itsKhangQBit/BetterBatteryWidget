@@ -35,6 +35,7 @@ ScrollView {
     property alias cfg_panelshowPercent: panelshowPercent.checked
     property alias cfg_panelshowIcon: panelshowIcon.checked
 
+    // just pasting so KCM doesn't warn
     property int cfg_panelfontSizeDefault
     property bool cfg_panelfontBoldDefault
     property string cfg_panelpercentColorDefault
@@ -55,6 +56,53 @@ ScrollView {
     property int cfg_panelLowpercentDefault
     property bool cfg_panelshowPercentDefault
     property bool cfg_panelshowIconDefault
+
+    property int cfg_popupfontSizeDefault
+    property bool cfg_popupfontBoldDefault
+    property string cfg_popuppercentColorDefault
+    property bool cfg_popupfontItalicDefault
+    property bool cfg_popupfontUnderlineDefault
+    property string cfg_popupfontFamilyDefault
+    property int cfg_popuppercentPosDefault
+    property bool cfg_popupcustomcolorDefault
+    property string cfg_popupdynamicLowcolorDefault
+    property string cfg_popupdynamicMidcolorDefault
+    property string cfg_popupdynamicHighcolorDefault
+    property int cfg_popupMidpercentDefault
+    property int cfg_popupLowpercentDefault
+
+    property int cfg_nosleepTitleFontsizeDefault
+    property int cfg_nosleepAppFontsizeDefault
+
+    property int cfg_popupfontSize
+    property bool cfg_popupfontBold
+    property string cfg_popuppercentColor
+    property bool cfg_popupfontItalic
+    property bool cfg_popupfontUnderline
+    property string cfg_popupfontFamily
+    property int cfg_popuppercentPos
+    property bool cfg_popupcustomcolor
+    property string cfg_popupdynamicLowcolor
+    property string cfg_popupdynamicMidcolor
+    property string cfg_popupdynamicHighcolor
+    property int cfg_popupMidpercent
+    property int cfg_popupLowpercent
+
+    property int cfg_nosleepTitleFontsize
+    property int cfg_nosleepAppFontsize
+    property string title: "" // shut up QML
+
+    property bool cfg_padMinDefault
+    property bool cfg_padHrDefault
+    property bool cfg_simpleTimeDefault
+    property bool cfg_timeLeftDefault
+    property bool cfg_healthLeftDefault
+
+    property bool cfg_padMin
+    property bool cfg_padHr
+    property bool cfg_simpleTime
+    property bool cfg_timeLeft
+    property bool cfg_healthLeft
 
     Kirigami.FormLayout {
         id: formLayout

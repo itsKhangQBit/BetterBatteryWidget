@@ -215,8 +215,10 @@ Item {
                 }
 
                 ChargeIndicator {
-                    anchors.fill: popupHeaderIcon
-                    visible: widgetdata.isCharge && Plasmoid.configuration.chargeIndicatorCustomColor
+                    anchors.centerIn: popupHeaderIcon
+                    visible: opacity > 0
+                    opacity: widgetdata.isCharge && Plasmoid.configuration.chargeIndicatorCustomColor ? 1 : 0
+                    Behavior on opacity { NumberAnimation { duration: 200; easing.type: Easing.OutQuad } }
                     color: Plasmoid.configuration.chargeIndicatorColor
                 }
             }
