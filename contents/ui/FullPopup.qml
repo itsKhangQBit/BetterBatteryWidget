@@ -450,7 +450,7 @@ Item {
             // switch for power saving (tlp)
             PlasmaComponents.Switch {
                 id: pwrSave
-                text: i18n("Power saving mode")
+                text: i18n("Power saver")
                 icon.name: "battery-profile-performance-symbolic"
                 checked: popupRoot.pwrmgrBackend === "tlp" ? popupRoot.ispwrSave : false
                 onToggled: {
@@ -473,15 +473,12 @@ Item {
                         Layout.alignment: Qt.AlignRight
                         Layout.preferredWidth: 16 // make it in sync with tlp switch
                         Layout.preferredHeight: 16
-                        source: {
-                            let icons = ["battery-profile-powersave-symbolic", "battery-profile-balanced-symbolic", "battery-profile-performance-symbolic"]
-                            return icons[popupRoot.ispwrSave] || icons[1]
-                        }
+                        source: "battery-profile-performance-symbolic" // maybe not dynamic, because there might not be a "battery-profile-balanced" icon
                     }
 
                     PlasmaComponents.Label {
                         text: {
-                            let labels = [i18n("Power saver mode"), i18n("Balanced mode"), i18n("Performance mode")]
+                            let labels = [i18n("Power saver"), i18n("Balanced"), i18n("Performance")]
                             return labels[popupRoot.ispwrSave] || labels[1]
                         }
                     }

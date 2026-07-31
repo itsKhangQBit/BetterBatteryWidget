@@ -164,13 +164,13 @@ ScrollView {
 
         Kirigami.Separator {
             Kirigami.FormData.isSection: true
-            Kirigami.FormData.label: i18n("Peripheral batteries")
+            Kirigami.FormData.label: i18n("Peripherals")
         }
 
         CheckBox {
             id: showPeripherals
-            Kirigami.FormData.label: i18n("Peripherals:")
-            text: i18n("Show battery level of connected Bluetooth devices (mouse, headphones, etc.)")
+            Kirigami.FormData.label: i18n("Peripheral batteries:")
+            text: i18n("Show battery level of connected Bluetooth devices (mouse, keyboards,...)")
         }
     }
 }

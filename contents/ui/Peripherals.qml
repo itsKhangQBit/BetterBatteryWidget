@@ -24,6 +24,8 @@ Item {
     }
 
     // maps upower's device "kind" to an icon that identifies the peripheral type
+
+    // i thought there is an "icon-name" in the upower output? oh wait, it's the battery icon not the device icon - itsKhangQBit
     function iconForKind(kind) {
         switch (kind) {
             case "mouse": return "input-mouse-symbolic";
@@ -64,7 +66,16 @@ Item {
                 let percentMatch = block.match(/percentage:\s*(\d+)%/);
                 if (!percentMatch) continue; // nothing worth showing without a battery level
 
-                // the device "kind" is a bare word line, e.g. "  mouse", right before its indented properties
+                // the device "kind" is a bare word line, e.g. "mouse", right before its indented properties
+
+                // for example, this is my (itsKhangQBit's) phone:
+                /*
+                phone
+                    rechargeable:        no
+                    warning-level:       none
+                    percentage:          40%
+                    icon-name:          'battery-missing-symbolic'
+                */
                 let kindMatch = block.match(/^  ([a-z][a-z-]*)$/m);
                 let modelMatch = block.match(/model:\s*(.+)/);
                 let stateMatch = block.match(/state:\s*(\S+)/);
@@ -96,7 +107,7 @@ Item {
                 deviceListModel.remove(deviceListModel.count - 1);
             }
         } catch (e) {
-            console.log("Oops, I can't parse peripheral battery data! [" + e + "]");
+            console.log("Oh no, what is this gibberish data!? (or code hahah) [" + e + "]");
         }
     }
 }

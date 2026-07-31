@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-31 22:48+0700\n"
+"POT-Creation-Date: 2026-07-31 23:16+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: AnVenecoGM <aorlando90@outlook.es>\n"
 "Language-Team: Spanish <LL@li.org>\n"
@@ -22,140 +22,76 @@ msgid "Better battery widget"
 msgstr "Indicador de batería mejorado"
 
 #: ../contents/config/config.qml
-msgid "Appearance"
-msgstr "Apariencia"
+msgid "Panel appearance"
+msgstr ""
 
-#: ../contents/config/config.qml ../contents/ui/config/ConfigFeatures.qml
-msgid "Features"
-msgstr "Funciones"
+#: ../contents/config/config.qml
+msgid "Popup appearance"
+msgstr ""
 
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet panel appearance"
-msgstr "Apariencia del panel del applet"
+#: ../contents/config/config.qml
+msgid "Applet behavior"
+msgstr ""
 
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage font family:"
-msgstr "Tipografía del porcentaje:"
+#: ../contents/ui/config/ConfigBehavior.qml
+msgid "Time display"
+msgstr ""
 
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Default"
-msgstr "Predeterminada"
+#: ../contents/ui/config/ConfigBehavior.qml
+msgid "Format:"
+msgstr ""
 
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage font size:"
-msgstr "Tamaño de la fuente:"
+#: ../contents/ui/config/ConfigBehavior.qml
+msgid "Simplified time (omit leading zero hour)"
+msgstr ""
 
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage font formatting:"
-msgstr "Formato de la fuente:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Bold"
-msgstr "Negrita"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Italic"
-msgstr "Cursiva"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Underline"
-msgstr "Subrayado"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage position:"
-msgstr "Posición del porcentaje:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Right"
-msgstr "Derecha"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage font padding:"
-msgstr "Espaciado del porcentaje:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Percentage fixed color:"
-msgstr "Color del porcentaje:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Enable dynamic percentage color"
-msgstr "Habilitar color de porcentaje dinámico"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Custom dynamic color:"
-msgstr "Color dinámico personalizado:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "High percentage"
-msgstr "Alto porcentaje"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Midrange percentage"
-msgstr "Porcentaje intermedio"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Low percentage"
-msgstr "Bajo porcentaje"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Change color to Midrange when below:"
-msgstr "Cambiar color de porcentaje intermedio si es menor de:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Change color to Low when below:"
-msgstr "Cambiar color de bajo porcentaje si es menor de:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Icon size:"
-msgstr "Tamaño del icono:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Vertical battery icon"
-msgstr "Icono de batería vertical"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Show percentage"
-msgstr "Mostrar porcentaje"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Show icon"
-msgstr "Mostrar icono"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Applet popup appearance"
-msgstr "Apariencia de la ventana del applet"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Left"
-msgstr "Izquierda"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Center"
-msgstr "Centro"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Other customizations"
-msgstr "Otras personalizaciones"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Sleep blocking tab title font size:"
-msgstr "Tamaño de fuente del título de bloqueo de suspensión:"
-
-#: ../contents/ui/config/ConfigAppearance.qml
-msgid "Sleep blocking tab item font size:"
-msgstr "Tamaño de fuente de los elementos de bloqueo de suspensión:"
-
-#: ../contents/ui/config/ConfigFeatures.qml
+#: ../contents/ui/config/ConfigBehavior.qml ../contents/ui/config/ConfigFeatures.qml
 msgid "Add leading zero before:"
 msgstr "Añadir un cero inicial antes de:"
 
-#: ../contents/ui/config/ConfigFeatures.qml
+#: ../contents/ui/config/ConfigBehavior.qml ../contents/ui/config/ConfigFeatures.qml
 msgid "Hours"
 msgstr "Horas"
 
-#: ../contents/ui/config/ConfigFeatures.qml
+#: ../contents/ui/config/ConfigBehavior.qml ../contents/ui/config/ConfigFeatures.qml
 msgid "Minutes"
 msgstr "Minutos"
+
+#: ../contents/ui/config/ConfigBehavior.qml
+msgid "Popup info"
+msgstr ""
+
+#: ../contents/ui/config/ConfigBehavior.qml
+msgid "Time remaining:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigBehavior.qml
+msgid "Show estimated time remaining"
+msgstr ""
+
+#: ../contents/ui/config/ConfigBehavior.qml ../contents/ui/FullPopup.qml
+msgid "Battery health:"
+msgstr "Salud de la batería:"
+
+#: ../contents/ui/config/ConfigBehavior.qml
+msgid "Show battery health"
+msgstr ""
+
+#: ../contents/ui/config/ConfigBehavior.qml
+msgid "Peripherals"
+msgstr ""
+
+#: ../contents/ui/config/ConfigBehavior.qml
+msgid "Peripheral batteries:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigBehavior.qml
+msgid "Show battery level of connected Bluetooth devices (mouse, keyboards,...)"
+msgstr ""
+
+#: ../contents/ui/config/ConfigFeatures.qml
+msgid "Features"
+msgstr "Funciones"
 
 #: ../contents/ui/config/ConfigFeatures.qml
 msgid "Simplified time"
@@ -169,6 +105,166 @@ msgstr "Habilitar tiempo restante"
 msgid "Enable battery health"
 msgstr "Habilitar salud de la batería"
 
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Percentage text"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Show percentage:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Show"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Font family:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Default"
+msgstr "Predeterminada"
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Font size:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Font style:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Bold"
+msgstr "Negrita"
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Italic"
+msgstr "Cursiva"
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Underline"
+msgstr "Subrayado"
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Position:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Align to the right"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Padding:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Percentage color"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Dynamic color:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Change color based on battery level"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Fixed color:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Colors:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "High"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Mid"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Low"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Switch to Mid color below:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "%"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
+msgid "Switch to Low color below:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Icon"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Show icon:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Icon size:"
+msgstr "Tamaño del icono:"
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Orientation:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Vertical battery icon"
+msgstr "Icono de batería vertical"
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Charging indicator"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Custom color:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Use a custom charging indicator color"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Color:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "(also used in the popup)"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Left"
+msgstr "Izquierda"
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Center"
+msgstr "Centro"
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Right"
+msgstr "Derecha"
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Sleep blocker tab"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Title font size:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "App list font size:"
+msgstr ""
+
 #: ../contents/ui/FullPopup.qml
 msgid "Battery percentage"
 msgstr "Porcentaje de la batería"
@@ -181,15 +277,15 @@ msgstr "Atrás"
 msgid "Keep applet popup open"
 msgstr "Mantener ventana del applet abierta"
 
-#: ../contents/ui/FullPopup.qml
+#: ../contents/ui/FullPopup.qml ../contents/ui/main.qml
 msgid "Fully charged"
 msgstr "Completamente cargado"
 
-#: ../contents/ui/FullPopup.qml
+#: ../contents/ui/FullPopup.qml ../contents/ui/main.qml
 msgid "Charging"
 msgstr "Cargando"
 
-#: ../contents/ui/FullPopup.qml
+#: ../contents/ui/FullPopup.qml ../contents/ui/main.qml
 msgid "Discharging"
 msgstr "Descargándose"
 
@@ -202,8 +298,8 @@ msgid "Battery time left:"
 msgstr "Tiempo de batería restante:"
 
 #: ../contents/ui/FullPopup.qml
-msgid "Battery health:"
-msgstr "Salud de la batería:"
+msgid "Connected devices"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep & screen lock"
@@ -214,8 +310,16 @@ msgid "Apps blocking sleep / screen lock"
 msgstr "Aplicaciones que impiden la suspensión / bloqueo"
 
 #: ../contents/ui/FullPopup.qml
-msgid "Power saving mode"
-msgstr "Modo ahorro de energía"
+msgid "Power saver"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Balanced"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
+msgid "Performance"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power settings..."
@@ -226,5 +330,95 @@ msgid "Apps blocking sleep / screen lock:"
 msgstr "Aplicaciones que impiden la suspensión / bloqueo:"
 
 #: ../contents/ui/main.qml
+msgid "Health: %1"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Not charging"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Pending charge"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Pending discharge"
+msgstr ""
+
+#: ../contents/ui/main.qml
 msgid "Calculating..."
 msgstr "Calculando..."
+
+#: ../contents/ui/main.qml
+msgid "Time until full: %1"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Time remaining: %1"
+msgstr ""
+
+#~ msgid "Power saving mode"
+#~ msgstr "Modo ahorro de energía"
+
+#~ msgid "Appearance"
+#~ msgstr "Apariencia"
+
+#~ msgid "Applet panel appearance"
+#~ msgstr "Apariencia del panel del applet"
+
+#~ msgid "Percentage font family:"
+#~ msgstr "Tipografía del porcentaje:"
+
+#~ msgid "Percentage font size:"
+#~ msgstr "Tamaño de la fuente:"
+
+#~ msgid "Percentage font formatting:"
+#~ msgstr "Formato de la fuente:"
+
+#~ msgid "Percentage position:"
+#~ msgstr "Posición del porcentaje:"
+
+#~ msgid "Percentage font padding:"
+#~ msgstr "Espaciado del porcentaje:"
+
+#~ msgid "Percentage fixed color:"
+#~ msgstr "Color del porcentaje:"
+
+#~ msgid "Enable dynamic percentage color"
+#~ msgstr "Habilitar color de porcentaje dinámico"
+
+#~ msgid "Custom dynamic color:"
+#~ msgstr "Color dinámico personalizado:"
+
+#~ msgid "High percentage"
+#~ msgstr "Alto porcentaje"
+
+#~ msgid "Midrange percentage"
+#~ msgstr "Porcentaje intermedio"
+
+#~ msgid "Low percentage"
+#~ msgstr "Bajo porcentaje"
+
+#~ msgid "Change color to Midrange when below:"
+#~ msgstr "Cambiar color de porcentaje intermedio si es menor de:"
+
+#~ msgid "Change color to Low when below:"
+#~ msgstr "Cambiar color de bajo porcentaje si es menor de:"
+
+#~ msgid "Show percentage"
+#~ msgstr "Mostrar porcentaje"
+
+#~ msgid "Show icon"
+#~ msgstr "Mostrar icono"
+
+#~ msgid "Applet popup appearance"
+#~ msgstr "Apariencia de la ventana del applet"
+
+#~ msgid "Other customizations"
+#~ msgstr "Otras personalizaciones"
+
+#~ msgid "Sleep blocking tab title font size:"
+#~ msgstr "Tamaño de fuente del título de bloqueo de suspensión:"
+
+#~ msgid "Sleep blocking tab item font size:"
+#~ msgstr "Tamaño de fuente de los elementos de bloqueo de suspensión:"
