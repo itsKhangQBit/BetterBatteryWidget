@@ -28,6 +28,14 @@ ScrollView {
     property alias cfg_popupMidpercent: popupMidpercent.value
     property alias cfg_popupLowpercent: popupLowpercent.value
 
+    property alias cfg_healthGreatColor: healthGreatColor.color
+    property alias cfg_healthGoodColor: healthGoodColor.color
+    property alias cfg_healthOkColor: healthOkColor.color
+    property alias cfg_healthBadColor: healthBadColor.color
+    property alias cfg_healthGreatPercent: healthGreatPercent.value
+    property alias cfg_healthGoodPercent: healthGoodPercent.value
+    property alias cfg_healthOkPercent: healthOkPercent.value
+
     property alias cfg_nosleepTitleFontsize: nosleepTitleFontsize.value //goddamn variable too long :(((
     property alias cfg_nosleepAppFontsize: nosleepAppFontsize.value
 
@@ -66,6 +74,14 @@ ScrollView {
     property string cfg_popupdynamicHighcolorDefault
     property int cfg_popupMidpercentDefault
     property int cfg_popupLowpercentDefault
+
+    property string cfg_healthGreatColorDefault
+    property string cfg_healthGoodColorDefault
+    property string cfg_healthOkColorDefault
+    property string cfg_healthBadColorDefault
+    property int cfg_healthGreatPercentDefault
+    property int cfg_healthGoodPercentDefault
+    property int cfg_healthOkPercentDefault
 
     property int cfg_nosleepTitleFontsizeDefault
     property int cfg_nosleepAppFontsizeDefault
@@ -298,6 +314,97 @@ ScrollView {
                 PlasmaComponents.Label {
                     text: i18n("%")
                 }
+            }
+        }
+
+        // ---- Battery health color ----
+
+        Kirigami.Separator {
+            Kirigami.FormData.isSection: true
+            Kirigami.FormData.label: i18n("Battery health color")
+        }
+
+        RowLayout {
+            Kirigami.FormData.label: i18n("Colors:")
+            PlasmaComponents.Label {
+                text: i18n("Great")
+            }
+            KQuickControls.ColorButton {
+                id: healthGreatColor
+                color: plasmoid.configuration.healthGreatColor
+                onColorChanged: cfg_healthGreatColor = color.toString()
+            }
+
+            PlasmaComponents.Label {
+                text: i18n("Good")
+            }
+            KQuickControls.ColorButton {
+                id: healthGoodColor
+                color: plasmoid.configuration.healthGoodColor
+                onColorChanged: cfg_healthGoodColor = color.toString()
+            }
+
+            PlasmaComponents.Label {
+                text: i18n("Ok")
+            }
+            KQuickControls.ColorButton {
+                id: healthOkColor
+                color: plasmoid.configuration.healthOkColor
+                onColorChanged: cfg_healthOkColor = color.toString()
+            }
+
+            PlasmaComponents.Label {
+                text: i18n("Bad")
+            }
+            KQuickControls.ColorButton {
+                id: healthBadColor
+                color: plasmoid.configuration.healthBadColor
+                onColorChanged: cfg_healthBadColor = color.toString()
+            }
+        }
+
+        RowLayout {
+            PlasmaComponents.Label {
+                text: i18n("Switch to Good color below:")
+            }
+            SpinBox {
+                id: healthGreatPercent
+                from: 0
+                to: 100
+                value: root.cfg_healthGreatPercent
+            }
+            PlasmaComponents.Label {
+                text: i18n("%")
+            }
+        }
+
+        RowLayout {
+            PlasmaComponents.Label {
+                text: i18n("Switch to Ok color below:")
+            }
+            SpinBox {
+                id: healthGoodPercent
+                from: 0
+                to: 100
+                value: root.cfg_healthGoodPercent
+            }
+            PlasmaComponents.Label {
+                text: i18n("%")
+            }
+        }
+
+        RowLayout {
+            PlasmaComponents.Label {
+                text: i18n("Switch to Bad color below:")
+            }
+            SpinBox {
+                id: healthOkPercent
+                from: 0
+                to: 100
+                value: root.cfg_healthOkPercent
+            }
+            PlasmaComponents.Label {
+                text: i18n("%")
             }
         }
 

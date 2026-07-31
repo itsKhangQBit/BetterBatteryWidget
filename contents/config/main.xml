@@ -134,5 +134,27 @@
         <entry name="nosleepTitleFontsize" type="Int">
             <default>16</default>
         </entry>
+
+        <entry name="healthGreatColor" type="String">
+            <default>#64EB1C</default>
+        </entry>
+        <entry name="healthGoodColor" type="String">
+            <default>#5ED61C</default>
+        </entry>
+        <entry name="healthOkColor" type="String">
+            <default>#E5F21B</default>
+        </entry>
+        <entry name="healthBadColor" type="String">
+            <default>#FF361C</default>
+        </entry>
+        <entry name="healthGreatPercent" type="Int">
+            <default>90</default>
+        </entry>
+        <entry name="healthGoodPercent" type="Int">
+            <default>70</default>
+        </entry>
+        <entry name="healthOkPercent" type="Int">
+            <default>50</default>
+        </entry>
     </group>
 </kcfg>

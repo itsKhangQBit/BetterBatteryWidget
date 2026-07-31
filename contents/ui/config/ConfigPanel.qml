@@ -71,6 +71,14 @@ ScrollView {
     property int cfg_popupMidpercentDefault
     property int cfg_popupLowpercentDefault
 
+    property string cfg_healthGreatColorDefault
+    property string cfg_healthGoodColorDefault
+    property string cfg_healthOkColorDefault
+    property string cfg_healthBadColorDefault
+    property int cfg_healthGreatPercentDefault
+    property int cfg_healthGoodPercentDefault
+    property int cfg_healthOkPercentDefault
+
     property int cfg_nosleepTitleFontsizeDefault
     property int cfg_nosleepAppFontsizeDefault
 
@@ -87,6 +95,14 @@ ScrollView {
     property string cfg_popupdynamicHighcolor
     property int cfg_popupMidpercent
     property int cfg_popupLowpercent
+
+    property string cfg_healthGreatColor
+    property string cfg_healthGoodColor
+    property string cfg_healthOkColor
+    property string cfg_healthBadColor
+    property int cfg_healthGreatPercent
+    property int cfg_healthGoodPercent
+    property int cfg_healthOkPercent
 
     property int cfg_nosleepTitleFontsize
     property int cfg_nosleepAppFontsize
