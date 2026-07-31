@@ -30,6 +30,10 @@ Item {
         id: sleepBlockerRoot
     }
 
+    Peripherals {
+        id: peripheralsRoot
+    }
+
     Plasma5Support.DataSource {
         id: batMgr
         engine: "executable"
@@ -351,6 +355,58 @@ Item {
                 }
             }
 
+        }
+
+        // peripheral batteries (mouse, headphones, etc.)
+        ColumnLayout {
+            Layout.fillWidth: true
+            spacing: Kirigami.Units.smallSpacing
+            visible: Plasmoid.configuration.showPeripherals && peripheralsRoot.devices.count > 0
+
+            Kirigami.Separator {
+                Layout.fillWidth: true
+            }
+
+            PlasmaComponents.Label {
+                text: i18n("Connected devices")
+                opacity: 0.7
+            }
+
+            Repeater {
+                model: peripheralsRoot.devices
+
+                RowLayout {
+                    Layout.fillWidth: true
+                    spacing: Kirigami.Units.smallSpacing
+
+                    Kirigami.Icon {
+                        source: model.typeIcon
+                        Layout.preferredWidth: 18
+                        Layout.preferredHeight: 18
+
+                        PlasmaComponents.ToolTip {
+                            text: model.name
+                        }
+                    }
+
+                    PlasmaComponents.Label {
+                        text: model.name
+                        Layout.fillWidth: true
+                        elide: Text.ElideRight
+                    }
+
+                    PlasmaComponents.Label {
+                        text: model.percent + "%"
+                        opacity: 0.7
+                    }
+
+                    Kirigami.Icon {
+                        source: model.levelIcon
+                        Layout.preferredWidth: 18
+                        Layout.preferredHeight: 18
+                    }
+                }
+            }
         }
 
         ColumnLayout {
