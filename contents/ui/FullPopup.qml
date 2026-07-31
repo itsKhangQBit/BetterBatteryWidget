@@ -471,11 +471,17 @@ Item {
                         Layout.alignment: Qt.AlignRight
                         Layout.preferredWidth: 16 // make it in sync with tlp switch
                         Layout.preferredHeight: 16
-                        source: "battery-profile-performance-symbolic"
+                        source: {
+                            let icons = ["battery-profile-powersave-symbolic", "battery-profile-balanced-symbolic", "battery-profile-performance-symbolic"]
+                            return icons[popupRoot.ispwrSave] || icons[1]
+                        }
                     }
 
                     PlasmaComponents.Label {
-                        text: i18n("Power saving mode")
+                        text: {
+                            let labels = [i18n("Power saver mode"), i18n("Balanced mode"), i18n("Performance mode")]
+                            return labels[popupRoot.ispwrSave] || labels[1]
+                        }
                     }
                 }
 
