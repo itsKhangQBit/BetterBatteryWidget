@@ -17,6 +17,7 @@ ScrollView {
     property alias cfg_simpleTime: simpleTime.checked
     property alias cfg_timeLeft: timeLeft.checked
     property alias cfg_healthLeft: healthLeft.checked
+    property alias cfg_showPeripherals: showPeripherals.checked
 
     // pinned is toggled from the popup's pin button, not exposed here,
     // but still needs to be declared so the KCM doesn't warn about it
@@ -30,6 +31,7 @@ ScrollView {
     property bool cfg_simpleTimeDefault
     property bool cfg_timeLeftDefault
     property bool cfg_healthLeftDefault
+    property bool cfg_showPeripheralsDefault
 
     // just pasting so KCM doesn't warn
     property int cfg_panelfontSizeDefault
@@ -156,6 +158,19 @@ ScrollView {
             id: healthLeft
             Kirigami.FormData.label: i18n("Battery health:")
             text: i18n("Show battery health")
+        }
+
+        // ---- Peripheral batteries ----
+
+        Kirigami.Separator {
+            Kirigami.FormData.isSection: true
+            Kirigami.FormData.label: i18n("Peripheral batteries")
+        }
+
+        CheckBox {
+            id: showPeripherals
+            Kirigami.FormData.label: i18n("Peripherals:")
+            text: i18n("Show battery level of connected Bluetooth devices (mouse, headphones, etc.)")
         }
     }
 }
