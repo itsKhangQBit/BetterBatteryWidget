@@ -34,7 +34,6 @@ PlasmoidItem {
     toolTipSubText: {
         let lines = [stateText()]
         if (root.state !== "FullyCharged") lines.push(timeText())
-        lines.push(i18n("Health: %1", root.health))
         return lines.join("\n")
     }
 
@@ -43,7 +42,7 @@ PlasmoidItem {
             case "Charging": return i18n("Charging")
             case "FullyCharged": return i18n("Fully charged")
             case "Discharging": return i18n("Discharging")
-            case "NotCharging": return i18n("Not charging")
+            case "NoCharge": return i18n("Not charging")
             case "PendingCharge": return i18n("Pending charge")
             case "PendingDischarge": return i18n("Pending discharge")
             default: return root.isCharge ? i18n("Charging") : i18n("Discharging")
@@ -203,6 +202,14 @@ PlasmoidItem {
                 ChargeIndicator {
                     id: chargeicon
                     anchors.centerIn: icon
+                    rotation: Plasmoid.configuration.rotateChargeIndicator && Plasmoid.configuration.paneliconRotate ? -90 : 0
+                    // for some god who knows reason, i love animations
+                    Behavior on rotation {
+                        NumberAnimation {
+                            duration: 400
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
                     iconwidth: icon.paintedWidth
                     iconheight: icon.paintedHeight
                     visible: opacity > 0

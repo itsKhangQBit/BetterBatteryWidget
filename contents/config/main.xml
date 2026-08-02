@@ -58,7 +58,7 @@
             <default>false</default>
         </entry>
         <entry name="paneldynamicHighcolor" type="String">
-            <default>#43c449</default><!-- weird color choice, you might know I took it from somewhere... this is color picked btw -->
+            <default>#45bf48</default><!-- weird color choice, you might know I took it from somewhere... this is from the wiki btw -->
         </entry>
         <entry name="paneldynamicMidcolor" type="String">
             <default>#ffff00</default>
@@ -87,7 +87,18 @@
         <entry name="chargeIndicatorColor" type="String">
             <default>#27ae60</default>
         </entry>
-
+        <entry name="chargeIndicatorCustomSVGpath" type="String">
+            <default></default>
+        </entry>
+        <entry name="chargeIndicatorCustomSVG" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="chargeIndicatorUseBolt" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="rotateChargeIndicator" type="Bool">
+            <default>false</default>
+        </entry>
         <entry name="popupfontSize" type="Int">
             <default>48</default>
         </entry>

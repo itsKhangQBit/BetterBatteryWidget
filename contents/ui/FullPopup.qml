@@ -265,12 +265,7 @@ Item {
             Layout.fillHeight: true
 
             PlasmaComponents.Label {
-                text: {
-                    if (widgetdata.isFull) {
-                        return i18n("Fully charged");
-                    }
-                    return widgetdata.isCharge ? i18n("Charging") : i18n("Discharging")
-                }
+                text: widgetdata.stateText()
                 opacity: 0.7
                 Layout.alignment: {
                     let alignlist = [Qt.AlignLeft, Qt.AlignHCenter, Qt.AlignRight]
@@ -359,7 +354,7 @@ Item {
 
         }
 
-        // peripheral batteries (mouse, headphones, etc.)
+        // peripherals (mouse, keyboards, headphones, even your phone, ...)
         ColumnLayout {
             Layout.fillWidth: true
             spacing: Kirigami.Units.smallSpacing
