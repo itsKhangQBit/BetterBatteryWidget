@@ -103,7 +103,7 @@ Item {
         // is there TLP or power-profiles-daemon
         popupRoot.batMgr.check("which tlp");
         popupRoot.batMgr.check("which powerprofilesctl");
-        widgetdata.getBatHealth.get("upower -i $(upower -e | grep battery | head -n 1) | awk '/capacity/ {print $2}' | tr -d ' %' | tr ',' '.'");
+        widgetdata.getBatHealth.get("upower -i $(upower -e | grep battery | head -n 1) | awk -F: '/^ *capacity:/ {print $2}' | tr -d ' %' | tr ',' '.'");
         sleepBlockerRoot.chkCafeStat();
         sleepBlockerRoot.getBlockerList();
     }
@@ -344,10 +344,10 @@ Item {
                     color: {
                         let healthInt = parseInt(widgetdata.health);
 
-                        if (healthInt >= 90) return "#64EB1C" // it's new!!!
-                            if (healthInt >= 70) return "#5ED61C" // still going strong
-                                if (healthInt >= 50) return "#E5F21B" // degrading
-                                    return "#FF361C" // god bless your battery
+                        if (healthInt >= Plasmoid.configuration.healthGreatPercent) return Plasmoid.configuration.healthGreatColor // it's new!!!
+                        if (healthInt >= Plasmoid.configuration.healthGoodPercent) return Plasmoid.configuration.healthGoodColor // still going strong
+                        if (healthInt >= Plasmoid.configuration.healthOkPercent) return Plasmoid.configuration.healthOkColor // degrading
+                        return Plasmoid.configuration.healthBadColor // god bless your battery
                     }
                 }
             }
