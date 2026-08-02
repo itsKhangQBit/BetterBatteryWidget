@@ -19,7 +19,7 @@ A lightweight, minimal battery widget for KDE Plasma 5 / 6. I find the default w
 ~~- Command Output - zren (https://store.kde.org/p/2136636/) for FontFamily and ComboBox libraries~~ I no longer use zren's library, switched from a ComboBox / Dropdown to a Dialog.
 
 ### **AI disclosure**
-- I used Gemini **ONLY** to assist me with syntaxes, almost all logics and structure are all my ideas (of course there is some contribution though!) (Stopped using it from 6.0 onwards) And if you see Claude (or any AI coding tools, really) from the contributor list, that's not me, that's other people using it! I'm not responsible ✋😬🤚
+- I used Gemini **ONLY** to assist me with syntaxes, almost all logics and structure are all my ideas (of course there is some contribution though!) **(Stopped using it from 6.0 onwards)** And if you see Claude (or any AI coding tools, really) from the contributor list, that's not me, that's other people using it! I'm not responsible ✋😬🤚
 
 ### **Changelogs**
 - version 1.0: initial
