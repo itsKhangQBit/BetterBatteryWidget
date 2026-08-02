@@ -34,6 +34,10 @@ ScrollView {
     property alias cfg_panelLowpercent: panelLowpercent.value
     property alias cfg_panelshowPercent: panelshowPercent.checked
     property alias cfg_panelshowIcon: panelshowIcon.checked
+    property alias cfg_chargeIndicatorCustomSVG: customIcon.checked
+    property alias cfg_chargeIndicatorUseBolt: useBolt.checked
+    property alias cfg_rotateChargeIndicator: rotatecustomIcon.checked
+    property alias cfg_chargeIndicatorCustomSVGpath: customIconPath.text
 
     // just pasting so KCM doesn't warn
     property int cfg_panelfontSizeDefault
@@ -330,27 +334,92 @@ ScrollView {
 
         CheckBox {
             id: chargeIndicatorCustomColor
-            Kirigami.FormData.label: i18n("Custom color:")
-            text: i18n("Use a custom charging indicator color")
+            Kirigami.FormData.label: i18n("Custom indicator:")
+            text: i18n("Use a custom charging indicator")
         }
 
-        RowLayout {
-            Kirigami.FormData.label: i18n("Color:")
+        ColumnLayout {
             visible: opacity > 0
             opacity: plasmoid.configuration.chargeIndicatorCustomColor ? 1 : 0
             Behavior on opacity {
                 NumberAnimation { duration: 200 }
             }
+            RowLayout {
+                Kirigami.FormData.label: i18n("Color:")
 
-            KQuickControls.ColorButton {
-                id: chargeIndicatorColorPicker
-                color: plasmoid.configuration.chargeIndicatorColor
-                onColorChanged: cfg_chargeIndicatorColor = color.toString()
+                KQuickControls.ColorButton {
+                    id: chargeIndicatorColorPicker
+                    color: plasmoid.configuration.chargeIndicatorColor
+                    onColorChanged: cfg_chargeIndicatorColor = color.toString()
+                }
+
+                PlasmaComponents.Label {
+                    text: i18n("(also used in the popup)")
+                    opacity: 0.7
+                }
             }
 
-            PlasmaComponents.Label {
-                text: i18n("(also used in the popup)")
-                opacity: 0.7
+            CheckBox {
+                id: useBolt
+                Kirigami.FormData.label: i18n("Custom icon:")
+                text: i18n("Use a charging bolt instead of a plug")
+            }
+
+            CheckBox {
+                id: customIcon
+                text: i18n("Use a custom SVG path (overrides the previous option)")
+            }
+
+            ColumnLayout {
+                visible: opacity > 0
+                opacity: plasmoid.configuration.chargeIndicatorCustomSVG ? 1 : 0
+                Behavior on opacity {
+                    NumberAnimation { duration: 200 }
+                }
+
+                Layout.fillWidth: true
+                Kirigami.FormData.label: i18n("Path:")
+
+                PlasmaComponents.Label {
+                    Layout.fillWidth: true
+                    textFormat: Text.RichText
+                    text: {
+                        let lines = [i18n("Note: For a best-looking icon, you can shrink the SVG path so it fits in a 6x6 box!")]
+                        lines.push(i18n("You can create your own SVG path here: ") + '<a href="https://svg-path-visualizer.netlify.app/">SVG Path Visualizer</a>')
+                        return lines.join("<br/>")
+                    }
+                    onLinkActivated: (link) => {
+                        Qt.openUrlExternally(link);
+                    }
+                    HoverHandler {
+                        id: hoverHandler
+                        cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+                    }
+                    wrapMode: Text.WordWrap
+                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                }
+
+                RowLayout {
+                    Layout.fillWidth: true
+                    PlasmaComponents.TextField {
+                        id: customIconPath
+                        placeholderText: "M1 -3.5 a3 3 0 0 0 -2.826 2 H-3 v2 h1.176 A3 3 0 0 0 1 2.5 v-1 h2 V0.5 H1 V-1.5 h2 V-2.5 H1 z"
+                        onAccepted: plasmoid.configuration.chargeIndicatorCustomSVGpath = text
+                    }
+                    PlasmaComponents.Button {
+                        id: savecustomIconPath
+                        icon.name: "document-save-symbolic"
+                        onClicked: plasmoid.configuration.chargeIndicatorCustomSVGpath = customIconPath.text
+                        PlasmaComponents.ToolTip {
+                            text: i18n("Save! (or press Enter in the text filed)")
+                        }
+                    }
+                }
+            }
+
+            CheckBox {
+                id: rotatecustomIcon
+                text: i18n("Rotate the indicator with the battery icon")
             }
         }
     }

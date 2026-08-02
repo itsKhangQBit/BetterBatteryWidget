@@ -7,6 +7,9 @@ Rectangle { // only this would work with the scaling
     property alias color: boltPath.fillColor
     property int iconheight: 24
     property int iconwidth: 24
+    // y'all got custom icons - itsKhangQBit
+    property string icon: Plasmoid.configuration.chargeIndicatorCustomSVG ? (Plasmoid.configuration.chargeIndicatorCustomSVGpath != "" ? Plasmoid.configuration.chargeIndicatorCustomSVGpath : "M1 -3.5 a3 3 0 0 0 -2.826 2 H-3 v2 h1.176 A3 3 0 0 0 1 2.5 v-1 h2 V0.5 H1 V-1.5 h2 V-2.5 H1 z
+    ") : (Plasmoid.configuration.chargeIndicatorUseBolt ? "M0.39 -3.0 a0.3 0.3 0 0 0 -0.55 -0.2 l-1.71 3.43 a0.2 0.2 0 0 0 0.2 0.27 h1.45 l-0.3 2.34 a0.3 0.3 0 0 0 0.55 0.2 l1.71 -3.43 a0.2 0.2 0 0 0 -0.2 -0.27 h-1.45 z" : "M1 -3.5 a3 3 0 0 0 -2.826 2 H-3 v2 h1.176 A3 3 0 0 0 1 2.5 v-1 h2 V0.5 H1 V-1.5 h2 V-2.5 H1 z")
     color: "transparent"
 
     Shape {
@@ -31,7 +34,7 @@ Rectangle { // only this would work with the scaling
             startY: -3
 
             PathSvg {
-                path: "M0.39 -3.0 a0.3 0.3 0 0 0 -0.55 -0.2 l-1.71 3.43 a0.2 0.2 0 0 0 0.2 0.27 h1.45 l-0.3 2.34 a0.3 0.3 0 0 0 0.55 0.2 l1.71 -3.43 a0.2 0.2 0 0 0 -0.2 -0.27 h-1.45 z"//"M10.4 2a0.7 0.7 0 0 0 -1.17 0l-5.2 10.4a0.5 0.5 0 0 0 0.5 0.7h 4.4  l -0.9 7.1a 0.7 0.7 0 0 0 1.17 0l5.2 -10.4a 0.5 0.5 0 0 0 -0.5 -0.7h -4.4z" //wait, what is this shape? M9 5a3 3 0 0 0-2.826 2H5v2h1.176A3 3 0 0 0 9 11v-1h2V9H9V7h2V6H9z is a plug... and this is a bolt!
+                path: chargeIndicator.icon // if your path fails it's up to you
             }
         }
     }

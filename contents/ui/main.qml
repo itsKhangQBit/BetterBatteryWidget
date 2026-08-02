@@ -33,17 +33,20 @@ PlasmoidItem {
     toolTipMainText: root.percent + "%"
     toolTipSubText: {
         let lines = [stateText()]
-        lines.push(root.state === "FullyCharged" ? i18n("Fully charged") : timeText())
+        if (root.state !== "FullyCharged") lines.push(timeText())
         return lines.join("\n")
     }
 
     function stateText() {
-        // report the actual charger connection status rather than the raw
-        // UPower charging state, since e.g. "not charging" while plugged in
-        // (charge threshold reached, etc.) is still "plugged in" to the user -
-        // and it stays "plugged in" even once fully charged, instead of that
-        // line disappearing entirely
-        return root.isCharge ? i18n("Plugged in") : i18n("Discharging")
+        switch (root.state) {
+            case "Charging": return i18n("Charging")
+            case "FullyCharged": return i18n("Fully charged")
+            case "Discharging": return i18n("Discharging")
+            case "NoCharge": return i18n("Not charging")
+            case "PendingCharge": return i18n("Pending charge")
+            case "PendingDischarge": return i18n("Pending discharge")
+            default: return root.isCharge ? i18n("Charging") : i18n("Discharging")
+        }
     }
 
     function timeText() {
@@ -199,6 +202,14 @@ PlasmoidItem {
                 ChargeIndicator {
                     id: chargeicon
                     anchors.centerIn: icon
+                    rotation: Plasmoid.configuration.rotateChargeIndicator && Plasmoid.configuration.paneliconRotate ? -90 : 0
+                    // for some god who knows reason, i love animations
+                    Behavior on rotation {
+                        NumberAnimation {
+                            duration: 400
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
                     iconwidth: icon.paintedWidth
                     iconheight: icon.paintedHeight
                     visible: opacity > 0
