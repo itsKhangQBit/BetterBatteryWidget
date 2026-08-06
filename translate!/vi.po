@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-31 23:16+0700\n"
+"POT-Creation-Date: 2026-08-06 11:29+0700\n"
 "PO-Revision-Date: 2026-05-26 10:47+0700\n"
 "Last-Translator: itsKhangQBit <minhkhangdinh24013@gmail.com>\n"
 "Language-Team: \n"
@@ -44,15 +44,15 @@ msgstr "Định dạng:"
 msgid "Simplified time (omit leading zero hour)"
 msgstr "Thời gian ngắn gọn (ẩn số 0 thừa)"
 
-#: ../contents/ui/config/ConfigBehavior.qml ../contents/ui/config/ConfigFeatures.qml
+#: ../contents/ui/config/ConfigBehavior.qml
 msgid "Add leading zero before:"
 msgstr "Thêm số 0 trước:"
 
-#: ../contents/ui/config/ConfigBehavior.qml ../contents/ui/config/ConfigFeatures.qml
+#: ../contents/ui/config/ConfigBehavior.qml
 msgid "Hours"
 msgstr "Giờ"
 
-#: ../contents/ui/config/ConfigBehavior.qml ../contents/ui/config/ConfigFeatures.qml
+#: ../contents/ui/config/ConfigBehavior.qml
 msgid "Minutes"
 msgstr "Phút"
 
@@ -87,22 +87,6 @@ msgstr "Pin các phụ kiện"
 #: ../contents/ui/config/ConfigBehavior.qml
 msgid "Show battery level of connected Bluetooth devices (mouse, keyboards,...)"
 msgstr "Hiện phần trăm pin của các thiết bị Bluetooth được kết nối"
-
-#: ../contents/ui/config/ConfigFeatures.qml
-msgid "Features"
-msgstr "Tính năng"
-
-#: ../contents/ui/config/ConfigFeatures.qml
-msgid "Simplified time"
-msgstr "Thời gian rút gọn"
-
-#: ../contents/ui/config/ConfigFeatures.qml
-msgid "Enable time remaining"
-msgstr "Hiện thời gian sạc/dùng còn lại"
-
-#: ../contents/ui/config/ConfigFeatures.qml
-msgid "Enable battery health"
-msgstr "Hiện sức khỏe pin còn lại"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Percentage text"
@@ -225,11 +209,11 @@ msgid "Charging indicator"
 msgstr "Biểu tượng sạc pin (tia sét / phích cắm)"
 
 #: ../contents/ui/config/ConfigPanel.qml
-msgid "Custom color:"
-msgstr "Màu tùy chỉnh:"
+msgid "Custom indicator:"
+msgstr "Biểu tượng sạc tùy chỉnh:"
 
 #: ../contents/ui/config/ConfigPanel.qml
-msgid "Use a custom charging indicator color"
+msgid "Use a custom charging indicator"
 msgstr "Dùng biểu tượng sạc tùy chỉnh"
 
 #: ../contents/ui/config/ConfigPanel.qml
@@ -239,6 +223,38 @@ msgstr "Màu:"
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "(also used in the popup)"
 msgstr "(cũng được dùng trong Popup)"
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Custom icon:"
+msgstr "Tùy chỉnh biểu tượng sạc:"
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Use a charging bolt instead of a plug"
+msgstr "Dùng biểu tượng tia sét thay vì phích cắm"
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Use a custom SVG path (overrides the previous option)"
+msgstr "Dùng 1 đường dẫn SVG tự tạo (ghi đè tùy chọn trên)"
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Path:"
+msgstr "Đường dẫn (đường vẽ):"
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Note: For a best-looking icon, you can shrink the SVG path so it fits in a 6x6 box!"
+msgstr "Lưu ý: Để icon pin đẹp nhất thì nên giảm cỡ đường dẫn SVG để nó vừa với khung 6x6!"
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "You can create your own SVG path here: "
+msgstr "Bạn cũng có thể tự vẽ đường dẫn SVG ở đây: "
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Save! (or press Enter in the text filed)"
+msgstr "Lưu biểu tượng! (hoặc nhấn Enter tong ô nhập)"
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Rotate the indicator with the battery icon"
+msgstr "Xoay biểu tượng sạc cùng biểu tượng pin"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Left"
@@ -251,6 +267,38 @@ msgstr "Giữa"
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Right"
 msgstr "Phải"
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Battery health color"
+msgstr "Màu các mốc sức khỏe pin"
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Great"
+msgstr "Rất tốt"
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Good"
+msgstr "Tốt"
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Ok"
+msgstr "Bình thường"
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Bad"
+msgstr "Đã xuống cấp"
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Switch to Good color below:"
+msgstr "Đổi sang màu pin Tốt khi dưới:"
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Switch to Ok color below:"
+msgstr "Đổi sang màu pin Bình thường khi dưới:"
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Switch to Bad color below:"
+msgstr "Đổi sang màu pin Xuống cấp khi dưới:"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Sleep blocker tab"
@@ -275,18 +323,6 @@ msgstr "Quay lại"
 #: ../contents/ui/FullPopup.qml
 msgid "Keep applet popup open"
 msgstr "Giữ cho applet popup mở"
-
-#: ../contents/ui/FullPopup.qml ../contents/ui/main.qml
-msgid "Fully charged"
-msgstr "Đã sạc đầy pin"
-
-#: ../contents/ui/FullPopup.qml ../contents/ui/main.qml
-msgid "Charging"
-msgstr "Đang sạc pin"
-
-#: ../contents/ui/FullPopup.qml ../contents/ui/main.qml
-msgid "Discharging"
-msgstr "Đang dùng pin"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Charge time left:"
@@ -329,8 +365,16 @@ msgid "Apps blocking sleep / screen lock:"
 msgstr "Danh sách chặn ngủ / khóa:"
 
 #: ../contents/ui/main.qml
-msgid "Health: %1"
-msgstr "Độ chai: %1"
+msgid "Charging"
+msgstr "Đang sạc pin"
+
+#: ../contents/ui/main.qml
+msgid "Fully charged"
+msgstr "Đã sạc đầy pin"
+
+#: ../contents/ui/main.qml
+msgid "Discharging"
+msgstr "Đang dùng pin"
 
 #: ../contents/ui/main.qml
 msgid "Not charging"

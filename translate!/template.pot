@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-31 23:16+0700\n"
+"POT-Creation-Date: 2026-08-06 11:29+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,15 +45,15 @@ msgstr ""
 msgid "Simplified time (omit leading zero hour)"
 msgstr ""
 
-#: ../contents/ui/config/ConfigBehavior.qml ../contents/ui/config/ConfigFeatures.qml
+#: ../contents/ui/config/ConfigBehavior.qml
 msgid "Add leading zero before:"
 msgstr ""
 
-#: ../contents/ui/config/ConfigBehavior.qml ../contents/ui/config/ConfigFeatures.qml
+#: ../contents/ui/config/ConfigBehavior.qml
 msgid "Hours"
 msgstr ""
 
-#: ../contents/ui/config/ConfigBehavior.qml ../contents/ui/config/ConfigFeatures.qml
+#: ../contents/ui/config/ConfigBehavior.qml
 msgid "Minutes"
 msgstr ""
 
@@ -87,22 +87,6 @@ msgstr ""
 
 #: ../contents/ui/config/ConfigBehavior.qml
 msgid "Show battery level of connected Bluetooth devices (mouse, keyboards,...)"
-msgstr ""
-
-#: ../contents/ui/config/ConfigFeatures.qml
-msgid "Features"
-msgstr ""
-
-#: ../contents/ui/config/ConfigFeatures.qml
-msgid "Simplified time"
-msgstr ""
-
-#: ../contents/ui/config/ConfigFeatures.qml
-msgid "Enable time remaining"
-msgstr ""
-
-#: ../contents/ui/config/ConfigFeatures.qml
-msgid "Enable battery health"
 msgstr ""
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
@@ -226,11 +210,11 @@ msgid "Charging indicator"
 msgstr ""
 
 #: ../contents/ui/config/ConfigPanel.qml
-msgid "Custom color:"
+msgid "Custom indicator:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigPanel.qml
-msgid "Use a custom charging indicator color"
+msgid "Use a custom charging indicator"
 msgstr ""
 
 #: ../contents/ui/config/ConfigPanel.qml
@@ -239,6 +223,38 @@ msgstr ""
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "(also used in the popup)"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Custom icon:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Use a charging bolt instead of a plug"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Use a custom SVG path (overrides the previous option)"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Path:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Note: For a best-looking icon, you can shrink the SVG path so it fits in a 6x6 box!"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "You can create your own SVG path here: "
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Save! (or press Enter in the text filed)"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPanel.qml
+msgid "Rotate the indicator with the battery icon"
 msgstr ""
 
 #: ../contents/ui/config/ConfigPopup.qml
@@ -251,6 +267,38 @@ msgstr ""
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Right"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Battery health color"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Great"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Good"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Ok"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Bad"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Switch to Good color below:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Switch to Ok color below:"
+msgstr ""
+
+#: ../contents/ui/config/ConfigPopup.qml
+msgid "Switch to Bad color below:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigPopup.qml
@@ -275,18 +323,6 @@ msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Keep applet popup open"
-msgstr ""
-
-#: ../contents/ui/FullPopup.qml ../contents/ui/main.qml
-msgid "Fully charged"
-msgstr ""
-
-#: ../contents/ui/FullPopup.qml ../contents/ui/main.qml
-msgid "Charging"
-msgstr ""
-
-#: ../contents/ui/FullPopup.qml ../contents/ui/main.qml
-msgid "Discharging"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml
@@ -330,7 +366,15 @@ msgid "Apps blocking sleep / screen lock:"
 msgstr ""
 
 #: ../contents/ui/main.qml
-msgid "Health: %1"
+msgid "Charging"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Fully charged"
+msgstr ""
+
+#: ../contents/ui/main.qml
+msgid "Discharging"
 msgstr ""
 
 #: ../contents/ui/main.qml
