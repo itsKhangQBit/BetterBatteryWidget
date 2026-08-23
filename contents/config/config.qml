@@ -4,14 +4,20 @@ import org.kde.plasma.configuration 2.0
 
 ConfigModel {
     ConfigCategory {
-        name: i18n("Appearance")
+        name: i18n("Panel appearance")
         icon: "preferences-desktop-color"
-        source: "config/ConfigAppearance.qml"
+        source: "config/ConfigPanel.qml"
     }
 
     ConfigCategory {
-        name: i18n("Features")
+        name: i18n("Popup appearance")
+        icon: "preferences-desktop-display"
+        source: "config/ConfigPopup.qml"
+    }
+
+    ConfigCategory {
+        name: i18n("Applet behavior")
         icon: "preferences-desktop-box-custom"
-        source: "config/ConfigFeatures.qml"
+        source: "config/ConfigBehavior.qml"
     }
 }

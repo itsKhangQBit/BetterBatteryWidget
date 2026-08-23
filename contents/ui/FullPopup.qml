@@ -29,6 +29,10 @@ Item {
         id: sleepBlockerRoot
     }
 
+    Peripherals {
+        id: peripheralsRoot
+    } // damn this is how we import files
+
     PlasmaCore.DataSource {
         id: pwrSaveSwitch
         engine: "powermanagement"
@@ -213,10 +217,23 @@ Item {
 
             Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
             // small icon for fun :)
-            Kirigami.Icon {
-                source: widgetdata.icon
+            Item {
                 width: 22
                 height: 22
+
+                Kirigami.Icon {
+                    id: popupHeaderIcon
+                    anchors.fill: parent
+                    source: widgetdata.icon
+                }
+
+                ChargeIndicator {
+                    anchors.centerIn: popupHeaderIcon
+                    visible: opacity > 0
+                    opacity: widgetdata.isCharge && plasmoid.configuration.chargeIndicatorCustomColor ? 1 : 0
+                    Behavior on opacity { NumberAnimation { duration: 200; easing.type: Easing.OutQuad } }
+                    color: plasmoid.configuration.chargeIndicatorColor
+                }
             }
 
             PlasmaComponents.ToolButton {
@@ -349,7 +366,58 @@ Item {
                     }
                 }
             }
+        }
 
+        // peripherals (mouse, keyboards, headphones, even your phone, ...)
+        ColumnLayout {
+            Layout.fillWidth: true
+            spacing: Kirigami.Units.smallSpacing
+            visible: plasmoid.configuration.showPeripherals && peripheralsRoot.devices.count > 0
+
+            Kirigami.Separator {
+                Layout.fillWidth: true
+            }
+
+            PlasmaComponents.Label {
+                text: i18n("Connected devices")
+                opacity: 0.7
+            }
+
+            Repeater {
+                model: peripheralsRoot.devices
+
+                RowLayout {
+                    Layout.fillWidth: true
+                    spacing: Kirigami.Units.smallSpacing
+
+                    Kirigami.Icon {
+                        source: model.typeIcon
+                        Layout.preferredWidth: 18
+                        Layout.preferredHeight: 18
+
+                        PlasmaComponents.ToolTip {
+                            text: model.name
+                        }
+                    }
+
+                    PlasmaComponents.Label {
+                        text: model.name
+                        Layout.fillWidth: true
+                        elide: Text.ElideRight
+                    }
+
+                    PlasmaComponents.Label {
+                        text: model.percent + "%"
+                        opacity: 0.7
+                    }
+
+                    Kirigami.Icon {
+                        source: model.levelIcon
+                        Layout.preferredWidth: 18
+                        Layout.preferredHeight: 18
+                    }
+                }
+            }
         }
 
         ColumnLayout {

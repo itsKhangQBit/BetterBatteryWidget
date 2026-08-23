@@ -28,6 +28,15 @@ Item {
 
     Plasmoid.hideOnWindowDeactivate: !plasmoid.configuration.pinned // had to link with the xml so that it works
 
+
+    //holy code, thanks @yuridival! (on github)
+    Plasmoid.toolTipMainText: root.percent + "%"
+    Plasmoid.toolTipSubText: {
+        let lines = [stateText()]
+        if (root.state !== "FullyCharged") lines.push(timeText())
+            return lines.join("\n")
+    }
+
     // we have to set a timer so that it actually updates fast
     Timer {
         interval: 1000
@@ -126,26 +135,8 @@ Item {
                 }
             }
 
-            Kirigami.Icon {
-                id: icon
-                source: {
-                    let intpercent = parseInt(root.percent, 10) || 0
-                    let percent = (Math.floor(intpercent / 10) *  10).toString().padStart(3, '0');
-                    let base = "battery-" + percent
-                    root.icon = root.isCharge ? base + "-charging" : base;
-                    return root.icon;
-                }
-                rotation: Plasmoid.configuration.paneliconRotate ? -90 : 0
-                // for some god who knows reason, i love animations
-                Behavior on rotation {
-                    NumberAnimation {
-                        duration: 400
-                        easing.type: Easing.InOutQuad
-                    }
-                }
-
-                width: opacity > 0 ? implicitWidth : 0
-                z: 0
+            Item {
+                id: iconContainer
                 visible: opacity > 0
                 opacity: {
                     let percentInt = parseInt(root.percent, 10)
@@ -158,8 +149,53 @@ Item {
                         easing.type: Easing.InOutCubic
                     }
                 }
+                width: opacity > 0 ? icon.implicitWidth : 0
+                z: 0
                 Layout.preferredWidth: plasmoid.configuration.paneliconSize
                 Layout.preferredHeight: plasmoid.configuration.paneliconSize
+
+                Kirigami.Icon {
+                    id: icon
+                    anchors.fill: parent
+                    rotation: plasmoid.configuration.paneliconRotate ? -90 : 0
+                    // for some god who knows reason, i love animations
+                    Behavior on rotation {
+                        NumberAnimation {
+                            duration: 400
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
+                    source: {
+                        let intpercent = parseInt(root.percent, 10) || 0
+                        let percent = (Math.floor(intpercent / 10) *  10).toString().padStart(3, '0');
+                        let base = "battery-" + percent
+                        let useCustomCharge = root.isCharge && plasmoid.configuration.chargeIndicatorCustomColor
+                        //testing
+                        console.log(icon.paintedHeight, chargeicon.x, chargeicon.y, chargeicon.width, chargeicon.height)
+                        root.icon = root.isCharge && !useCustomCharge ? base + "-charging" : base;
+                        return root.icon;
+                    }
+                }
+
+                ChargeIndicator {
+                    id: chargeicon
+                    anchors.centerIn: icon
+                    rotation: plasmoid.configuration.rotateChargeIndicator && plasmoid.configuration.paneliconRotate ? -90 : 0
+                    // for some god who knows reason, i love animations
+                    Behavior on rotation {
+                        NumberAnimation {
+                            duration: 400
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
+                    iconwidth: icon.paintedWidth
+                    iconheight: icon.paintedHeight
+                    visible: opacity > 0
+                    opacity: root.isCharge && plasmoid.configuration.chargeIndicatorCustomColor ? 1 : 0
+                    Behavior on opacity { NumberAnimation { duration: 200; easing.type: Easing.OutQuad } }
+                    color: plasmoid.configuration.chargeIndicatorColor
+                    z: 99
+                }
             }
         }
     }
