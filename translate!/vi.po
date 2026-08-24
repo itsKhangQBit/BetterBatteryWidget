@@ -7,14 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-06 11:29+0700\n"
-"PO-Revision-Date: 2026-05-26 10:47+0700\n"
+"POT-Creation-Date: 2026-08-24 22:13+0700\n"
+"PO-Revision-Date: 2026-08-24 13:26+0000\n"
 "Last-Translator: itsKhangQBit <minhkhangdinh24013@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: Vietnamese <https://translate.codeberg.org/projects/"
+"betterbatterywidget_plasma/languages/vi/>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #: ../metadata.desktop
 msgid "Better battery widget"
@@ -82,10 +85,11 @@ msgstr "các phụ kiện"
 
 #: ../contents/ui/config/ConfigBehavior.qml
 msgid "Peripheral batteries:"
-msgstr "Pin các phụ kiện"
+msgstr "Pin các phụ kiện:"
 
 #: ../contents/ui/config/ConfigBehavior.qml
-msgid "Show battery level of connected Bluetooth devices (mouse, keyboards,...)"
+msgid ""
+"Show battery level of connected Bluetooth devices (mouse, keyboards,...)"
 msgstr "Hiện phần trăm pin của các thiết bị Bluetooth được kết nối"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
@@ -94,7 +98,7 @@ msgstr "Phần trăm"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Show percentage:"
-msgstr "Hiện phần trăm"
+msgstr "Hiện phần trăm:"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Show"
@@ -198,7 +202,7 @@ msgstr "Kích cỡ biểu tượng pin:"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Orientation:"
-msgstr "Hướng xoay"
+msgstr "Hướng xoay:"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Vertical battery icon"
@@ -241,8 +245,12 @@ msgid "Path:"
 msgstr "Đường dẫn (đường vẽ):"
 
 #: ../contents/ui/config/ConfigPanel.qml
-msgid "Note: For a best-looking icon, you can shrink the SVG path so it fits in a 6x6 box!"
-msgstr "Lưu ý: Để icon pin đẹp nhất thì nên giảm cỡ đường dẫn SVG để nó vừa với khung 6x6!"
+msgid ""
+"Note: For a best-looking icon, you can shrink the SVG path so it fits in a "
+"6x6 box!"
+msgstr ""
+"Lưu ý: Để icon pin đẹp nhất thì nên giảm cỡ đường dẫn SVG để nó vừa với "
+"khung 6x6!"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "You can create your own SVG path here: "
@@ -306,11 +314,11 @@ msgstr "Danh sách các app chặn ngủ"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Title font size:"
-msgstr "Phông chữ tiêu đề"
+msgstr "Phông chữ tiêu đề:"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "App list font size:"
-msgstr "Phông chữ các mục"
+msgstr "Phông chữ các mục:"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery percentage"

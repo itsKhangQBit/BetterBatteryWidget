@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-06 11:29+0700\n"
-"PO-Revision-Date: 2026-06-01 08:31+0000\n"
+"POT-Creation-Date: 2026-08-24 22:13+0700\n"
+"PO-Revision-Date: 2026-08-24 13:26+0000\n"
 "Last-Translator: Vistaus <vistaus@noreply.codeberg.org>\n"
 "Language-Team: Dutch <https://translate.codeberg.org/projects/"
-"betterbatterywidget_plasma/language-names/nl/>\n"
+"betterbatterywidget_plasma/languages/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.5\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #: ../metadata.desktop
 msgid "Better battery widget"
@@ -29,23 +29,23 @@ msgstr "Vormgeving op paneel"
 
 #: ../contents/config/config.qml
 msgid "Popup appearance"
-msgstr ""
+msgstr "Pop-upvormgeving"
 
 #: ../contents/config/config.qml
 msgid "Applet behavior"
-msgstr ""
+msgstr "Appletgedrag"
 
 #: ../contents/ui/config/ConfigBehavior.qml
 msgid "Time display"
-msgstr ""
+msgstr "Tijdweergave"
 
 #: ../contents/ui/config/ConfigBehavior.qml
 msgid "Format:"
-msgstr ""
+msgstr "Opmaak:"
 
 #: ../contents/ui/config/ConfigBehavior.qml
 msgid "Simplified time (omit leading zero hour)"
-msgstr ""
+msgstr "Vereenvoudigd (geen voorloopnul tonen)"
 
 #: ../contents/ui/config/ConfigBehavior.qml
 msgid "Add leading zero before:"
@@ -61,15 +61,15 @@ msgstr "Minuten"
 
 #: ../contents/ui/config/ConfigBehavior.qml
 msgid "Popup info"
-msgstr ""
+msgstr "Pop-upinformatie"
 
 #: ../contents/ui/config/ConfigBehavior.qml
 msgid "Time remaining:"
-msgstr ""
+msgstr "Resterende tijd:"
 
 #: ../contents/ui/config/ConfigBehavior.qml
 msgid "Show estimated time remaining"
-msgstr ""
+msgstr "Resterende tijd tonen"
 
 #: ../contents/ui/config/ConfigBehavior.qml ../contents/ui/FullPopup.qml
 msgid "Battery health:"
@@ -77,36 +77,38 @@ msgstr "Accugezondheid:"
 
 #: ../contents/ui/config/ConfigBehavior.qml
 msgid "Show battery health"
-msgstr ""
+msgstr "Accugezondheid tonen"
 
 #: ../contents/ui/config/ConfigBehavior.qml
 msgid "Peripherals"
-msgstr ""
+msgstr "Apparaten"
 
 #: ../contents/ui/config/ConfigBehavior.qml
 msgid "Peripheral batteries:"
-msgstr ""
+msgstr "Apparaataccu's:"
 
 #: ../contents/ui/config/ConfigBehavior.qml
 msgid ""
 "Show battery level of connected Bluetooth devices (mouse, keyboards,...)"
 msgstr ""
+"Toon het accuniveau van verbonden Bluetoothapparaten (muizen, toetsenborden, "
+"etc.)"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Percentage text"
-msgstr ""
+msgstr "Percentagetekst"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Show percentage:"
-msgstr ""
+msgstr "Percentage tonen:"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Show"
-msgstr ""
+msgstr "Tonen"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Font family:"
-msgstr ""
+msgstr "Lettertype:"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Default"
@@ -114,11 +116,11 @@ msgstr "Standaard"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Font size:"
-msgstr ""
+msgstr "Tekstgrootte:"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Font style:"
-msgstr ""
+msgstr "Tekststijl:"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Bold"
@@ -134,67 +136,67 @@ msgstr "Onderstrepen"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Position:"
-msgstr ""
+msgstr "Locatie:"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Align to the right"
-msgstr ""
+msgstr "Rechts uitlijnen"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Padding:"
-msgstr ""
+msgstr "Opvulling:"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Percentage color"
-msgstr ""
+msgstr "Percentagekleur"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Dynamic color:"
-msgstr ""
+msgstr "Dynamische kleur:"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Change color based on battery level"
-msgstr ""
+msgstr "Pas de kleur aan op basis van het accuniveau"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Fixed color:"
-msgstr ""
+msgstr "Vaste kleur:"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Colors:"
-msgstr ""
+msgstr "Kleuren:"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "High"
-msgstr ""
+msgstr "Hoog"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Mid"
-msgstr ""
+msgstr "Gemiddeld"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Low"
-msgstr ""
+msgstr "Laag"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Switch to Mid color below:"
-msgstr ""
+msgstr "Gemiddelde kleur tonen onder de:"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Switch to Low color below:"
-msgstr ""
+msgstr "Lage kleur tonen onder de:"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Icon"
-msgstr ""
+msgstr "Pictogram"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Show icon:"
-msgstr ""
+msgstr "Pictogram tonen:"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Icon size:"
@@ -202,7 +204,7 @@ msgstr "Pictogramgrootte:"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Orientation:"
-msgstr ""
+msgstr "Oriëntatie:"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Vertical battery icon"
@@ -210,57 +212,59 @@ msgstr "Verticaal accupictogram gebruiken"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Charging indicator"
-msgstr ""
+msgstr "Oplaadindicator"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Custom indicator:"
-msgstr ""
+msgstr "Ander soort indicator:"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Use a custom charging indicator"
-msgstr ""
+msgstr "Ander soort oplaadindicator tonen"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Color:"
-msgstr ""
+msgstr "Kleur:"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "(also used in the popup)"
-msgstr ""
+msgstr "(tevens van toepassing op de pop-up)"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Custom icon:"
-msgstr ""
+msgstr "Ander pictogram:"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Use a charging bolt instead of a plug"
-msgstr ""
+msgstr "Stroompictogram tonen in plaats van oplaadkabel"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Use a custom SVG path (overrides the previous option)"
-msgstr ""
+msgstr "Eigen svg-pictogram tonen (vorige optie negeren)"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Path:"
-msgstr ""
+msgstr "Locatie:"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid ""
 "Note: For a best-looking icon, you can shrink the SVG path so it fits in a "
 "6x6 box!"
 msgstr ""
+"Let op: voor het beste resultaat kun je de svg-locatie verkleinen om binnen "
+"een rooster van 6x6 te passen!"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "You can create your own SVG path here: "
-msgstr ""
+msgstr "Voeg hier je eigen svg-locatie toe: "
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Save! (or press Enter in the text filed)"
-msgstr ""
+msgstr "Opslaan! (of ga in het tekstvak staan en druk op enter)"
 
 #: ../contents/ui/config/ConfigPanel.qml
 msgid "Rotate the indicator with the battery icon"
-msgstr ""
+msgstr "Indicator meedraaien met accupictogram"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Left"
@@ -276,47 +280,47 @@ msgstr "Rechts"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Battery health color"
-msgstr ""
+msgstr "Accugezondheidskleur"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Great"
-msgstr ""
+msgstr "Gezond"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Good"
-msgstr ""
+msgstr "Goed"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Ok"
-msgstr ""
+msgstr "Redelijk"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Bad"
-msgstr ""
+msgstr "Slecht"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Switch to Good color below:"
-msgstr ""
+msgstr "Kleur van goede gezondheid tonen onder de:"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Switch to Ok color below:"
-msgstr ""
+msgstr "Kleur van redelijke gezondheid tonen onder de:"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Switch to Bad color below:"
-msgstr ""
+msgstr "Kleur van slechte gezondheid tonen onder de:"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Sleep blocker tab"
-msgstr ""
+msgstr "Slaapstandonderdrukking"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "Title font size:"
-msgstr ""
+msgstr "Tekstgrootte van titel:"
 
 #: ../contents/ui/config/ConfigPopup.qml
 msgid "App list font size:"
-msgstr ""
+msgstr "Tekstgrootte van programmalijst:"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery percentage"
@@ -340,7 +344,7 @@ msgstr "Resterende accuduur:"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Connected devices"
-msgstr ""
+msgstr "Verbonden apparaten"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Block sleep & screen lock"
@@ -352,15 +356,15 @@ msgstr "Programma's die slapen/vergrendelen onderdrukken"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power saver"
-msgstr ""
+msgstr "Energiebesparing"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Balanced"
-msgstr ""
+msgstr "Gebalanceerd"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Performance"
-msgstr ""
+msgstr "Prestaties"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power settings..."
@@ -384,15 +388,15 @@ msgstr "Aan het ontladen"
 
 #: ../contents/ui/main.qml
 msgid "Not charging"
-msgstr ""
+msgstr "Niet aan het opladen"
 
 #: ../contents/ui/main.qml
 msgid "Pending charge"
-msgstr ""
+msgstr "In afwachting van opladen"
 
 #: ../contents/ui/main.qml
 msgid "Pending discharge"
-msgstr ""
+msgstr "In afwachting van ontladen"
 
 #: ../contents/ui/main.qml
 msgid "Calculating..."
@@ -400,11 +404,11 @@ msgstr "Bezig met berekenen..."
 
 #: ../contents/ui/main.qml
 msgid "Time until full: %1"
-msgstr ""
+msgstr "Opgeladen over %1"
 
 #: ../contents/ui/main.qml
 msgid "Time remaining: %1"
-msgstr ""
+msgstr "Resterende tijd: %1"
 
 #~ msgid "Features"
 #~ msgstr "Functies"

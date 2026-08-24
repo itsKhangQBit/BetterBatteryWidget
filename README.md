@@ -5,7 +5,7 @@ Just a simple battery widget, for Plasma.
 
 **PLEASE RESTART PLASMASHELL, OTHERWISE IT MIGHT NOT WORK!**
 
-**A lightweight,** ~minimal~ (not minimal anymore ig) **battery widget for KDE Plasma 5 / 6. I find the default widget not that good, so I decided to create a new one**.
+**A lightweight,** ~~minimal~~ (not minimal anymore ig) **battery widget for KDE Plasma 5 / 6. I find the default widget not that good, so I decided to create a new one**.
 
 ### **Features:** 
 - Battery percentage and battery saver (minimum ahh feature)
@@ -15,7 +15,7 @@ Just a simple battery widget, for Plasma.
 - Time remaining (charge / discharge)
 - Battery health
 - Periperal battery levels
-- ~2763 options~ A lot of options
+- ~~ 2763 options ~~ A lot of options
 
 ### **Credits:**
 ~~- Command Output - zren (https://store.kde.org/p/2136636/) for FontFamily and ComboBox libraries~~ I no longer use zren's library, switched from a ComboBox / Dropdown to a Dialog.
