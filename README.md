@@ -15,7 +15,7 @@ Just a simple battery widget, for Plasma.
 - Time remaining (charge / discharge)
 - Battery health
 - Periperal battery levels
-- ~~ 2763 options ~~ A lot of options
+- ~~2763 options~~ A lot of options
 
 ### **Credits:**
 ~~- Command Output - zren (https://store.kde.org/p/2136636/) for FontFamily and ComboBox libraries~~ I no longer use zren's library, switched from a ComboBox / Dropdown to a Dialog.
