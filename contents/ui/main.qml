@@ -15,7 +15,7 @@ PlasmoidItem {
     property string state: ""
     property string icon: "battery-000"
     property string health: "100%"
-    property string timeleft: "0" // string because it'll say "Error: Cannot assign QString to int"
+    property string timeleft: "--"
     readonly property bool horizontal: Plasmoid.location === 5 || Plasmoid.location === 6 // make sure that it's left/right, no quick shi like >= 5
     property alias getBatHealth: getBatHealth //need the alias so that we can call getBatHealth from FullPopup
 
@@ -137,7 +137,7 @@ PlasmoidItem {
                                 if (percentInt >= Plasmoid.configuration.panelLowpercent) return Plasmoid.configuration.paneldynamicMidcolor
                                     return Plasmoid.configuration.paneldynamicLowcolor // go charge, emergencyyyyyy
                 }
-                font.bold: Plasmoid.configuration.panelfontBold
+                font.weight: Plasmoid.configuration.panelfontWeight
                 font.italic: Plasmoid.configuration.panelfontItalic
                 font.underline: Plasmoid.configuration.panelfontUnderline
                 font.family: Plasmoid.configuration.panelfontFamily || Kirigami.Theme.defaultFont.family

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-24 22:13+0700\n"
+"POT-Creation-Date: 2026-11-23 10:52+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,7 +118,7 @@ msgid "Font style:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
-msgid "Bold"
+msgid "Weight"
 msgstr ""
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml

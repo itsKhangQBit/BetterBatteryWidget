@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-24 22:13+0700\n"
+"POT-Creation-Date: 2026-11-23 10:52+0700\n"
 "PO-Revision-Date: 2026-06-23 11:07+0000\n"
 "Last-Translator: hasanbkaylan <hasanbkaylan@noreply.codeberg.org>\n"
 "Language-Team: Turkish <https://translate.codeberg.org/projects/"
@@ -121,8 +121,8 @@ msgid "Font style:"
 msgstr ""
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
-msgid "Bold"
-msgstr "Kalın"
+msgid "Weight"
+msgstr ""
 
 #: ../contents/ui/config/ConfigPanel.qml ../contents/ui/config/ConfigPopup.qml
 msgid "Italic"
@@ -406,6 +406,9 @@ msgstr ""
 #: ../contents/ui/main.qml
 msgid "Time remaining: %1"
 msgstr ""
+
+#~ msgid "Bold"
+#~ msgstr "Kalın"
 
 #~ msgid "Features"
 #~ msgstr "Özellikler"
