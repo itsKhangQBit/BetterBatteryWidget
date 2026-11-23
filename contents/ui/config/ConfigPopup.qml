@@ -41,7 +41,7 @@ ScrollView {
 
     // just pasting so KCM doesn't warn
     property int cfg_panelfontSizeDefault
-    property bool cfg_panelfontWeightDefault
+    property int cfg_panelfontWeightDefault
     property string cfg_panelpercentColorDefault
     property bool cfg_panelfontItalicDefault
     property bool cfg_panelfontUnderlineDefault
@@ -62,7 +62,7 @@ ScrollView {
     property bool cfg_panelshowIconDefault
 
     property int cfg_popupfontSizeDefault
-    property bool cfg_popupfontWeightDefault
+    property int cfg_popupfontWeightDefault
     property string cfg_popuppercentColorDefault
     property bool cfg_popupfontItalicDefault
     property bool cfg_popupfontUnderlineDefault
@@ -87,7 +87,7 @@ ScrollView {
     property int cfg_nosleepAppFontsizeDefault
 
     property int cfg_panelfontSize
-    property bool cfg_panelfontWeight
+    property int cfg_panelfontWeight
     property string cfg_panelpercentColor
     property bool cfg_panelfontItalic
     property bool cfg_panelfontUnderline
