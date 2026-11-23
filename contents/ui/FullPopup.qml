@@ -305,7 +305,7 @@ Item {
                             if (percentInt >= plasmoid.configuration.popupLowpercent) return plasmoid.configuration.popupdynamicMidcolor
                                 return plasmoid.configuration.popupdynamicLowcolor // go charge, emergencyyyyyy
                 }
-                font.bold: plasmoid.configuration.popupfontBold
+                font.weight: plasmoid.configuration.popupfontWeight
                 font.italic: plasmoid.configuration.popupfontItalic
                 font.underline: plasmoid.configuration.popupfontUnderline
                 font.family: plasmoid.configuration.popupfontFamily || Kirigami.Theme.defaultFont.family

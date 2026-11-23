@@ -30,8 +30,8 @@
         <entry name="panelfontSize" type="Int">
             <default>14</default>
         </entry>
-        <entry name="panelfontBold" type="Bool">
-            <default>true</default>
+        <entry name="panelfontWeight" type="Int">
+            <default>400</default>
         </entry>
         <entry name="panelpercentColor" type="String">
             <default>#ffffff</default>
@@ -102,8 +102,8 @@
         <entry name="popupfontSize" type="Int">
             <default>48</default>
         </entry>
-        <entry name="popupfontBold" type="Bool">
-            <default>true</default>
+        <entry name="popupfontWeight" type="Int">
+            <default>400</default>
         </entry>
         <entry name="popuppercentColor" type="String">
             <default>#ffffff</default>

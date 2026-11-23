@@ -117,7 +117,7 @@ Item {
                 }
                 font.italic: plasmoid.configuration.panelfontItalic
                 font.underline: plasmoid.configuration.panelfontUnderline
-                font.bold: plasmoid.configuration.panelfontBold
+                font.weight: plasmoid.configuration.panelfontWeight
                 font.family: plasmoid.configuration.panelfontFamily || Kirigami.Theme.defaultFont.family
                 width: opacity > 0 ? implicitWidth : 0
                 z: 1

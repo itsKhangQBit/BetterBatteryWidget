@@ -15,7 +15,7 @@ ScrollView {
     id: root
 
     property alias cfg_panelfontSize: panelfontSize.value
-    property alias cfg_panelfontBold: panelfontBold.checked
+    property alias cfg_panelfontWeight: panelfontWeight.value
     property alias cfg_panelpercentColor: panelcolorPicker.color
     property alias cfg_panelfontItalic: panelfontItalic.checked
     property alias cfg_panelfontUnderline: panelfontUnderline.checked
@@ -41,7 +41,7 @@ ScrollView {
 
     // just pasting so KCM doesn't warn
     property int cfg_panelfontSizeDefault
-    property bool cfg_panelfontBoldDefault
+    property int cfg_panelfontWeightDefault
     property string cfg_panelpercentColorDefault
     property bool cfg_panelfontItalicDefault
     property bool cfg_panelfontUnderlineDefault
@@ -62,7 +62,7 @@ ScrollView {
     property bool cfg_panelshowIconDefault
 
     property int cfg_popupfontSizeDefault
-    property bool cfg_popupfontBoldDefault
+    property int cfg_popupfontWeightDefault
     property string cfg_popuppercentColorDefault
     property bool cfg_popupfontItalicDefault
     property bool cfg_popupfontUnderlineDefault
@@ -87,7 +87,7 @@ ScrollView {
     property int cfg_nosleepAppFontsizeDefault
 
     property int cfg_popupfontSize
-    property bool cfg_popupfontBold
+    property int cfg_popupfontWeight
     property string cfg_popuppercentColor
     property bool cfg_popupfontItalic
     property bool cfg_popupfontUnderline
@@ -175,9 +175,28 @@ ScrollView {
 
         RowLayout {
             Kirigami.FormData.label: i18n("Font style:")
-            CheckBox {
-                id: panelfontBold
-                text: i18n("Bold")
+            RowLayout {
+                PlasmaComponents.Label {
+                    text: i18n("Weight")
+                }
+
+                PlasmaComponents.Slider {
+                    id: panelfontWeight
+                    from: 100
+                    to: 900
+                    value: root.cfg_panelfontWeight
+                    stepSize: 100
+                    Layout.fillWidth: true
+                    Layout.minimumWidth: 120
+                    snapMode: Slider.SnapOnRelease
+                }
+                PlasmaComponents.Label {
+                    text: panelfontWeight.value
+
+                    // reserves fixed width so the slider doesn't jitter as numbers change
+                    Layout.minimumWidth: Kirigami.Units.gridUnit * 2
+                    horizontalAlignment: Text.AlignRight
+                }
             }
             CheckBox {
                 id: panelfontItalic
