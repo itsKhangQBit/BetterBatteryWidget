@@ -1,9 +1,7 @@
 # BetterBatteryWidget
-https://www.opendesktop.org/p/2355937/
+### https://www.opendesktop.org/p/2355937/
 
 Just a simple battery widget, for Plasma.
-
-** ~~Oh god. I might not come back to KDE.. I could say that this project is basically no longer maintained, but I will still happily take your code suggestions! You can still keep using this and translate the project!~~ I'm back!! **
 
 **PLEASE RESTART PLASMASHELL, OTHERWISE IT MIGHT NOT WORK!**
 
@@ -23,7 +21,9 @@ Just a simple battery widget, for Plasma.
 ~~- Command Output - zren (https://store.kde.org/p/2136636/) for FontFamily and ComboBox libraries~~ I no longer use zren's library, switched from a ComboBox / Dropdown to a Dialog.
 
 ### **AI disclosure**
-- I used Gemini **ONLY** to assist me with syntaxes, almost all logics and structure are all my ideas (of course there is some contribution from contributors though!) **(Stopped using Gemini from 6.0 onwards)** And if you see Claude (or any AI coding tools, really) from the contributor list, that's not me, that's other people using it! I'm not responsible ✋😬🤚
+- I used Gemini **ONLY** to assist me with syntaxes, almost all logics and structure are all my ideas (of course there is some contributions though!)
+- And if you see Claude (or any AI agents) from the contributor list, that's not me, that's other people using it. I'm ~~not~~ responsible
+- All the code is tested thoroughly on my main machine before any commit even happens
 
 ### **Changelogs**
 - version 1.0: initial
@@ -31,6 +31,7 @@ Just a simple battery widget, for Plasma.
 - version 3.0: added sleep blocker, charge / usage time remaining (you can enable / disable this feature), battery health feature
 - version 4.0: polished everything up, fixed the feature battery saver to be A LOT BETTER, translated to German by @Gamernist and @rr1111.
 - version 5.0: added sleep blocking app lists, more customization
+- version 6.0: more customizations and translations!
 
 ### Images
 ![Taskbar icon](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/plasma-6/screenshots/taskbar.png)
